@@ -1,4 +1,5 @@
-baseurl: "/jekyll-atlantic-theme"
+baseurl: "/jekyll-atlantic-theme/"
+url: "https://ryurbsgks.github.io/jekyll-atlantic-theme/"
 permalink: pretty
 title: "Jekyll Atlantic"
 collections_dir: collections
