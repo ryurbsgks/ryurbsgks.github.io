@@ -1,9 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
-
-group :jekyll_plugins do
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-  gem "jemoji"
-end
+gem "jekyll", "~> 4.1"
+gem "jekyll-environment-variables"
+gem "jekyll-postcss"
+gem "jekyll-paginate"

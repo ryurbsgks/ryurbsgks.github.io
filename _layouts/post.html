@@ -1,38 +1,58 @@
 ---
-layout: main
+layout: default
 ---
-<article class="article-page">
-  <div class="page-content">
-    {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-        {% if page.fig-caption %}
-          <figcaption>{{page.fig-caption}}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
-    {% else %}
-    {% endif %}
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
-      {{content | markdownify}}
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
-        </div>
-        <div class="page-tag">
-          {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
+
+{% include heading.html heading=page.title description=page.description align="center" date=page.date %}
+
+{% if page.authors %}
+  <div class="flex flex-col pb-3 md:hidden">
+    {% for author in page.authors %}
+      {% include author-large.html
+        author=author
+      %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+<img width="1600" height="900" src="{{ page.image }}"/>
+
+<div class="flex flex-col md:flex-row py-6 md:py-12">
+
+  <div class="w-full md:w-3/12 pr-3">
+    {% if page.authors %}
+      <div class="flex flex-col hidden md:flex mb-3 md:mb-6">
+        {% for author in page.authors %}
+          {% include author-large.html
+        author=author
+        %}
+        {% endfor %}
       </div>
-      {% include disqus.html %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+    {% endif %}
+
+    {% if page.categories %}
+      <div class="hidden md:block">
+        {% for category in page.categories %}
+          {% include category-badge.html %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="w-full md:w-9/12">
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+
+</div>
+
+{% if page.categories %}
+  <div class="py-6 mt-6 border-t-2 block md:hidden">
+    <h3 class="text-sm font-medium mb-1">Categories</h3>
+    <div>
+      {% for category in page.categories %}
+        {% include category-badge.html %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %} 
