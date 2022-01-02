@@ -417,7 +417,9 @@ mark,
   color: #6c757d; }
 
 code {
-  font-size: 87.5%;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #e83e8c;
   word-break: break-word; }
   a > code {
