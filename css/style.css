@@ -8172,6 +8172,9 @@ a {
     color: #1eafed;
     outline: none !important; }
 
+td {
+  padding: 1rem; }
+
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
