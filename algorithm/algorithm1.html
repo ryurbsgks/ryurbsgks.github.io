@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>알고리즘</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. 알고리즘</h2>
+
+								<p>알고리즘이란 문제를 해결하기 위해 정해진 절차나 방법을 공식화한 형태로 표현한 것</p>
+
+								<h2 class="mb-3">2. 시간 복잡도</h2>
+
+                                <p>시간 복잡도란 입력값의 변화에 따라 연산을 실행할 때 문제를 해결하는데 걸리는 시간관계를 뜻한다.</p>
+
+                                <p>시간 복잡도를 표기하는 방법으로는 Big-O(빅-오), Big-Ω(빅-오메가), Big-θ(빅-세타) 가 있다.<br>
+                                    각각 최악, 최선, 중간(평균)의 경우에 대하여 나타내는 방법이다.
+                                </p>
+
+                                <h3 class="mb-3">Big-O 표기법</h3>
+
+                                <p>Big-O 표기법은 최악의 경우를 고려하므로 프로그램이 실행되는 과정에서 소요되는 최악의 시간까지 고려할 수 있기 때문에 
+                                    시간 복잡도를 표기하는 방법 중 하나로 가장 자주 사용 된다.
+                                </p>
+
+                                <p>
+                                    <img src="../images/big_o.PNG" alt="" class="img-fluid">
+                                </p>
+
+                                <h4 class="mb-3">O(1)</h4>
+
+                                <p>O(1)는 constant complexity라고 하며 입력값이 증가하더라도 시간이 늘어나지 않는다.<br>
+                                    즉, 입력값의 크기와 관계없이 즉시 출력값을 얻어낼 수 있다.
+                                </p>
+
+                                <p>
+                                    <img src="../images/o1.PNG" alt="" class="img-fluid">
+                                </p>
+
+                                <code>
+                                    function O_1_algorithm(arr, index){<br>
+                                    &nbsp;&nbsp;return arr[index];<br>
+                                    }<br>
+                                    <br>
+                                    let arr = [1, 2, 3, 4, 5];<br>
+                                    let index = 1;<br>
+                                    let result = O_1_algorithm(arr, index);  // expected output : 2
+                                </code>
+
+                                <h4 class="mb-3">O(n)</h4>
+
+                                <p>O(n)은 linear complexity라고 하며 입력값이 증가함에 따라 시간 또한 같은 비율로 증가한다.</p>
+
+                                <p>
+                                    <img src="../images/on.PNG" alt="" class="img-fluid">
+                                </p>
+
+                                <code>
+                                    function O_n_algorithm(n){<br>
+                                    &nbsp;&nbsp;for(let i = 0; i < n; i++){<br>
+                                    &nbsp;&nbsp;// do something for 1 second<br>
+                                    &nbsp;&nbsp;}<br>
+                                    }
+                                </code>
+
+								<h4 class="mb-3">O(log n)</h4>
+
+								<p>O(log n)은 logarithmic complexity라고 하며 Big-O표기법중 O(1) 다음으로 빠른 시간 복잡도이다.<br>
+									입력값을 제시함에 따라 경우의 수가 절반으로 줄어 시간도 줄어든다.
+								</p>
+
+								<p>
+                                    <img src="../images/ologn.PNG" alt="" class="img-fluid">
+                                </p>
+
+								<p>O(log n)의 예시로 up & down 게임을 예로 들수있다.<br>
+									1. 1~100 중 하나의 숫자를 플레이어1이 고른다. (30을 골랐다고 가정)<br>
+									2. 50(가운데)을 제시하면 50보다 작으므로 down을 외친다.<br>
+									3. 1~50중의 하나의 숫자이므로 또다시 경우의 수를 절반으로 줄이기 위해 25를 제시한다.<br>
+									4. 25보다 크므로 up을 외친다.<br>
+									5. 경우의 수를 계속 절반으로 줄여나가며 정답을 찾는다.
+								</p>
+
+								<h4 class="mb-3">O(n<sup>2</sup>)</h4>
+
+								<p>O(n^2)은 quadratic complexity라고 하며 입력값이 증가함에 따라 시간이 n의 제곱수의 비율로 증가한다.</p>
+
+								<p>
+                                    <img src="../images/onn.PNG" alt="" class="img-fluid">
+                                </p>
+
+								<code>
+									function O_quadratic_algorithm(n) {<br>
+									&nbsp;&nbsp;for (let i = 0; i < n; i++) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;for (let j = 0; j < n; j++) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;// do something for 1 second<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+									&nbsp;&nbsp;}<br>
+									}
+								</code>
+
+								<h4 class="mb-3">O(2<sup>n</sup>)</h4>
+
+								<p>O(2^n)은 exponential complexity라고 하며 Big-O 표기법 중 가장 느린 시간 복잡도이다.</p>
+
+								<p>
+                                    <img src="../images/o2n.PNG" alt="" class="img-fluid">
+                                </p>
+
+								<code>
+									function fibonacci(n) {<br>
+									&nbsp;&nbsp;if (n <= 1) {<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br>
+									&nbsp;&nbsp;}<br>
+									&nbsp;&nbsp;return fibonacci(n - 1) + fibonacci(n - 2);<br>
+									}
+								</code>
+
+								<h2 class="mb-3">3. 탐욕 알고리즘(Greedy Algorithm)</h2>
+
+								<p>탐욕 알고리즘은 선택의 순간마다 당장 눈앞에 보이는 최적의 상황만을 쫓아 최종적인 해답에 도달하는 방법이다.</p>
+
+								<h3 class="mb-3">해결 방법</h3>
+
+								<p>탐욕 알고리즘으로 문제를 해결하는 방법은 다음과 같이 단계적으로 구분할 수 있다.</p>
+
+								<p>1. 선택 절차(Selection Procedure): 현재 상태에서의 최적의 해답을 선택한다.<br>
+									2. 적절성 검사(Feasibility Check): 선택된 해가 문제의 조건을 만족하는지 검사한다.<br>
+									3. 해답 검사(Solution Check): 원래의 문제가 해결되었는지 검사하고 해결되지 않았다면 선택 절차로 돌아가 위의 과정을 반복한다.
+								</p>
+
+								<h3 class="mb-3">적용 조건</h3>
+
+								<p>탐욕 알고리즘을 적용하려면 해결하려는 문제가 다음의 2가지 조건을 성립해야 한다.</p>
+
+								<p>1. 탐욕적 선택 속성(Greedy Choice Property) : 앞의 선택이 이후의 선택에 영향을 주지 않아야 한다.<br>
+									2. 최적 부분 구조(Optimal Substructure) : 문제에 대한 최종 해결 방법은 부분 문제에 대한 최적 문제 해결 방법으로 구성되어야 한다.
+								</p>
+
+								<h2 class="mb-3">4. 완전 탐색</h2>
+
+								<p>모든 문제는 완전 탐색으로 풀 수 있으며 이 방법은 굉장히 단순하고 무식하지만 답이 무조건 있다라는 장점이 있다.<br>
+									그렇지만 문제 해결을 할 때엔 기본적으로 두 가지 규칙이 붙는다.
+								</p>
+
+								<p>1. 문제를 해결할 수 있는가?<br>
+									2. 효율적으로 동작하는가?
+								</p>
+
+								<p>완전 탐색은 첫 번째 규칙을 만족시킬 수 있는 강력한 무기이지만 두 번째 규칙은 만족할 수 없는 경우가 있다.</p>
+
+								<h2 class="mb-3">5. 시뮬레이션</h2>
+
+								<p>문제에서 요구하는 복잡한 구현 요구 사항을 하나도 빠뜨리지 않고 코드로 옮겨 마치 시뮬레이션을 하는 것과 같은 방식</p>
+
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>알고리즘</li>
+									<li>시간 복잡도
+										<ul>
+											<li>Big-O 표기법</li>		
+										</ul>
+									</li>
+									<li>탐욕 알고리즘(Greedy Algorithm)
+										<ul>
+											<li>해결 방법</li>
+											<li>적용 조건</li>
+										</ul>
+									</li>
+									<li>완전 탐색</li>
+									<li>시뮬레이션</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
