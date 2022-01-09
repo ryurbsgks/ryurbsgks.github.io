@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>수학적 알고리즘</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. 순열</h2>
+
+								<p>n 개 중에서 일부만을 선택하여 나열하는 것을 순열이라고 하며 순열은 순서를 지키며 나열해야 한다.</p>
+
+                                <p>일반식 : <sub>n</sub>P<sub>r</sub> = n! / (n - r)!</p>
+
+                                <code>
+                                    function getPermutations(array, selectNumber){<br>
+                                    &nbsp;&nbsp;let result = [];<br>
+                                    &nbsp;&nbsp;if(selectNumber === 1){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return array.map((element) => [element]);<br>
+                                    &nbsp;&nbsp;}<br>
+                                    &nbsp;&nbsp;array.forEach((fixed, index, origin) => {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let rest = [...origin.slice(0, index), ...origin.slice(index + 1)];<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let permutations = getPermutations(rest, selectNumber - 1);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let attached = permutations.map((permutation) => [fixed, ...permutation]);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;result.push(...attached);<br>
+                                    &nbsp;&nbsp;});<br>
+                                    &nbsp;&nbsp;return result;<br>
+                                    }
+                                </code>
+
+                                <h2 class="mb-3">2. 조합</h2>
+
+								<p>조합은 n 개 중에서 일부만을 선택하여 나열하지만 순열과 달리 순서를 고려하지 않는다.</p>
+
+                                <p>일반식 : <sub>n</sub>C<sub>r</sub> = n! / (r! * (n - r)!)</p>
+
+                                <code>
+                                    function getCombinations(array, selectNumber){<br>
+                                    &nbsp;&nbsp;let result = [];<br>
+                                    &nbsp;&nbsp;if(selectNumber === 1){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return array.map((element) => [element]);<br>
+                                    &nbsp;&nbsp;}<br>
+                                    &nbsp;&nbsp;array.forEach((fixed, index, origin) => {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let rest = origin.slice(index + 1);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let combinations = getCombinations(rest, selectNumber - 1);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;let attached = combinations.map((combination) => [fixed, ...combination]);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;result.push(...attached);<br>
+                                    &nbsp;&nbsp;});<br>
+                                    &nbsp;&nbsp;return result;<br>
+                                    }
+                                </code>
+
+                                <h2 class="mb-3">3. 최소 공배수(LCM)</h2>
+
+								<p>공배수란 두 수 이상의 여러 수의 공통된 배수를 의미한다.<br>
+                                    최소공배수(LCM)란 두 수 이상의 여러 수의 공배수 중 최소인 수를 말한다.
+                                </p>
+
+                                <h2 class="mb-3">4. 최대 공약수(GCD)</h2>
+
+								<p>공약수란 두 수 이상의 여러 수의 공통된 약수를 의미한다.<br>
+                                    최대공약수(GCD)란 두 수 이상의 여러 수의 공약수 중 최대인 수를 말한다.
+                                </p>
+
+                                <h2 class="mb-3">5. 멱집합</h2>
+
+                                <p>어떤 집합이 있을 때 이 집합의 모든 부분집합을 멱집합이라고 한다.</p>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>순열</li>
+                                    <li>조합</li>
+                                    <li>최소 공배수(LCM)</li>
+                                    <li>최대 공약수(GCD)</li>
+                                    <li>멱집합</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
