@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>함수</h1>
+
+							<div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. 함수</h2>
+
+                                <p>함수란 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 말한다.<br>
+                                    선언된 함수는 필요할 때 호출하여 사용 할 수 있다.
+                                </p>
+
+                                <code>
+                                    function example(...&lt;variable&gt;){<br>
+                                    &nbsp;&nbsp;&lt;content&gt;;<br>
+                                    &nbsp;&nbsp;return &lt;result&gt;;<br>
+                                    }
+                                </code>
+
+                                <h2 class="mb-3">2. 함수의 선언(정의)</h2>
+
+                                <p>함수의 선언(정의)은 다음과 같은 함수 키워드로 구성되어 있다.</p>
+
+                                <p>함수의 이름 : example<br>
+                                    함수의 매개변수 : variable<br>
+                                    함수를 정의하는 JS 표현 : content<br>
+                                    결과값 : result
+                                </p>
+
+                                <p>variable라는 매개변수를 가지며 content라는 함수를 정의하는 JS의 표현으로 result라는 결과값을 반환(return)하는 
+                                    example이라는 함수이다.
+                                </p>
+
+                                <h3 class="mb-3">반환문(return)</h3>
+
+                                <p>반환문은 함수의 실행을 바로 종료하고 호출자에게 값을 반환해준다.<br>
+                                    이때 반환값은 배열이나 객체를 포함한 모든 타입의 값을 반환할 수 있다.<br>
+                                    또한 함수에서의 반환문은 있어도 되고 없어도 된다.
+                                </p>
+
+                                <h2 class="mb-3">3. 함수의 호출</h2>
+
+                                <p>함수의 정의는 함수를 실행하는 것이 아니다. 함수의 실행은 함수를 호출하여 실행시켜야 한다.</p>
+
+                                <code>
+                                    example(...&lt;variable&gt;)<br>
+                                    // expected output : &lt;result&gt;
+                                </code>
+
+                                <p>다음과 같이 example 함수를 호출하여 형식에 맞는 매개변수 variable를 입력하면 
+                                    example함수를 실행하여 result라는 결과값을 얻게 된다.
+                                </p>
+
+                                <h2 class="mb-3">4. 함수의 범위(유효 범위)</h2>
+
+                                <p>함수 내에서 정의된 변수는 함수 내부에서만 접근 가능하고 함수 외부에서는 접근할 수 없다.</p>
+
+                                <code>
+                                    let num1 = 20, num2 = 3, name = "Chamahk";<br>
+                                    <br>
+                                    function multiply(){<br>
+                                    &nbsp;&nbsp;return num1 * num2;<br>
+                                    }<br>
+                                    <br>
+                                    multiply(); // expected output : 60<br>
+                                    <br>
+                                    function getScore(){<br>
+                                    &nbsp;&nbsp;var num1 = 2, num2 = 3<br>
+                                    <br>
+                                    &nbsp;&nbsp;function add(){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;return name + " scored " + (num1 + num2);<br>
+                                    &nbsp;&nbsp;}<br>
+                                    <br>
+                                    &nbsp;&nbsp;return add();<br>
+                                    }<br>
+                                    <br>
+                                    getScore(); // expected output : "Chamahk scored 5"<br>
+                                </code>
+
+                                <h2 class="mb-3">5. 함수 선언 방법</h2>
+
+                                <p>함수 선언에는 여러가지 방식이 있다.(표현식을 명명, 익명으로 쪼개기도 한다)<br>
+                                    대표적으로는 선언식, 표현식, 화살표 함수가 있다.
+                                </p>
+
+                                <h3 class="mb-3">함수 선언식</h3>
+
+                                <code>
+                                    function &lt;function_name&gt;(...&lt;variable&gt;){<br>
+                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    }
+                                </code>
+
+                                <h3 class="mb-3">함수 표현식</h3>
+
+                                <code>
+                                    let &lt;function_name&gt; = function(...&lt;variable&gt;){<br>
+                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    }
+                                </code>
+
+                                <h3 class="mb-3">화살표 함수</h3>
+
+                                <code>
+                                    let &lt;function_name&gt; = (...&lt;variable&gt;) => {<br>
+                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    }
+                                </code>
+
+                                <h2 class="mb-3">6. 호이스팅</h2>
+
+                                <p>자바스크립트 함수 안에 있는 모든 변수의 선언은 함수의 맨 처음으로 이동된 것처럼 작동된다.<br>
+                                    이것을 호이스팅이라고 한다.(여기서 주의점은 선언만 호이스팅 된다)
+                                </p>
+
+                                <code>
+                                    function testHoisting(){<br>
+                                    &nbsp;&nbsp;console.log(num); // expected output : undefined<br>
+                                    &nbsp;&nbsp;var num=10;<br>
+                                    &nbsp;&nbsp;console.log(num); // expected output : 10<br>
+                                    }
+                                </code>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+                                    <li>함수</li>
+									<li>함수의 선언(정의)
+                                        <ul>
+											<li>반환문</li>
+										</ul>
+                                    </li>
+                                    <li>함수의 호출</li>
+                                    <li>함수의 범위(유효 범위)</li>
+                                    <li>함수 선언 방법
+                                        <ul>
+											<li>함수 선언식</li>
+                                            <li>함수 표현식</li>
+                                            <li>화살표 함수</li>
+										</ul>
+                                    </li>
+                                    <li>호이스팅</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
