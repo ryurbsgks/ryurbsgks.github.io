@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>반복문</h1>
+
+							<div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. 반복문</h2>
+
+                                <p>반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 실행문이다.</p>
+
+                                <h2 class="mb-3">2. for문</h2>
+
+                                <p>for문은 초기식, 표현식, 증감식을 모두 포함하는 반복문이다.</p>
+
+                                <code>
+                                    for(&lt;초기식&gt;; &lt;표현식&gt;; &lt;증감식&gt;){<br>
+                                    &nbsp;&nbsp;&lt;실행문&gt;<br>
+                                    }
+                                </code>
+
+                                <p>초기식은 변수를 선언하여 사용하며 주로 카운터 변수를 초기화할 때 사용한다.</p>
+
+                                <p>표현식은 매 반복마다 표현식의 값이 참인지 거짓인지 판단하여 참일 경우 실행문을 실행하며 
+                                    거짓일 경우 for문의 다음 코드로 넘어간다.
+                                </p>
+
+                                <p>증감식은 주로 카운트할 변수를 증감할때 사용하며 다음번 표현식 이전에 발생한다.</p>
+
+                                <h2 class="mb-3">3. for in문</h2>
+
+                                <p>for in문은 해당 객체의 모든 열거 가능한 속성에 대해 반복하는 반복문이다.</p>
+
+                                <code>
+                                    for(&lt;variable&gt; in &lt;object&gt;){<br>
+                                    &nbsp;&nbsp;&lt;실행문&gt;<br>
+                                    } 
+                                </code>
+
+                                <p>variable은 매 반복마다 다른 속성이름이 변수로 지정된다.</p>
+
+                                <p>object는 반복 작업을 수행할 객체로 열거형 속성을 가지고 있는 객체를 입력한다.</p>
+
+                                <h2 class="mb-3">4. for of문</h2>
+
+                                <p>for of문은 반복가능한 객체에 대해서 순회할 수 있도록 해주는 반복문이다.</p>
+
+                                <code>
+                                    for(&lt;variable&gt; of &lt;object&gt;){<br>
+                                    &nbsp;&nbsp;&lt;실행문&gt;<br>
+                                    }
+                                </code>
+
+                                <p>variable은 각 반복에 서로 다른 속성값이 variable에 할당된다.</p>
+
+                                <p>object는 반복되는 열거 가능한 속성이 있는 객체를 입력한다.</p>
+
+                                <h2 class="mb-3">5. while문</h2>
+
+                                <p>while문은 조건이 참일 경우 계속해서 반복을 하게 된다.</p>
+
+                                <p>만약 조건이 계속해서 참이면 실행문이 무한대로 돌아가는 무한 루프에 빠지게 된다.<br>
+                                    무한루프에서 빠져나갈 수 있는 조건문이나 실행문에 break, return 같은 명령어를 사용하여 무한 루프에서 벗어날 수 있다.
+                                </p>
+
+                                <code>
+                                    while(&lt;조건문&gt;){<br>
+                                    &nbsp;&nbsp;&lt;실행문&gt;<br>   
+                                    }
+                                </code>
+                                
+                                <h2 class="mb-3">6. do while문</h2>
+
+                                <p>do while문은 조건이 거짓일 때 까지 실행문을 실행한다.<br>
+                                    실행문이 실행된 후에 조건을 판별하기 때문에 무조건 한번은 실행한다.
+                                </p>
+
+                                <code>
+                                    do{<br>   
+                                    &nbsp;&nbsp;&lt;실행문&gt;<br>   
+                                    }while(&lt;조건문&gt;);
+                                </code>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+                                    <li>반복문</li>
+									<li>for문</li>
+                                    <li>for in문</li>
+                                    <li>for of문</li>
+                                    <li>while문</li>
+                                    <li>do while문</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
