@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>스코프와 클로저</h1>
+
+							<div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. 스코프</h2>
+
+                                <p>스코프란 변수에 접근할 수 있는 범위(변수의 유효범위)이다.</p>
+
+                                <p>JS에서 스코프는 전역(global) 스코프, 지역(local) 스코프 2가지로 분류한다.</p>
+                                
+                                <h3 class="mb-3">전역 스코프</h3>
+
+                                <p>전역 스코프는 말 그대로 전역에서 선언되어 있어 어느 곳에서든지 해당 변수에 접근할 수 있다.</p>
+
+                                <h3 class="mb-3">지역 스코프</h3>
+
+                                <p>지역 스코프는 해당 지역에서만 접근할 수 있어 지역을 벗어난 곳에선 접근할수 없다.</p>
+                    
+                                <h3 class="mb-3">스코프의 범위</h3>
+
+                                <p>스코프의 범위는 블록(중괄호) 또는 함수에 의해 나누어지며 이 범위를 스코프라고 부른다.</p>
+
+                                <h3 class="mb-3">스코프의 규칙</h3>
+
+                                <p>스코프는 중첩이 가능하며 바깥쪽 스코프에서 선언한 변수는 안쪽 스코프에서 사용이 가능하다.<br>
+                                    안쪽에서 선언한 변수는 바깥쪽 스코프에서 사용할 수 없다.
+                                </p>
+
+                                <p>가장 바깥쪽의 스코프는 전역 스코프라고 부른다.(전역이 아닌 다른 스코프는 전부 지역 스코프이다)</p>
+
+                                <p>지역 변수는 전역 변수보다 우선 순위를 가진다.</p>
+
+                                <h3 class="mb-3">스코프의 종류</h3>
+
+                                <p>스코프의 종류에는 블록(block) 스코프, 함수(function) 스코프가 존재한다.</p>
+
+                                <h4 class="mb-3">블록 스코프</h4>
+
+                                <p>블록 스코프는 블록을 기준으로 범위가 구분 된다.</p>
+
+                                <h4 class="mb-3">함수 스코프</h4>
+
+                                <p>함수 스코프는 function 키워드가 등장하는 함수 선언식 및 함수 표현식을 함수 스코프라고 한다.(화살표 함수는 블록 스코프로 취급된다)</p>
+
+                                <h2 class="mb-3">2. 클로저</h2>
+
+                                <p>클로저란 함수와 함수가 선언된 어휘적 환경의 조합을 말한다.</p>
+
+                                <h3 class="mb-3">클로저 함수</h3>
+
+                                <p>클로저 함수는 함수를 리턴하는 함수이며 내부 함수는 외부 함수에 선언된 변수에 접근이 가능하다.</p>
+
+                                <p>클로저 함수의 장점은 데이터를 보존하는 함수라는 것이다.</p>
+
+                                <p>일반적인 함수는 함수 실행이 끝나면 함수 내부의 변수를 사용할 수 없지만 클로저 함수는 외부 함수의 실행이 끝나더라도 외부 함수 내 변수가 메모리 상에 저장되기 때문에 변수 사용이 가능하다.</p>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>스코프
+                                        <ul>
+                                            <li>전역 스코프</li>
+                                            <li>지역 스코프</li>
+                                            <li>스코프의 범위</li>
+                                            <li>스코프의 규칙</li>
+                                            <li>스코프의 종류</li>
+                                        </ul>
+                                    </li>
+                                    <li>클로저
+                                        <ul>
+                                            <li>클로저 함수</li>
+                                        </ul>
+                                    </li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
