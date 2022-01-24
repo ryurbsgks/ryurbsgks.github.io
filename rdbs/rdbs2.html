@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about.html">About</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>MySQL 명령문</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. SHOW</h2>
+
+                                <p>SHOW 명령문은 DB의 목록이나 테이블의 목록을 확인할 때 사용하는 명령문이다.</p>
+
+								<code>
+                                    SHOW DATABASES;
+                                </code>
+
+                                <code>
+                                    SHOW TABLES;
+                                </code>
+
+                                <h2 class="mb-3">2. USE</h2>
+
+                                <p>USE 명령문은 DB를 선택할 때 사용하는 명령문이다.</p>
+    
+                                <code>
+                                    USE &lt;DB_name&gt;;
+                                </code>
+
+                                <h2 class="mb-3">3. CREATE</h2>
+
+                                <p>CREATE 명령문은 새로운 DB 또는 테이블을 생성할 때 사용하는 명령문이다.</p>
+
+                                <code>
+                                    CREATE DATABASE &lt;DB_name&gt;;
+                                </code>
+
+                                <code>
+                                    CREATE TABLE &lt;table_name&gt; (<br>
+                                    &nbsp;&nbsp;id int PRIMARY KEY AUTO_INCREMENT,<br>
+                                    &nbsp;&nbsp;name varchar(255),<br>
+                                    &nbsp;&nbsp;email varchar(255)<br>
+                                    );
+                                </code>
+
+                                <h2 class="mb-3">4. DROP</h2>
+
+                                <p>DROP 명령문은 DB 또는 테이블을 삭제할 수 있는 명령문이다.</p>
+
+                                <code>
+                                    DROP DATABASE &lt;DB_name&gt;;
+                                </code>
+
+                                <code>
+                                    DROP TABLE &lt;table_name&gt;;
+                                </code>
+
+                                <h2 class="mb-3">5. ALTER</h2>
+
+                                <p>ALTER 명령문은 기존 테이블의 컬럼을 추가, 삭제 또는 수정하는 명령문이다.</p>
+
+                                <h3 class="mb-3">ADD</h3>
+
+                                <p>ALTER 명령문과 ADD문을 사용하면 테이블에 컬럼을 추가할 수 있다.</p>
+
+                                <code>
+                                    ALTER TABLE &lt;table_name&gt; ADD &lt;column_name&gt; &lt;datatype&gt;;
+                                </code>
+
+                                <h3 class="mb-3">DROP</h3>
+
+                                <p>ALTER 명령문과 DROP문을 사용하면 테이블에서 컬럼을 삭제할 수 있다.</p>
+
+                                <code>
+                                    ALTER TABLE &lt;table_name&gt; DROP &lt;column_name&gt;;
+                                </code>
+
+                                <h3 class="mb-3">MODIFY</h3>
+
+                                <p>ALTER 명령문과 MODIFY문을 사용하면 테이블에서 컬럼의 데이터 유형을 변경할 수 있다.</p>
+
+                                <code>
+                                    ALTER TABLE &lt;table_name&gt; MODIFY COLUMN &lt;column_name&gt; &lt;datatype&gt;;
+                                </code>
+
+                                <h2 class="mb-3">6. DESCRIBE(DESC)</h2>
+
+                                <p>DESCRIBE 명령문은 테이블의 구조를 확인할 수 있다.</p>
+
+                                <code>
+                                    DESCRIBE &lt;table_name&gt;;
+                                </code>
+
+                                <code>
+                                    DESC &lt;table_name&gt;;
+                                </code>
+
+                                <h2 class="mb-3">7. SELECT</h2>
+
+                                <p>SELECT 명령문은 데이터를 선택할 수 있다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt;;
+                                </code>
+
+                                <h2 class="mb-3">8. WHERE</h2>
+
+                                <p>WHERE 절은 지정된 조건을 충족하는 레코드를 추출하는 데 사용된다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">9. AND, OR, NOT</h2>
+
+                                <p>AND, OR, NOT 연산자는 WHERE 절과 결합할 수 있다.</p>
+
+                                <h3 class="mb-3">AND, OR</h3>
+
+                                <p>AND, OR 연산자는 둘 이상의 조건을 기반으로 레코드를 필터링하는 데 사용된다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;condition&gt; AND &lt;condition&gt;;
+                                </code>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;condition&gt; OR &lt;condition&gt;;
+                                </code>
+
+                                <h3 class="mb-3">NOT</h3>
+
+                                <p>NOT 연산자는 조건이 true가 아닌 경우의 레코드를 표시한다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE NOT &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">10. ORDER BY</h2>
+
+                                <p>ORDER BY 문은 레코드를 오름차순 또는 내림차순으로 정렬하는 데 사용된다.</p>
+
+                                <p>ORDER BY 문은 기본적으로 레코드를 오름차순으로 정렬하며 내림차순으로 정렬하려면 DESC 키워드를 사용한다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; ORDER BY &lt;column_name&gt; ASC(생략가능);
+                                </code>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; ORDER BY &lt;column_name&gt; DESC;
+                                </code>
+
+                                <h2 class="mb-3">11. INSERT INTO</h2>
+
+                                <p>INSERT INTO 문은 테이블에 새 레코드를 삽입하는 데 사용된다.</p>
+
+                                <code>
+                                    INSERT INTO &lt;table_name&gt; (&lt;column_name&gt;) VALUES (&lt;value&gt;);
+                                </code>
+
+                                <h2 class="mb-3">12. UPDATE</h2>
+
+                                <p>UPDATE 문은 테이블의 기존 레코드를 수정하는 데 사용된다.</p>
+
+                                <code>
+                                    UPDATE &lt;table_name&gt; SET &lt;column_name&gt;=&lt;value&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">13. DELETE</h2>
+
+                                <p>DELETE 문은 테이블의 기존 레코드를 삭제하는 데 사용된다.</p>
+
+                                <code>
+                                    DELETE FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">14. MIN(), MAX()</h2>
+
+                                <p>MIN() 함수는 선택한 컬럼의 가장 작은 값을 반환한다.</p>
+
+                                <code>
+                                    SELECT MIN(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <p>MAX() 함수는 선택한 컬럼의 가장 큰 값을 반환한다.</p>
+
+                                <code>
+                                    SELECT MAX(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">15. COUNT(), AVG(), SUM()</h2>
+
+                                <p>COUNT() 함수는 지정된 기준과 일치하는 행의 수를 반환한다.</p>
+
+                                <code>
+                                    SELECT COUNT(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <p>AVG() 함수는 숫자 컬럼의 평균 값을 반환한다.</p>
+
+                                <code>
+                                    SELECT AVG(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <p>SUM() 함수는 숫자 컬럼의 총 합계를 반환한다.</p>
+
+                                <code>
+                                    SELECT SUM(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
+                                </code>
+
+                                <h2 class="mb-3">16. Aliases(AS)</h2>
+
+                                <p>Aliases 문은 테이블 또는 테이블의 컬럼에 임시 이름을 지정할 때 사용된다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; AS &lt;new_column_name&gt; FROM &lt;table_name&gt;;
+                                </code>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; AS &lt;new_table_name&gt;;
+                                </code>
+
+                                <h2 class="mb-3">17. GROUP BY</h2>
+                                
+                                <p>GROUP BY 문은 특정 컬럼을 기준으로 그룹화한다.</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;condition&gt; GROUP BY &lt;column_name&gt;;
+                                </code>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>SHOW</li>
+                                    <li>USE</li>
+                                    <li>CREATE</li>
+                                    <li>DROP</li>
+                                    <li>ALTER
+										<ul>
+											<li>ADD</li>
+											<li>DROP</li>
+											<li>MODIFY</li>
+										</ul>
+									</li>
+                                    <li>DESCRIBE(DESC)</li>
+                                    <li>SELECT</li>
+                                    <li>WHERE</li>
+                                    <li>AND, OR, NOT
+                                        <ul>
+											<li>AND, OR</li>
+											<li>NOT</li>										
+										</ul>
+                                    </li>
+                                    <li>ORDER BY</li>
+                                    <li>INSERT INTO</li>
+                                    <li>UPDATE</li>
+                                    <li>DELETE</li>
+                                    <li>MIN(), MAX()</li>
+                                    <li>COUNT(), AVG(), SUM()</li>
+                                    <li>Aliases(AS)</li>
+                                    <li>GROUP BY</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
