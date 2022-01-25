@@ -248,7 +248,7 @@
 
                                 <h2 class="mb-3">15. COUNT(), AVG(), SUM()</h2>
 
-                                <p>COUNT() 함수는 지정된 기준과 일치하는 행의 수를 반환한다.</p>
+                                <p>COUNT() 함수는 지정된 기준과 일치하는 레코드의 수를 반환한다.</p>
 
                                 <code>
                                     SELECT COUNT(&lt;column_name&gt;) FROM &lt;table_name&gt; WHERE &lt;condition&gt;;
@@ -286,6 +286,60 @@
                                     SELECT &lt;column_name&gt; FROM &lt;table_name&gt; WHERE &lt;condition&gt; GROUP BY &lt;column_name&gt;;
                                 </code>
 
+                                <h2 class="mb-3">18. JOIN</h2>
+
+                                <p>JOIN 문은 둘 이상의 테이블 사이의 관련 컬럼을 기반으로 레코드를 결합하는 데 사용된다.</p>
+
+                                <p>
+									<img src="../images/join.PNG" alt="" class="img-fluid">
+								</p>
+
+                                <h3 class="mb-3">INNER JOIN</h3>
+
+                                <p>INNER JOIN 문은 두 테이블에서 일치하는 값이 있는 레코드를 선택한다.</p>
+
+                                <p>INNER JOIN 문에서 INNER를 생략하고 JOIN만 사용할 수도 있다.</p>
+
+                                <p>
+									<img src="../images/innerjoin.PNG" alt="" class="img-fluid">
+								</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table1&gt; INNER JOIN &lt;table2&gt; ON 
+                                    &lt;table1&gt;.&lt;column_name&gt; = &lt;table2&gt;.&lt;column_name&gt;;
+                                </code>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table1&gt; JOIN &lt;table2&gt; ON 
+                                    &lt;table1&gt;.&lt;column_name&gt; = &lt;table2&gt;.&lt;column_name&gt;;
+                                </code>
+                                
+                                <h3 class="mb-3">LEFT JOIN</h3>
+
+                                <p>LEFT JOIN 문은 왼쪽 테이블에서 모든 레코드를 오른쪽 테이블에서 일치하는 레코드를 선택한다.</p>
+
+                                <p>
+									<img src="../images/leftjoin.PNG" alt="" class="img-fluid">
+								</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table1&gt; LEFT JOIN &lt;table2&gt; ON 
+                                    &lt;table1&gt;.&lt;column_name&gt; = &lt;table2&gt;.&lt;column_name&gt;;
+                                </code>
+
+                                <h3 class="mb-3">RIGHT JOIN</h3>
+
+                                <p>RIGHT JOIN 문은 오른쪽 테이블에서 모든 레코드를 왼쪽 테이블에서 일치하는 레코드를 선택한다.</p>
+
+                                <p>
+									<img src="../images/rightjoin.PNG" alt="" class="img-fluid">
+								</p>
+
+                                <code>
+                                    SELECT &lt;column_name&gt; FROM &lt;table1&gt; RIGHT JOIN &lt;table2&gt; ON 
+                                    &lt;table1&gt;.&lt;column_name&gt; = &lt;table2&gt;.&lt;column_name&gt;;
+                                </code>
+                            
 							</div>
 						</div>
 
@@ -323,6 +377,13 @@
                                     <li>COUNT(), AVG(), SUM()</li>
                                     <li>Aliases(AS)</li>
                                     <li>GROUP BY</li>
+                                    <li>JOIN
+                                        <ul>
+                                            <li>INNER JOIN</li>
+                                            <li>LEFT JOIN</li>
+                                            <li>RIGHT JOIN</li>
+                                        </ul>
+                                    </li>
 								</ol>
 
 							</div>
