@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ryu의 코딩 블로그</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+                        style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+                <p class="pfooter">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+                    This template is copyrighted by Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 px-md-5 py-5">
+
+                            <h1>ACID</h1>
+
+                            <div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. 트랜잭션</h2>
+
+                                <p>데이터베이스의 상태를 변환시키는 논리적 기능을 수행하기 위해 행해지는 하나 이상의 쿼리를 모아 놓은 하나의 작업 단위</p>
+
+                                <p>트랜잭션은 성공 또는 실패라는 두 개의 결과만 존재하며 미완료된 작업 없이 모든 작업을 수행해야한다.<br>
+                                    즉 작업이 하나라도 실패를 하게 되면 트랜잭션도 실패이고 모든 작업이 성공적이면 트랜잭션 또한 성공이다.
+                                </p>
+
+                                <p>데이터베이스 트랜잭션은 ACID라는 특성을 가지고 있다.</p>
+
+                                <h2 class="mb-3">2. ACID</h2>
+
+                                <p>Atomicity, Consistency, Isolation, Durability의 약자로 데이터베이스 트랜잭션이 발생할 때 그 안정성을
+                                    보장할 수 있는 성질이다.
+                                </p>
+
+                                <h3 class="mb-3">Atomicity(원자성)</h3>
+
+                                <p>하나의 트랜잭션 내에서는 모든 연산이 성공하거나 모두 실패해야 한다.</p>
+
+                                <h3 class="mb-3">Consistency(일관성)</h3>
+
+                                <p>하나의 트랜잭션 전후에 데이터베이스의 일관된 상태가 유지되어야 한다.</p>
+
+                                <h3 class="mb-3">Isolation(격리성, 고립성)</h3>
+
+                                <p>모든 트랜잭션은 다른 트랜잭션으로부터 독립되어야 한다.</p>
+
+                                <p>동시에 여러 개의 트랜잭션들이 수행될 때 각 트랜잭션은 고립(격리)되어 있어 연속으로 실행된 것과 동일한 결과를 보여준다.<br>
+                                    이때 각각의 트랜잭션은 서로의 연산을 확인받거나 영향을 줄 수 없다.
+                                </p>
+
+                                <h3 class="mb-3">Durability(지속성)</h3>
+
+                                <p>트랜잭션이 성공되었다면 해당 트랜잭션에 대한 로그가 남아야 하며 해당 기록은 영구적이어야 한다.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+                            <div class="sidebar-box ftco-animate">
+
+                                <h3 class="sidebar-heading">List</h3>
+
+                                <ol>
+                                    <li>트랜잭션</li>
+                                    <li>ACID
+										<ul>
+											<li>Atomicity(원자성)</li>
+											<li>Consistency(일관성)</li>
+											<li>Isolation(격리성, 고립성)</li>
+											<li>Durability(지속성)</li>
+										</ul>
+									</li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../js/google-map.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
