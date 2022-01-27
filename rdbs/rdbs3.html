@@ -87,13 +87,47 @@
 
 								<p>비밀번호를 설정하고 나면 해당 비밀번호를 입력하여 MySQL에 접속한다.</p>
 
-								<h2 class="mb-3">3. 비밀번호 변경</h2>
+								<h3 class="mb-3">비밀번호 변경</h3>
 
 								<p>MySQL에서 root 사용자의 비밀번호를 변경하는 방법</p>
 
 								<code>
 									ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '&lt;password&gt;'; 
 								</code>
+
+								<h2 class="mb-3">3. MySQL 연결</h2>
+
+								<p>Node.js와 MySQL 연결 방법</p>
+								
+								<code>
+									const mysql = require("mysql");<br>
+									const connection = mysql.createConnection({<br>
+									&nbsp;&nbsp;host: "&lt;host&gt;",<br>
+									&nbsp;&nbsp;user: "&lt;user&gt;",<br>
+									&nbsp;&nbsp;password: "&lt;password&gt;",<br>
+									&nbsp;&nbsp;database: "&lt;db_name&gt;"<br>
+									});<br>
+									<br>
+									connection.connect();<br>
+									<br>
+									connection.query(&lt;query_language&gt;, function (error, results, fields){<br>
+									&nbsp;&nbsp;if(error){<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;throw error;<br>
+									&nbsp;&nbsp;} <br>
+									&nbsp;&nbsp;console.log(results);<br>
+									});<br>
+									<br>
+									connection.end();
+								</code>
+
+								<h3 class="mb-3">연결 옵션</h3>
+
+								<p>host : 연결하려는 데이터베이스의 호스트 이름(default : localhost)<br>
+									port : 연결할 포트 번호(default : 3306)<br>
+									user : MySQL 사용자<br>
+									password : MySQL 사용자의 비밀번호<br>
+									database : 연결에 사용할 데이터베이스 이름
+								</p>
 
 							</div>
 						</div>
@@ -105,8 +139,16 @@
 
 								<ol>
 									<li>MySQL 설치</li>
-                                    <li>MySQL 접속</li>
-                                    <li>비밀번호 변경</li>
+                                    <li>MySQL 접속
+										<ul>
+											<li>비밀번호 변경</li>
+										</ul>
+									</li>
+                                    <li>MySQL 연결
+										<ul>
+											<li>연결 옵션</li>
+										</ul>
+									</li>
 								</ol>
 
 							</div>
