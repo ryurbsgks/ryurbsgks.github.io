@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ryu의 코딩 블로그</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li class="colorlib-active"><a href="../sequelizeindex.html">Sequelize</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+                        style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+                <p class="pfooter">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+                    This template is copyrighted by Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 px-md-5 py-5">
+
+                            <h1>Sequelize</h1>
+
+                            <div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. ORM(객체 관계 매핑)</h2>
+
+                                <p>ORM(Object-Relational Mapping; 객체 관계 매핑)은 데이터를 객체 간의 관계를 바탕으로 SQL문으로 만들어서 객체와 관계형 데이터베이스의 데이터를 연결해주는 프로그래밍 기법이다.</p>
+
+                                <h2 class="mb-3">2. Sequelize</h2>
+
+                                <p>Sequelize는 Node.js 기반의 ORM이다.</p>
+
+                                <p>Sequelize에서 제공하는 대부분의 메서드는 비동기로 기본적으로 Promise를 제공하며 async와 await도 사용 가능하다.</p>
+
+                                <h2 class="mb-3">3. Sequelize 설치</h2>
+
+                                <code>
+                                    npm install --save sequelize
+                                </code>
+
+                                <code>
+                                    npm i sequelize
+                                </code>
+
+                                <h2 class="mb-3">4. Sequelize CLI 설치</h2>
+
+                                <p>CLI는 마이그레이션(Migrations) 및 프로젝트 부트스트랩(Project bootstrapping)에 대한 지원을 제공한다.</p>
+
+                                <code>
+                                    npm install --save-dev sequelize-cli
+                                </code>
+
+                                <h3 class="mb-3">Project bootstrapping</h3>
+
+                                <p>프로젝트 초기 단계를 자동으로 설정할 수 있도록 도와주는 폴더 및 파일</p>
+
+                                <code>
+                                    npx sequelize-cli init
+                                </code>
+
+                                <p>성공적으로 완료되면 config, models, migrations, seeders 폴더가 생성된다.</p>
+
+                                <h4 class="mb-3">config</h4>
+
+                                <p>데이터베이스에 연결하는 방법을 CLI에 알려주는 config.json 파일을 포함하는 폴더</p>
+
+                                <p>만약 해당 데이터베이스가 없다면 db:create 명령어로 config/config.json 파일의 해당 데이터베이스를 생성한다.</p>
+
+                                <code>
+                                    sequelize db:create
+                                </code>
+
+                                <h4 class="mb-3">models</h4>
+
+                                <p>프로젝트의 모든 모델 파일을 포함하는 폴더</p>
+
+                                <h4 class="mb-3">migrations</h4>
+
+                                <p>모든 마이그레이션 파일을 포함하는 폴더</p>
+
+                                <h4 class="mb-3">seeders</h4>
+
+                                <p>모든 시드 파일을 포함하는 폴더</p>
+                                
+                                <h2 class="mb-3">5. 모델 생성</h2>
+                              
+                                <code>
+                                    npx sequelize-cli model:generate --name &lt;model_name&gt; --attributes &lt;field_name&gt;:&lt;data_types&gt;,&lt;field_name&gt;:&lt;data_types&gt;
+                                </code>
+
+                                <p>모델은 엔티티를 객체로 표현한 형태로 데이터 구조를 기술하고 데이터에 수행할 수 있는 명령의 모음을 의미한다.</p>
+
+                                <p>id, createdAt, updatedAt 필드는 자동으로 생성되며 생성된 모델은 모델이름의 파일명으로 models폴더에 위치한다.</p>
+                                
+                                <h2 class="mb-3">6. 마이그레이션</h2>
+
+                                <p>IT에서 마이그레이션은 데이터나 소프트웨어를 다른 시스템으로 이동하는 것을 말한다.</p>
+
+                                <p>Sequelize에서 마이그레이션은 마이그레이션 실행(up) 및 취소(down) 2가지 기능을 가지는 JS파일이다.</p>
+
+                                <code>
+                                    npx sequelize-cli db:migrate
+                                </code>
+
+                                <p>실질적으로 데이터베이스에 테이블을 생성하는 과정으로 테이블명의 기본설정은 모델명의 복수형으로 나온다.<br>
+                                    만약 테이블명을 변경하고 싶으면 migrations 폴더에 해당 모델명 파일의 up, down의 createTable, dropTable의 테이블명을 변경한 후 마이그레이션을 진행 하면 된다.
+                                </p>
+
+                                <p>db:migrate 명령어는 SequelizeMeta(현재 데이터베이스에서 실행된 마이그레이션을 기록하는 데 사용되는 테이블)를 확인 후 실행되지 않은 마이그레이션 파일이 있으면 마이그레이션을 진행한다.<br>
+                                    따라서 마이그레이션 변동이 있으면 db:migrate을 진행해야 한다.
+                                </p>
+
+                                <h2 class="mb-3">7. 마이그레이션 취소</h2>
+                               
+                                <p>db:migrate:undo 명령어는 가장 최근 마이그레이션을 되돌린다.</p>
+
+                                <code>
+                                    npx sequelize-cli db:migrate:undo
+                                </code>
+
+                                <p>db:migrate:undo:all 명령어는 모든 마이그레이션을 되돌려 초기 상태로 되돌린다.</p>
+
+                                <code>
+                                    npx sequelize-cli db:migrate:undo:all
+                                </code>
+
+                                <p>--to 옵션을 사용하면 특정 마이그레이션을 되돌린다.</p>
+                               
+                                <code>
+                                    npx sequelize-cli db:migrate:undo:all --to XXXXXXXXXXXXXX-create-&lt;model_name&gt;.js
+                                </code>
+
+                                <h2 class="mb-3">8. Sequelize 공식 문서</h2>
+
+                                <p>추가적인 내용이나 위의 내용들을 더 자세히 보고 싶으면 Sequelize 공식 문서를 확인해보자</p>
+
+                                <p>
+                                    <a href="https://sequelize.org/master/manual/migrations.html" target="_blank">Sequelize 공식 문서</a> 
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+                            <div class="sidebar-box ftco-animate">
+
+                                <h3 class="sidebar-heading">List</h3>
+
+                                <ol>
+                                    <li>ORM(객체 관계 매핑)</li>
+                                    <li>Sequelize</li>
+                                    <li>Sequelize 설치</li>
+                                    <li>Sequelize CLI 설치
+                                        <ul>
+                                            <li>Project bootstrapping</li>
+                                        </ul>
+                                    </li>
+                                    <li>모델 생성</li>
+                                    <li>마이그레이션</li>
+                                    <li>마이그레이션 취소</li>
+                                    <li>Sequelize 공식 문서</li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../js/google-map.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
