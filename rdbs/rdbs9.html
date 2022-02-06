@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ryu의 코딩 블로그</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li class="colorlib-active"><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+                        style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+                <p class="pfooter">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+                    This template is copyrighted by Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 px-md-5 py-5">
+
+                            <h1>NoSQL, MongoDB</h1>
+
+                            <div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. NoSQL</h2>
+
+                                <p>관계형 테이블의 레거시한 방법을 사용하지 않는 데이터 저장소이다.</p>
+
+                                <p>NoSQL 데이터베이스는 데이터 모델에 따라 유형이 다양하다.<br>
+                                    주요 유형으로는 문서, 필드-값, 와이드 컬럼, 그래프가 있다.
+                                </p>
+
+                                <h2 class="mb-3">2. NoSQL 기반이 사용되는 경우</h2>
+
+                                <h4 class="mb-3">비구조적인 대용량의 데이터를 저장하는 경우</h4>
+
+                                <p>SQL 데이터베이스보다 자유로운 형태로 데이터를 저장할 수 있으므로 필요에 따라서 새로운 데이터 유형을 추가할 수 있다.</p>
+
+                                <h4 class="mb-3">클라우드 컴퓨팅 및 저장 공간을 최대한 활용하는 경우</h4>
+
+                                <p>NoSQL 데이터베이스는 데이터베이스를 클라우드 기반으로 쉽게 분리할 수 있도록 지원하여 저장 공간을 효율적으로 사용할 수 있다.</p>
+
+                                <h4 class="mb-3">빠르게 서비스를 구축하고 데이터 구조를 자주 업데이트 하는 경우</h4>
+
+                                <p>NoSQL 데이터베이스의 경우 스키마를 미리 준비할 필요가 없어서 개발을 빠르게 해야 하는 경우에 매우 적합하다.<br>
+                                    시장에 빠르게 프로토타입을 출시해야 하는 경우나 일일이 스키마를 수정해 주어야 하는 경우 관계형 데이터베이스 보다 
+                                    NoSQL 기반의 비관계형 데이터베이스가 더 효율적이다.
+                                </p>
+
+                                <h2 class="mb-3">3. MongoDB</h2>
+
+                                <p>MongoDB는 대표적인 NoSQL 도큐먼트 데이터베이스이다.</p>
+
+                                <p>도큐먼트 데이터베이스는 데이터를 테이블이 아닌 문서처럼 저장하는 데이터베이스를 의미한다.<br>
+                                    일반적으로 도큐먼트 데이터베이스에서는 JSON 유사 형식으로 데이터를 문서화한다.
+                                </p>
+
+                                <p>도큐먼트는 데이터를 필드-값의 형태로 가지고 있고 컬렉션이라고 하는 그룹으로 묶어서 관리한다.<br>
+                                    데이터베이스는 여러 개의 컬렉션으로 구성된다.
+                                </p>
+                             
+                                <h3 class="mb-3">컬렉션(Collection)</h3>
+
+                                <p>MongoDB의 도큐먼트로 구성된 저장소이다.</p>
+
+                                <p>데이터베이스 당 많은 컬렉션이 있고 컬렉션 당 많은 도큐먼트가 있을 수 있다.</p>
+
+                                <h2 class="mb-3">4. Atlas Cloud</h2>
+
+                                <p>MongoDB에서는 아틀라스(Atlas)로 클라우드에 데이터베이스를 설정한다.</p>
+
+                                <p>아틀라스는 GUI와 CLI로 데이터를 시각화, 분석, 내보내기, 그리고 빌드하는 데에 사용할 수 있다.</p>
+
+                                <p>아틀라스 사용자는 클러스터를 배포할 수 있으며 클러스터는 그룹화된 서버에 데이터를 저장한다.<br>
+                                    이 서버는 레플리카 세트로 구성되어 있으며 레플리카 세트는 동일한 데이터를 저장하는 몇 개의 연결된 MongoDB 인스턴스의 모음이다.
+                                </p>
+
+                                <p>도큐먼트나 컬렉션을 변경할 경우 변경된 데이터의 중복 사본이 레플리카 세트에 저장된다.</p>
+
+                                <h3 class="mb-3">레플리카 세트</h3>
+
+                                <p>동일한 데이터를 저장하는 소수의 연결된 머신을 뜻한다.</p>
+
+                                <p>레플리카 세트 중 하나에 문제가 발생하더라도 데이터를 그대로 유지할 수 있다.</p>
+
+                                <h3 class="mb-3">인스턴스</h3>
+
+                                <p>로컬 또는 클라우드에서 특정 소프트웨어를 실행하는 단일 머신을 말한다.<br>
+                                    MongoDB에서는 데이터베이스를 말한다.
+                                </p>
+
+                                <h3 class="mb-3">클러스터</h3>
+
+                                <p>데이터를 저장하는 서버 그룹으로 여러 대의 컴퓨터를 네트워크를 통해 연결하여 하나의 단일 컴퓨터처럼 동작하도록 제작한 컴퓨터를 말한다.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+                            <div class="sidebar-box ftco-animate">
+
+                                <h3 class="sidebar-heading">List</h3>
+
+                                <ol>
+                                    <li>NoSQL</li>
+                                    <li>NoSQL 기반이 사용되는 경우</li>
+                                    <li>MongoDB
+                                        <ul>
+                                            <li>컬렉션(Collection)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Atlas Cloud
+                                        <ul>
+                                            <li>레플리카 세트</li>
+                                            <li>인스턴스</li>
+                                            <li>클러스터</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../js/google-map.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
