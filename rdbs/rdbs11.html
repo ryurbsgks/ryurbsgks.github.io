@@ -160,6 +160,32 @@
                                     {$unset: {&lt;field&gt;: "", ...}}
                                 </code>
 
+                                <h2 class="mb-3">11. $push</h2>
+
+                                <p>배열에 요소를 추가한다.</p>
+
+                                <code>
+                                    {$push: {&lt;field&gt;: &lt;value&gt;, ...}}
+                                </code>
+
+                                <h2 class="mb-3">12. $addToSet</h2>
+
+                                <p>요소가 없는 경우에만 배열에 요소를 추가한다.</p>
+
+                                <code>
+                                    {$addToSet: {&lt;field&gt;: &lt;value&gt;, ...}}
+                                </code>
+
+                                <h2 class="mb-3">13. $pop</h2>
+
+                                <p>배열의 첫 번째 또는 마지막 요소를 제거한다.</p>
+
+                                <code>
+                                    {$pop: {&lt;field&gt;: &lt;-1or1&gt;}}
+                                </code>
+
+                                <p>-1을 입력하면 배열의 첫번째 요소가 제거되며 1을 입력하면 배열의 마지막 요소를 제거한다.</p>
+
                             </div>
                         </div>
 
@@ -179,6 +205,9 @@
                                     <li>$set</li>
                                     <li>$setOnInsert</li>
                                     <li>$unset</li>
+                                    <li>$push</li>
+                                    <li>$addToSet</li>
+                                    <li>$pop</li>
                                 </ol>
 
                             </div>
