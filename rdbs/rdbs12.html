@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ryu의 코딩 블로그</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+                    <li><a href="../gitindex.html">Git</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li class="colorlib-active"><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+                    <li><a href="../cookiesession.html">인증/보안</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+                        style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+                <p class="pfooter">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+                    This template is copyrighted by Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 px-md-5 py-5">
+
+                            <h1>MQL 쿼리 연산자</h1>
+
+                            <div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. MQL 쿼리 연산자</h2>
+
+                                <p>MQL(MongoDB Query Language) 쿼리 연산자는 데이터베이스 내에서 데이터를 찾는 방법을 제공해준다.</p>
+
+                                <h2 class="mb-3">2. 비교 연산자</h2>
+
+                                <p>비교 연산자를 사용하면 특정 범위 내에서 데이터를 찾을 수 있다.</p>
+
+                                <h3 class="mb-3">$eq</h3>
+
+                                <p>지정된 값과 같은 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$eq: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$ne</h3>
+
+                                <p>지정된 값과 같지 않은 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$ne: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$gt</h3>
+
+                                <p>지정된 값보다 큰 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$gt: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$lt</h3>
+
+                                <p>지정된 값보다 작은 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$lt: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$gte</h3>
+
+                                <p>지정된 값보다 크거나 같은 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$gte: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$lte</h3>
+
+                                <p>지정된 값보다 작거나 같은 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$lte: &lt;value&gt;}}
+                                </code>
+
+                                <h3 class="mb-3">$in</h3>
+
+                                <p>지정된 배열의 값중 하나 이상 포함된 배열이 있는 값을 찾는다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$in: [&lt;value&gt;, ...]}}
+                                </code>
+
+                                <h3 class="mb-3">$nin</h3>
+
+                                <p>지정된 배열의 값과 일치하지 않는 배열을 찾는다.<br>
+                                    만약 배열의 요소가 여러개일때 요소중 하나라도 포함되어 있으면 $nin 연산자는 적용되지 않는다.
+                                </p>
+
+                                <code>
+                                    {&lt;field&gt;: {$nin: [&lt;value&gt;, ...]}}
+                                </code>
+
+                                <h2 class="mb-3">3. 논리 연산자</h2>
+
+                                <p>$and, $or, $nor 연산자는 작동할 절의 배열 앞에 위치하며 $not 연산자는 배열 구문이 필요하지 않다.</p>
+
+                                <h3 class="mb-3">$and</h3>
+
+                                <p>지정된 모든 쿼리절을 충족하는 도큐먼트를 반환한다.</p>
+
+                                <code>
+                                    {$and: [{&lt;query&gt;}, {&lt;query&gt;}, ...]}
+                                </code>
+
+                                <h3 class="mb-3">$or</h3>
+
+                                <p>쿼리절 중 하나라도 일치하는 도큐먼트가 있다면 해당 도큐먼트를 반환한다.</p>
+
+                                <code>
+                                    {$or: [{&lt;query&gt;}, {&lt;query&gt;}, ...]}
+                                </code>
+
+                                <h3 class="mb-3">$nor</h3>
+
+                                <p>모든 절과 일치하지 않는 도큐먼트를 반환한다.</p>
+
+                                <code>
+                                    {$nor: [{&lt;query&gt;}, {&lt;query&gt;}, ...]}
+                                </code>
+
+                                <h3 class="mb-3">$not</h3>
+
+                                <p>뒤의 조건을 만족하지 않는 모든 도큐먼트를 반환한다.</p>
+
+                                <code>
+                                    {$not: {&lt;query&gt;}}
+                                </code>
+
+                                <h2 class="mb-3">4. 배열 연산자</h2>
+                                
+                                <p>배열 연산자를 쓰지 않고 배열 필드를 쿼리하는 경우 배열을 지정한다면 해당 배열과 정확히 일치하는 배열을 가진 도큐먼트를 찾는다.<br>
+                                    또한 문자열로 요소를 지정한다면 해당 요소가 배열에 포함된 모든 도큐먼트를 찾는다.<br>
+                                    따라서 상황에 맞게 배열 연산자를 사용해야 한다.
+                                </p>
+
+                                <h3 class="mb-3">$all</h3>
+
+                                <p>배열 요소의 순서와 상관없이 지정된 요소가 모두 포함된 도큐먼트를 반환한다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$all: [&lt;value&gt;, ...]}}
+                                </code>
+
+                                <h3 class="mb-3">$size</h3>
+                               
+                                <p>지정된 배열 필드가 주어진 길이와 정확히 일치하는 모든 도큐먼트 반환한다.</p>
+
+                                <code>
+                                    {&lt;field&gt;: {$size: &lt;value&gt;}}
+                                </code>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+                            <div class="sidebar-box ftco-animate">
+
+                                <h3 class="sidebar-heading">List</h3>
+
+                                <ol>
+                                    <li>MQL 쿼리 연산자</li>
+                                    <li>비교 연산자
+                                        <ul>
+                                            <li>$eq</li>
+                                            <li>$ne</li>
+                                            <li>$gt</li>
+                                            <li>$lt</li>
+                                            <li>$gte</li>
+                                            <li>$lte</li>
+                                            <li>$in</li>
+                                            <li>$nin</li>
+                                        </ul>
+                                    </li>
+                                    <li>논리 연산자
+                                        <ul>
+                                            <li>$and</li>
+                                            <li>$or</li>
+                                            <li>$nor</li>
+                                            <li>$not</li>
+                                        </ul>
+                                    </li>
+                                    <li>배열 연산자
+                                        <ul>
+                                            <li>$all</li>
+                                            <li>$size</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../js/google-map.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
