@@ -40,13 +40,11 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../javascriptindex.html">JavaScript</a></li>
                     <li><a href="../linuxindex.html">Linux</a></li>
-                    <li><a href="../gitindex.html">Git</a></li>
                     <li class="colorlib-active"><a href="../nodeindex.html">Node.js</a></li>
                     <li><a href="../algorithmindex.html">알고리즘</a></li>
                     <li><a href="../databaseindex.html">Database</a></li>
                     <li><a href="../mvcindex.html">MVC</a></li>
                     <li><a href="../sequelizeindex.html">Sequelize</a></li>
-                    <li><a href="../cookiesession.html">인증/보안</a></li>
                     <li><a href="../about.html">About</a></li>
                 </ul>
             </nav>
@@ -97,6 +95,10 @@
                                 <h3 class="mb-3">nvm 설치</h3>
 
                                 <code>
+                                    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+                                </code>
+
+                                <code>
                                     wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
                                 </code>
 
@@ -120,6 +122,28 @@
                                 </code>
 
                                 <p>버전이 잘 나온다면 nvm 설치가 성공적으로 되었다.</p>
+
+                                <p>Linux에서 설치 이후 nvm: command not found 가 표시되면 현재 터미널을 닫고 새 터미널을 연 다음 다시 확인하거나 
+                                    해당 셸(shell)에 대한 아래 명령어를 입력한다.
+                                </p>
+
+                                <p>bash : 
+                                    <code>
+                                        source ~/.bashrc
+                                    </code>
+                                </p>
+
+                                <p>zsh : 
+                                    <code>
+                                        source ~/.zshrc
+                                    </code>
+                                </p>
+
+                                <p>ksh : 
+                                    <code>
+                                        . ~/.profile
+                                    </code>
+                                </p>
 
                                 <h3 class="mb-3">nvm 간단 사용법</h3>
 
