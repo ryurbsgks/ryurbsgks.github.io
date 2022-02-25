@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ryu의 코딩 블로그</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+                    <li><a href="../nodeindex.html">Node.js</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+                    <li class="colorlib-active"><a href="../cookiesession.html">인증/보안</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="colorlib-footer">
+                <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+                        style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+                <p class="pfooter">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+                    This template is copyrighted by Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 px-md-5 py-5">
+
+                            <h1>mkcert</h1>
+
+                            <div class="row pt-md-4">
+
+                                <h2 class="mb-3">1. mkcert</h2>
+
+                                <p>로컬 환경에서 신뢰할 수 있는 인증서를 만들 수 있는 간단한 툴이다.</p>
+
+                                <p>mkcert는 시스템 루트 저장소에 로컬 CA를 자동으로 생성 및 설치하고 로컬에서 신뢰할 수 있는 인증서를 생성한다.</p>
+                                
+                                <h2 class="mb-3">2. mkcert 설치</h2>
+
+                                <code>
+                                    sudo apt install libnss3-tools<br>
+                                    wget -O mkcert https://github.com/FiloSottile/mkcert/releases/download/v1.4.3/mkcert-v1.4.3-linux-amd64<br>
+                                    chmod +x mkcert<br>
+                                    sudo cp mkcert /usr/local/bin/
+                                </code>
+
+                                <h2 class="mb-3">3. 인증서 생성</h2>
+
+                                <p>아래 명령어를 통해 로컬을 인증된 발급기관으로 추가한다.</p>
+
+                                <code>
+                                    mkcert -install
+                                </code>
+
+                                <p>아래 명령어를 통해 로컬 환경에 대한 인증서를 생성한다.</p>
+
+                                <code>
+                                    mkcert -key-file key.pem -cert-file cert.pem localhost 127.0.0.1 ::1
+                                </code>
+
+                                <p>해당 명령어를 입력하면 옵션으로 추가한 localhost, 127.0.0.1(IPv4), ::1(IPv6)에서 사용할 수 있는 인증서가 완성되고 cert.pem, key.pem 파일이 생성된 것을 확인할 수 있다.</p>
+
+                                <p>인증서는 공개키, 그리고 인증기관의 서명을 포함하고 있으므로 공개되어도 상관이 없지만 key.pem의 경우 개인 키이므로 공개하지 않고 암호처럼 다루어야 한다.</p>
+
+                                <h2 class="mb-3">4. HTTPS 서버 작성</h2>
+
+                                <p>Node.js 환경에서 HTTPS 서버를 작성하기 위해서는 https 내장 모듈 또는 express.js를 이용해 https 서버를 만들 수 있다.</p>
+                                
+                                <h3 class="mb-3">https 내장 모듈</h3>
+                                
+                                <code>
+                                    const https = require("https");<br>
+                                    const fs = require("fs");<br>
+                                    https.createServer({<br>
+                                    &nbsp;&nbsp;key: fs.readFileSync("&lt;key의 경로&gt;" + "/key.pem", "utf-8"),<br>
+                                    &nbsp;&nbsp;cert: fs.readFileSync("&lt;cert의 경로&gt;" + "/cert.pem", "utf-8")<br> 
+                                    }, function(req, res){<br>
+                                    &nbsp;&nbsp;res.write("Congrats! You made https server now :)");<br>
+                                    &nbsp;&nbsp;res.end();<br>
+                                    }).listen(3001);<br>
+                                </code>
+
+                                <h3 class="mb-3">express.js</h3>
+
+                                <code>
+                                    const https = require("https");<br>
+                                    const fs = require("fs");<br>
+                                    const express = require("express");<br>
+                                    const app = express();<br>
+                                    https.createServer({<br>
+                                    &nbsp;&nbsp;key: fs.readFileSync("&lt;key의 경로&gt;" + "/key.pem", "utf-8"),<br>
+                                    &nbsp;&nbsp;cert: fs.readFileSync("&lt;cert의 경로&gt;" + "/cert.pem", "utf-8")<br>
+                                    }, app.use("/", (req,res) => {<br>
+                                    &nbsp;&nbsp;res.send("Congrats! You made https server now :)");<br>
+                                    })).listen(3001);
+                                </code>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+                            <div class="sidebar-box ftco-animate">
+
+                                <h3 class="sidebar-heading">List</h3>
+
+                                <ol>
+                                    <li>mkcert</li>
+                                    <li>mkcert 설치</li>
+                                    <li>인증서 생성</li>
+                                    <li>HTTPS 서버 작성
+                                        <ul>
+                                            <li>https 내장 모듈</li>
+                                            <li>express.js</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="../js/google-map.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
