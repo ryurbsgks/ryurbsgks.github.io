@@ -244,6 +244,86 @@
 
                                 <p>&lt;Remote_repository&gt;는 Remote repository의 단축이름이다.</p>
 
+                                <h2 class="mb-3">13. Branch</h2>
+
+                                <p>새로운 브랜치를 생성하거나 브랜치 목록을 확인 또는 삭제하는 명령어</p>
+
+                                <code>
+                                    git branch &lt;new_branch_name&gt;
+                                </code>
+
+                                <p>&lt;new_branch_name&gt; 브랜치를 생성한다.</p>
+
+                                <code>
+                                    git branch
+                                </code>
+
+                                <p>브랜치 목록을 확인한다.</p>
+
+                                <code>
+                                    git branch -v
+                                </code>
+
+                                <p>v 옵션은 브랜치 목록과 각 브랜치의 최근 commit을 확인하는 옵션이다.</p>
+
+                                <code>
+                                    git branch -d &lt;branch_name&gt;
+                                </code>
+
+                                <p>d 옵션은 &lt;branch_name&gt; 브랜치를 삭제하는 옵션이다.</p>
+
+                                <code>
+                                    git branch -D
+                                </code>
+
+                                <p>D 옵션은 병합하지 않은 브랜치를 강제 삭제하는 옵션이다.</p>
+
+                                <h2 class="mb-3">14. Switch</h2>
+
+                                <p>브랜치를 전환하는 명령어</p>
+
+                                <code>
+                                    git switch &lt;branch_name&gt;
+                                </code>
+
+                                <p>c 옵션은 새로운 브랜치를 생성 후 해당 브랜치로 전환하는 옵션이다.</p>
+
+                                <code>
+                                    git switch -c &lt;branch_name&gt;
+                                </code>
+
+                                <h2 class="mb-3">15. Checkout</h2>
+
+                                <p>브랜치를 전환하는 명령어</p>  
+                                
+                                <code>
+                                    git checkout &lt;branch_name&gt;
+                                </code>
+
+                                <p>b 옵션은 새로운 브랜치를 생성 후 해당 브랜치로 전환하는 옵션이다.</p>
+
+                                <code>
+                                    git checkout -b &lt;branch_name&gt;
+                                </code>
+
+                                <h2 class="mb-3">16. Merge</h2>
+
+                                <p>브랜치를 병합하는 명령어</p>
+
+                                <code>
+                                    git merge &lt;branch_name&gt;
+                                </code>
+
+                                <p>현재 위치의 브랜치에 &lt;branch_name&gt; 브랜치를 병합한다.</p>
+
+                                <h2 class="mb-3">17. Stash</h2>
+
+                                <p>아직 마무리하지 않은 작업을 스택에 잠시 저장할 수 있도록 하는 명령어</p>
+
+                                <code>
+                                    git stash
+                                </code>
+
                             </div>
                         </div>
 
@@ -275,6 +355,11 @@
                                     <li>Pull</li>
                                     <li>Remote</li>
                                     <li>Remote add</li>
+                                    <li>Branch</li>
+                                    <li>Switch</li>
+                                    <li>Checkout</li>
+                                    <li>Merge</li>
+                                    <li>Stash</li>
                                 </ol>
 
                             </div>
