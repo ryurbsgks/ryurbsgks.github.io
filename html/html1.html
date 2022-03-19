@@ -38,8 +38,19 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Home</a></li>
-					<li><a href="../about.html">About</a></li>
-
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li class="colorlib-active"><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+                    <li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+                    <li><a href="../about.html">About</a></li>
 				</ul>
 			</nav>
 
@@ -66,32 +77,49 @@
 
 							<div class="row pt-md-4">
 
-                                <h2 class="mb-3">1. HTML</h2>
+								<h2 class="mb-3">1. HTML</h2>
 
                                 <p>HTML은 HyperText Markup Language의 약자로 웹 페이지를 구성하는 마크업 언어이다.</p>
 
-                                <p>HTML에는 수많은 Tag와 Input type들이 존재한다.<br>
-                                    기본 구조는 크게 head와 body영역으로 구성되며 각 영역에 세부 요소들의 tag와 Semantic tag들이 들어온다.
-                                </p>
+                                <p>HTML의 기본 구조는 크게 Head와 Body의 영역으로 구성되며 각 영역은 &lt;head&gt; Tag와 &lt;body&gt; Tag로 구별한다.<br>
+									각 영역에는 HTML Element가 존재한다.
+								</p>
+
+								<h2 class="mb-3">2. Element(요소)</h2>
+
+								<p>HTML은 Element로 구성되어 있으며 Element는 Tag와 Attribute(속성), Content로 구성되어 있다.</p>
+
+								<p>
+									<img src="../images/element.PNG" alt="" class="img-fluid">
+								</p>
+
+								<h2 class="mb-3">3. Tag</h2>
+
+								<p>Tag는 부등호(&lt;&gt;)로 묶인 HTML 기본 구성 요소로 Start Tag(Opening Tag)와 End Tag(Closing Tag)로 구성되어 있다.</p>
+
+								<p>Start Tag에 다양한 Attribute가 들어갈 수 있으며 End Tag는 슬래쉬(/)를 넣어 해당 태그가 끝났음을 의미한다.</p>
                     
-                                <h3 class="mb-3">Tag</h3>
+								<p>Tag 내부(Start Tag와 End Tag 사이)에 Content가 올 수도 있으며 만약 Content가 없다면 Self-closing Tag를 사용할 수 있다.</p>
 
-                                <p>Tag는 Start tag(Opening tag)와 End tag(Closing tag) 그리고 그 사이의 Content로 구성된다.</p>
+                                <h3 class="mb-3">Self-closing Tag</h3>
 
-                                <h3 class="mb-3">Semantic tag</h3>
+								<p>Self-closing tag는 End tag를 사용하지 않고 Start tag의 끝에 한칸의 공백을 두고 슬래쉬(/)를 사용하여 해당 태그가 끝났음을 알린다.</p>
 
-                                <p>Semantic의 사전적 의미는 "의미론적인" 이라는 뜻이다. 즉 의미론적인 태그를 뜻한다.</p>
+								<p>예를들면 아래와 같다.</p>
 
-                                <p>HTML작성시 div나 span등 그 이름만 들어서는 그 내용이 무엇을 뜻하는지 한번에 알아보기가 힘들다.<br>
-                                    HTML5로 넘어오면서 이 문제를 해결하기 위해 각 태그들이 무엇을 뜻하는지 명시적으로 표현하기 위해 Semantic tag를 활용하기 시작했다.<br>
-                                    Semantic tag의 사용 장점은 각 태그들이 무엇을 의미하는지 한눈에 알아보기 쉽도록 구현 할 수 있다는 것이다.
-                                </p>
+								<code>
+									&lt;img /&gt;
+								</code>
 
-                                <h3 class="mb-3">Element</h3>
+								<h2 class="mb-3">4. Semantic Tag</h2>
 
-                                <p>element는 HTML을 문서형식으로 구성할 때 특정 의미를 표현하는 약속된 단어이다.</p>
+								<p>Semantic의 사전적 의미는 "의미론적인" 이라는 뜻으로 Semantic Tag를 직역하면 의미론적인 태그를 말한다.</p>
 
-                                <p>tag와 차이점은 img자체는 element(요소)이며 요소를 &lt;&gt;로 깜산 &lt;img&gt;는 tag(태그)이다.</p>
+								<p>HTML 작성시 div나 span 등 그 이름만 들어서는 그 내용이 무엇을 뜻하는지 한번에 알아보기가 힘든 경우가 있다.<br>
+									HTML5로 넘어오면서 이 문제를 해결하기 위해 각 Tag들이 무엇을 뜻하는지 명시적으로 표한하기 위해 Semantic Tag를 활용하기 시작했다.
+								</p>
+
+								<p>Semantic Tag의 사용 장점은 &lt;nav&gt;, &lt;main&gt; 등과 같이 각 태그들이 무엇을 의미하는지 한눈에 알아보기 쉽도록 구현할 수 있다는 것이다.</p>
 
 							</div>
 						</div>
@@ -102,13 +130,14 @@
 								<h3 class="sidebar-heading">List</h3>
 
 								<ol>
-									<li>HTML
-                                        <ul>
-                                            <li>Tag</li>
-                                            <li>Semantic tag</li>
-                                            <li>Element</li>
-                                        </ul>
-                                    </li>
+									<li>HTML</li>
+									<li>Element(요소)</li>
+									<li>Tag
+										<ul>
+											<li>Self-closing Tag</li>
+										</ul>
+									</li>
+									<li>Semantic Tag</li>
 								</ol>
 
 							</div>
