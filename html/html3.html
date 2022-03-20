@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+                    <li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li class="colorlib-active"><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+                    <li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+                    <li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>자주 사용하는 HTML Tag(Body 영역)</h1>
+
+							<div class="row pt-md-4">
+                                
+                                <h2 class="mb-3">1. &lt;body&gt;</h2>
+
+                                <p>&lt;body&gt; 태그는 HTML 문서의 내용을 나타내며 한 문서에 하나의 &lt;body&gt; 태그만 존재할 수 있다.</p>
+
+                                <code>
+                                    &lt;html&gt;<br>
+                                    &nbsp;&nbsp;&lt;head&gt;<br>
+                                    &nbsp;&nbsp;&lt;/head&gt;<br>
+                                    &nbsp;&nbsp;&lt;body&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;body 안에 들어가는 태그&gt;<br>
+                                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                                    &lt;/html&gt;
+                                </code>
+
+                                <h2 class="mb-3">2. &lt;div&gt;</h2>
+
+                                <p>&lt;div&gt; 태그는 문서에서 특정 영역이나 구획을 정의할 때 사용하며 여러 요소들을 하나로 묶어 줄 수도 있다.</p>
+
+                                <code>
+                                    &lt;div&gt;&lt;div 영역에 들어갈 태그 or 내용&gt;&lt;/div&gt;
+                                </code>
+
+                                <h2 class="mb-3">3. &lt;span&gt;</h2>
+
+                                <p>&lt;span&gt; 태그는 그 자체만으로는 어떠한 의미도 가지지 않지만 스타일을 적용하거나 HTML 문서에서 인라인 요소들을 하나로 묶을 때 사용한다.</p>
+
+                                <code>
+                                    &lt;span&gt;&lt;span 영역에 들어갈 태그 or 내용&gt;&lt;/span&gt;
+                                </code>
+
+                                <h3 class="mb-3">&lt;div&gt;와 &lt;span&gt; 태그의 차이</h3>
+                                
+                                <p>&lt;div&gt;와 &lt;span&gt; 태그의 차이는 &lt;div&gt;는 블록 타입의 태그이고 &lt;span&gt;은 인라인 타입의 태그이다.</p>
+
+                                <h2 class="mb-3">4. &lt;h1 ~ h6&gt;</h2>
+
+                                <p>&lt;h1 ~ h6&gt; 태그는 HTML 문서에서 제목을 정의할 때 사용하며 숫자가 작을 수록 텍스트의 크기가 더 크며 제목을 더 강조한다.</p>
+
+                                <code>
+                                    &lt;h1&gt;제목&lt;/h1&gt;
+                                </code>
+
+                                <h2 class="mb-3">5. &lt;p&gt;</h2>
+
+                                <p>&lt;p&gt; 태그는 하나의 문단을 나타낸다.</p>
+
+                                <code>
+                                    &lt;p&gt;문단&lt;/p&gt;
+                                </code>
+
+                                <h2 class="mb-3">6. &lt;a&gt;</h2>
+
+                                <p>&lt;a&gt; 태그는 href 속성을 통해 다른 페이지나 같은 페이지의 특정 위치로 이동할 수 있는 하이퍼링크를 만든다.</p>
+
+                                <code>
+                                    &lt;a href="&lt;URL&gt;"&gt;하이퍼링크될 URL에 대한 설명&lt;/a&gt;
+                                </code>
+
+                                <h3 class="mb-3">href</h3>
+
+                                <p>href 속성은 하이퍼링크가 가리키는 URL을 속성값으로 갖는다.</p>
+
+                                <h2 class="mb-3">7. &lt;img&gt;</h2>
+
+                                <p>&lt;img&gt; 태그는 문서에 이미지를 삽입할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;img src="&lt;img_path&gt;"&gt;
+                                </code>
+
+                                <h3 class="mb-3">src</h3>
+
+                                <p>src 속성은 필수이며 포함하고자 하는 이미지의 경로를 지정한다.</p>
+
+                                <h3 class="mb-3">alt</h3>
+
+                                <p>alt 속성은 필수는 아니지만 이미지를 표시할 수 없는 경우에 이 속성값을 대신 보여준다.</p>
+
+                                <h2 class="mb-3">8. &lt;form&gt;</h2>
+
+                                <p>&lt;form&gt; 태그는 정보를 제출하기 위한 구획을 나타낸다.</p>
+
+                                <code>
+                                    &lt;form&gt;<br>
+                                    &nbsp;&nbsp;&lt;form 안에 들어가는 태그&gt;<br>
+                                    &lt;/form&gt;
+                                </code>
+
+                                <h2 class="mb-3">9. &lt;button&gt;</h2>
+
+                                <p>&lt;button&gt; 태그는 클릭 가능한 버튼을 나타낸다.</p>
+
+                                <code>
+                                    &lt;button type="&lt;type_value&gt;"&gt;button_name&lt;/button&gt;
+                                </code>
+
+                                <h3 class="mb-3">type</h3>
+
+                                <p>type 속성은 버튼의 행동 방식을 나타내는 속성으로 속성값으로는 submit, reset, button이 있다.</p>
+
+                                <h4 class="mb-3">submit</h4>
+
+                                <p>버튼이 서버로 양식 데이터를 제출하며 default 값이다.</p>
+
+                                <h4 class="mb-3">button</h4>
+
+                                <p>기본 행동이 없으며 클릭했을 때 아무것도 하지 않는다.<br>
+                                    특정 행동을 하기 위해서는 클라이언트측 스크립트와 연결하여 사용한다.
+                                </p>
+
+                                <h4 class="mb-3">reset</h4>
+
+                                <p>&lt;button&gt; 태그를 감싸고 있는 &lt;form&gt; 태그의 데이터를 초기화한다.</p>
+
+                                <h3 class="mb-3">value</h3>
+
+                                <p>value 속성은 해당 버튼의 초기 값을 명시한다.</p>
+
+                                <h3 class="mb-3">form</h3>
+
+                                <p>form 속성을 사용하면 버튼을 &lt;form&gt; 태그에 넣지 않고도 연결할 수 있으며 부모 중 form이 있더라더도 form을 재정의할 수 있다.</p>
+
+                                <p>form 속성을 명시하지 않았으면 부모 중 &lt;form&gt; 태그가 존재하는 form과 연결된다.</p>
+
+                                <h3 class="mb-3">disabled</h3>
+
+                                <p>disabled 속성을 명시하면 버튼을 누르거나 클릭하는 것을 막는다.</p>
+
+                                <h2 class="mb-3">10. &lt;input&gt;</h2>
+
+                                <p>&lt;input&gt; 태그는 사용자로부터 입력을 받을 수 있는 입력 필드를 정의할 때 사용하며 End tag가 존재하면 안된다.<br>
+                                    입력 필드는 type 속성의 값을 변경함으로써 여러 가지 입력 필드를 나타낼 수 있다.
+                                </p>
+
+                                <code>
+                                    &lt;input type="&lt;type_value&gt;"&gt;
+                                </code>
+
+                                <p>type의 속성값에는 수많은 값이 있지만 여기에서는 자주 사용하는 속성값만 다룬다.</p>
+
+                                <h3 class="mb-3">button</h3>
+                                
+                                <p>기본 행동을 가지지 않으며 value 값을 레이블로 사용하는 버튼이다.</p>
+
+                                <h3 class="mb-3">submit</h3>
+
+                                <p>양식을 전송하는 버튼이다.</p>
+
+                                <h3 class="mb-3">text</h3>
+
+                                <p>default 값으로 한줄의 텍스트 필드를 제공한다.</p>
+
+                                <h3 class="mb-3">number</h3>
+
+                                <p>숫자를 입력하기 위한 속성값이다.</p>
+
+                                <h3 class="mb-3">password</h3>
+
+                                <p>값이 가려진 한줄 텍스트 필드를 제공한다.</p>
+
+                                <h3 class="mb-3">email</h3>
+
+                                <p>이메일 주소를 입력할 수 있는 필드를 제공한다.</p>
+
+                                <h3 class="mb-3">checkbox</h3>
+
+                                <p>단일 값을 선택하거나 선택 해제할 수 있는 체크박스이다.</p>
+
+                                <h3 class="mb-3">radio</h3>
+
+                                <p>같은 name 값을 가진 여러개의 버튼 중에서 하나의 값을 선택하게 하는 버튼이다.</p>
+
+                                <h3 class="mb-3">hidden</h3>
+
+                                <p>보이지 않지만 값은 서버로 전송할 수 있도록 하는 속성값이다.</p>
+
+                                <h3 class="mb-3">date</h3>
+
+                                <p>날짜(년월일)를 지정할 수 있는 컨트롤이며 클릭시 날짜를 선택할 수 있는 달력을 열어준다.</p>
+
+                                <h3 class="mb-3">file</h3>
+
+                                <p>클릭시 파일을 지정할 수 있는 컨트롤을 열어준다.</p>
+
+                                <h2 class="mb-3">11. &lt;textarea&gt;</h2>
+
+                                <p>&lt;textarea&gt; 태그는 여러 줄의 텍스트를 입력할 수 있는 텍스트 입력 영역을 정의할 때 사용한다.</p>
+
+                                <p>텍스트 입력 영역의 크기는 cols, rows 속성으로 지정할 수 있으며 CSS의 height, width 속성을 사용하면 더욱 손 쉽게 지정할 수 있다.<br>
+                                    이때 cols, rows의 속성값은 양의 정수이다.
+                                </p>
+
+                                <code>
+                                    &lt;textarea cols="&lt;양의 정수&gt;" rows="&lt;양의 정수&gt;"&gt;&lt;/textarea&gt;
+                                </code>
+
+                                <h2 class="mb-3">12. &lt;li&gt;</h2>
+
+                                <p>&lt;li&gt; 태그는  &lt;ul&gt; 또는 &lt;ol&gt; 태그 안에 들어가는 내용의 목록을 나타낼 때 사용한다.</p>
+
+                                <p>&lt;li&gt; 태그의 부모 요소로는 반드시 &lt;ul&gt; 또는 &lt;ol&gt; 태그가 있어야 하며 &lt;ul&gt;, &lt;ol&gt; 태그는 중복해서 사용 가능하다.</p>
+
+                                <code>
+                                    &lt;ol&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;목록<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;목록&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;/li&gt;<br>
+                                    &lt;/ol&gt;
+                                </code>
+
+                                <h2 class="mb-3">13. &lt;ul&gt;</h2>
+
+                                <p>&lt;ul&gt; 태그는 순서가 없는 단순 목록을 표현할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;목록&lt;/li&gt;<br>
+                                    &lt;/ul&gt;
+                                </code>
+
+                                <h2 class="mb-3">14. &lt;ol&gt;</h2>
+
+                                <p>&lt;ol&gt; 태그는 순서가 있는 목록을 표현할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;ol&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;목록&lt;/li&gt;<br>
+                                    &lt;/ol&gt;
+                                </code>
+
+                                <h2 class="mb-3">15. &lt;dl&gt;</h2>
+
+                                <p>&lt;dl&gt; 태그는 어떠한 단어 또는 정의에 대한 설명이 묶여있을 때 그 목록을 리스트 형식으로 나타낼 때 사용한다.</p>
+
+                                <code>
+                                    &lt;dl&gt;<br>
+                                    &nbsp;&nbsp;&lt;dt&gt;어떠한 단어 또는 정의&lt;/dt&gt;<br>
+                                    &nbsp;&nbsp;&lt;dd&gt;해당 단어 또는 정의에 대한 설명&lt;/dd&gt;<br>
+                                    &lt;/dl&gt;
+                                </code>
+
+                                <p>&lt;dl&gt; 태그의 자식 태그로 &lt;dt&gt;, &lt;dd&gt; 태그가 존재한다.</p>
+
+                                <h3 class="mb-3">&lt;dt&gt;</h3>
+
+                                <p>&lt;dt&gt; 태그는 어떠한 단어 또는 정의를 나타낸다.</p>
+
+                                <h3 class="mb-3">&lt;dd&gt;</h3>
+
+                                <p>&lt;dd&gt; 태그는 해당 단어 또는 정의에 대한 설명을 나타낸다.</p>
+
+                                <h2 class="mb-3">16. &lt;table&gt;</h2>
+
+                                <p>&lt;table&gt; 태그는 행과 열로 이루어진 표를 나타낸다.</p>
+
+                                <code>
+                                    &lt;table&gt;<br>
+                                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;열의 제목&lt;/th&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;테이블 셀의 데이터&lt;/td&gt;<br>
+                                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                                    &lt;/table&gt;
+                                </code>
+
+                                <p>&lt;table&gt; 태그의 자식 태그로 &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; 태그가 존재한다.</p>
+
+                                <h3 class="mb-3">&lt;tr&gt;</h3>
+
+                                <p>&lt;tr&gt; 태그는 테이블의 각 행을 정의한다.</p>
+
+                                <h3 class="mb-3">&lt;th&gt;</h3>
+
+                                <p>&lt;th&gt; 태그는 테이블의 각 열의 제목을 정의한다.</p>
+
+                                <h3 class="mb-3">&lt;td&gt;</h3>
+
+                                <p>&lt;td&gt; 태그는 하나의 테이블 셀을 정의한다.</p>
+
+                                <h2 class="mb-3">17. &lt;b&gt;</h2>
+
+                                <p>&lt;b&gt; 태그는 텍스트를 시각적으로 강조하며 텍스트 자체를 강조하는 볼드체이다.</p>
+
+                                <code>
+                                    &lt;b&gt;강조할 텍스트&lt;/b&gt;
+                                </code>
+
+                                <h2 class="mb-3">18. &lt;strong&gt;</h2>
+
+                                <p>&lt;strong&gt; 태그는 텍스트를 시각적으로 강조하며 텍스트 자체를 강조하는 볼드체이다.</p>
+
+                                <code>
+                                    &lt;strong&gt;강조할 텍스트&lt;/strong&gt;
+                                </code>
+
+                                <h3 class="mb-3">&lt;b&gt;와 &lt;strong&gt; 태그의 차이</h3>
+
+                                <p>&lt;b&gt;와 &lt;strong&gt; 태그의 차이는 스크린 리더(컴퓨터의 화면 낭독 소프트웨어)에서의 차이가 크다.<br>
+                                    &lt;b&gt; 태그는 강조하지 않지만 &lt;strong&gt; 태그는 강조해서 읽어준다.
+                                </p>
+
+                                <h2 class="mb-3">19. &lt;i&gt;</h2>
+
+                                <p>&lt;i&gt; 태그는 텍스트를 이탤릭체로 표현한다.</p>
+
+                                <code>
+                                    &lt;i&gt;강조할 텍스트&lt;/i&gt;
+                                </code>
+
+                                <h2 class="mb-3">20. &lt;em&gt;</h2>
+
+                                <p>&lt;em&gt; 태그는 텍스트를 강조하는 이탤릭체를 표현한다.</p>
+
+                                <code>
+                                    &lt;em&gt;강조할 텍스트&lt;/em&gt;
+                                </code>
+
+                                <h3 class="mb-3">&lt;i&gt;와 &lt;em&gt; 태그의 차이</h3>
+
+                                <p>&lt;i&gt;와 &lt;em&gt; 태그의 차이는 스크린 리더(컴퓨터의 화면 낭독 소프트웨어)에서의 차이가 크다.<br>
+                                    &lt;i&gt; 태그는 강조하지 않지만 &lt;em&gt; 태그는 강조해서 읽어준다.
+                                </p>
+
+                                <h2 class="mb-3">21. &lt;br&gt;</h2>
+
+                                <p>&lt;br&gt; 태그는 텍스트 안에 줄바꿈을 할 때 사용하며 End tag가 존재하면 안된다.</p>
+
+                                <code>
+                                    &lt;br&gt;
+                                </code>
+
+                                <h2 class="mb-3">22. &lt;del&gt;</h2>
+
+                                <p>&lt;del&gt; 태그는 문서에서 제거된 텍스트의 범위를 나타낸다.</p>
+
+                                <code>
+                                    &lt;del&gt;제거된 텍스트&lt;/del&gt;
+                                </code>
+
+                                <h2 class="mb-3">23. &lt;code&gt;</h2>
+
+                                <p>&lt;code&gt; 태그는 코드의 일부분을 나타낼 때 사용하며 CSS를 사용하여 더욱 다양한 모습으로 꾸밀 수 있다.</p>
+
+                                <code>
+                                    &lt;code&gt;작성할 code&lt;/code&gt;
+                                </code>
+
+                                <h2 class="mb-3">24. &lt;header&gt;</h2>
+
+                                <p>&lt;header&gt; 태그는 시멘틱 태그로 문서나 특정 섹션의 헤더를 정의할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;header&gt;
+                                    &nbsp;&nbsp;&lt;header 안에 들어가는 태그&gt;
+                                    &lt;/header&gt;
+                                </code>
+
+                                <h2 class="mb-3">25. &lt;nav&gt;</h2>
+
+                                <p>&lt;nav&gt; 태그는 시멘틱 태그로 다른 페이지 또는 현재 페이지의 다른 부분과 연결되는 네비게이션 링크들의 집합을 묶어두기 위한 요소이다.</p>
+
+                                <code>
+                                    &lt;nav&gt;
+                                    &nbsp;&nbsp;&lt;nav 안에 들어가는 태그&gt;
+                                    &lt;/nav&gt;
+                                </code>
+
+                                <h2 class="mb-3">26. &lt;section&gt;</h2>
+
+                                <p>&lt;section&gt; 태그는 시멘틱 태그로 문서에 포함된 독립적인 섹션을 정의할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;section&gt;
+                                    &nbsp;&nbsp;&lt;section 안에 들어가는 태그&gt;
+                                    &lt;/section&gt;
+                                </code>
+
+                                <h2 class="mb-3">27. &lt;main&gt;</h2>
+
+                                <p>&lt;main&gt; 태그는 시멘틱 태그로 해당 문서의 주 컨텐츠를 정의할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;main&gt;
+                                    &nbsp;&nbsp;&lt;main 안에 들어가는 태그&gt;
+                                    &lt;/main&gt;
+                                </code>
+
+                                <h2 class="mb-3">28. &lt;article&gt;</h2>
+
+                                <p>&lt;article&gt; 태그는 시멘틱 태그로 문서, 페이지, 애플리케이션 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타낸다.</p>
+
+                                <code>
+                                    &lt;article&gt;
+                                    &nbsp;&nbsp;&lt;article 안에 들어가는 태그&gt;
+                                    &lt;/article&gt;
+                                </code>
+
+                                <h2 class="mb-3">29. &lt;aside&gt;</h2>
+
+                                <p>&lt;aside&gt; 태그는 시멘틱 태그로 페이지의 다른 컨텐츠들과 직접적인 관련이 없거나 약간의 연광성을 가지고 있지만 해당 컨테츠들로부터 분리시킬 수 있는 컨텐츠로 구성된 페이지 영역을 정의할 때 사용한다.</p>
+
+                                <code>
+                                    &lt;aside&gt;
+                                    &nbsp;&nbsp;&lt;aside 안에 들어가는 태그&gt;
+                                    &lt;/aside&gt;
+                                </code>
+
+                                <h2 class="mb-3">30. &lt;footer&gt;</h2>
+
+                                <p>&lt;footer&gt; 태그는 시멘틱 태그로 문서나 특정 섹션의 하단부를 정의할 때 사용한다.</p>
+
+                                <p>일반적으로 작성자, 저작권 정보, 관련 문서 등의 내용을 담는다.</p>
+
+                                <code>
+                                    &lt;footer&gt;
+                                    &nbsp;&nbsp;&lt;footer 안에 들어가는 태그&gt;
+                                    &lt;/footer&gt;
+                                </code>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>&lt;body&gt;</li>
+                                    <li>&lt;div&gt;</li>
+                                    <li>&lt;span&gt;
+                                        <ul>
+                                            <li>&lt;div&gt;와 &lt;span&gt; 태그의 차이</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;h1 ~ h6&gt;</li>
+                                    <li>&lt;p&gt;</li>
+                                    <li>&lt;a&gt;
+                                        <ul>
+                                            <li>href</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;img&gt;
+                                        <ul>
+                                            <li>src</li>
+                                            <li>alt</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;form&gt;</li>
+                                    <li>&lt;button&gt;
+                                        <ul>
+                                            <li>type</li>
+                                            <li>value</li>
+                                            <li>form</li>
+                                            <li>disabled</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;input&gt;
+                                        <ul>
+                                            <li>button</li>
+                                            <li>submit</li>
+                                            <li>text</li>
+                                            <li>number</li>
+                                            <li>password</li>
+                                            <li>email</li>
+                                            <li>checkbox</li>
+                                            <li>radio</li>
+                                            <li>hidden</li>
+                                            <li>date</li>
+                                            <li>file</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;textarea&gt;</li>
+                                    <li>&lt;li&gt;</li>
+                                    <li>&lt;ul&gt;</li>
+                                    <li>&lt;ol&gt;</li>
+                                    <li>&lt;dl&gt;
+                                        <ul>
+                                            <li>&lt;dt&gt;</li>
+                                            <li>&lt;dd&gt;</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;table&gt;
+                                        <ul>
+                                            <li>&lt;tr&gt;</li>
+                                            <li>&lt;th&gt;</li>
+                                            <li>&lt;td&gt;</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;b&gt;</li>
+                                    <li>&lt;strong&gt;
+                                        <ul>
+                                            <li>&lt;b&gt;와 &lt;strong&gt; 태그의 차이</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;i&gt;</li>
+                                    <li>&lt;em&gt;
+                                        <ul>
+                                            <li>&lt;i&gt;와 &lt;em&gt; 태그의 차이</li>
+                                        </ul>
+                                    </li>
+                                    <li>&lt;br&gt;</li>
+                                    <li>&lt;del&gt;</li>
+                                    <li>&lt;code&gt;</li>
+                                    <li>&lt;header&gt;</li>
+                                    <li>&lt;nav&gt;</li>
+                                    <li>&lt;section&gt;</li>
+                                    <li>&lt;main&gt;</li>
+                                    <li>&lt;article&gt;</li>
+                                    <li>&lt;aside&gt;</li>
+                                    <li>&lt;footer&gt;</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
