@@ -38,8 +38,19 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Home</a></li>
-					<li><a href="../about.html">About</a></li>
-
+                    <li class="colorlib-active"><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+                    <li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+                    <li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+                    <li><a href="../algorithmindex.html">알고리즘</a></li>
+                    <li><a href="../databaseindex.html">Database</a></li>
+                    <li><a href="../mvcindex.html">MVC</a></li>
+                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+                    <li><a href="../about.html">About</a></li>
 				</ul>
 			</nav>
 
@@ -68,120 +79,81 @@
 
                                 <h2 class="mb-3">1. 함수</h2>
 
-                                <p>함수란 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 말한다.<br>
-                                    선언된 함수는 필요할 때 호출하여 사용 할 수 있다.
+                                <p>함수란 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 말한다.</p>
+
+                                <p>선언된 함수는 필요할 때 호출하여 사용 할 수 있다.</p>
+                              
+                                <h2 class="mb-3">2. 함수의 선언</h2>
+
+                                <p>함수의 선언이란 해당 함수 이름으로 메모리를 확보하는 과정이다.</p>
+
+                                <p>함수의 선언 과정에서는 매개변수(parameter)를 설정할 수도 있으며 반환(return)문을 넣을 수도 있다.</p>
+                                
+                                <p>함수의 선언 방법에는 크게 함수 선언식, 함수 표현식, 화살표 함수가 있다.</p>
+
+                                <h3 class="mb-3">매개변수(parameter)</h3>
+
+                                <p>함수의 매개변수(parameter)는 함수 호출시 인수(argument)로 전달된 값을 함수 내부에서 사용할 수 있게 해주는 변수이다.</p>
+
+                                <p>매개변수는 함수의 선언시 소괄호(())안에 넣어주면 된다.</p>
+
+                                <h3 class="mb-3">반환(return)문</h3>
+
+                                <p>반환문은 함수의 실행을 바로 종료하고 값을 반환한다.<br>
+                                    이때 반환되는 값은 배열이나 객체를 포함한 모든 타입의 값을 반환할 수 있다.
                                 </p>
+
+                                <p>반환할 값은 return 뒤에 작성하면 된다.</p>
 
                                 <code>
-                                    function example(...&lt;variable&gt;){<br>
-                                    &nbsp;&nbsp;&lt;content&gt;;<br>
-                                    &nbsp;&nbsp;return &lt;result&gt;;<br>
-                                    }
+                                    return &lt;반환할 값&gt;
                                 </code>
-
-                                <h2 class="mb-3">2. 함수의 선언(정의)</h2>
-
-                                <p>함수의 선언(정의)은 다음과 같은 함수 키워드로 구성되어 있다.</p>
-
-                                <p>함수의 이름 : example<br>
-                                    함수의 매개변수 : variable<br>
-                                    함수를 정의하는 JS 표현 : content<br>
-                                    결과값 : result
-                                </p>
-
-                                <p>variable라는 매개변수를 가지며 content라는 함수를 정의하는 JS의 표현으로 result라는 결과값을 반환(return)하는 
-                                    example이라는 함수이다.
-                                </p>
-
-                                <h3 class="mb-3">반환문(return)</h3>
-
-                                <p>반환문은 함수의 실행을 바로 종료하고 호출자에게 값을 반환해준다.<br>
-                                    이때 반환값은 배열이나 객체를 포함한 모든 타입의 값을 반환할 수 있다.<br>
-                                    또한 함수에서의 반환문은 있어도 되고 없어도 된다.
-                                </p>
-
-                                <h2 class="mb-3">3. 함수의 호출</h2>
-
-                                <p>함수의 정의는 함수를 실행하는 것이 아니다. 함수의 실행은 함수를 호출하여 실행시켜야 한다.</p>
-
-                                <code>
-                                    example(...&lt;variable&gt;)<br>
-                                    // expected output : &lt;result&gt;
-                                </code>
-
-                                <p>다음과 같이 example 함수를 호출하여 형식에 맞는 매개변수 variable를 입력하면 
-                                    example함수를 실행하여 result라는 결과값을 얻게 된다.
-                                </p>
-
-                                <h2 class="mb-3">4. 함수의 범위(유효 범위)</h2>
-
-                                <p>함수 내에서 정의된 변수는 함수 내부에서만 접근 가능하고 함수 외부에서는 접근할 수 없다.</p>
-
-                                <code>
-                                    let num1 = 20, num2 = 3, name = "Chamahk";<br>
-                                    <br>
-                                    function multiply(){<br>
-                                    &nbsp;&nbsp;return num1 * num2;<br>
-                                    }<br>
-                                    <br>
-                                    multiply(); // expected output : 60<br>
-                                    <br>
-                                    function getScore(){<br>
-                                    &nbsp;&nbsp;var num1 = 2, num2 = 3<br>
-                                    <br>
-                                    &nbsp;&nbsp;function add(){<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;return name + " scored " + (num1 + num2);<br>
-                                    &nbsp;&nbsp;}<br>
-                                    <br>
-                                    &nbsp;&nbsp;return add();<br>
-                                    }<br>
-                                    <br>
-                                    getScore(); // expected output : "Chamahk scored 5"<br>
-                                </code>
-
-                                <h2 class="mb-3">5. 함수 선언 방법</h2>
-
-                                <p>함수 선언에는 여러가지 방식이 있다.(표현식을 명명, 익명으로 쪼개기도 한다)<br>
-                                    대표적으로는 선언식, 표현식, 화살표 함수가 있다.
-                                </p>
 
                                 <h3 class="mb-3">함수 선언식</h3>
 
                                 <code>
-                                    function &lt;function_name&gt;(...&lt;variable&gt;){<br>
-                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    function &lt;function_name&gt;() {<br>
+                                    &nbsp;&nbsp;&lt;실행할 코드&gt;<br>
                                     }
                                 </code>
-
+                                
                                 <h3 class="mb-3">함수 표현식</h3>
 
                                 <code>
-                                    let &lt;function_name&gt; = function(...&lt;variable&gt;){<br>
-                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    const &lt;function_name&gt; = function () {<br>
+                                    &nbsp;&nbsp;&lt;실행할 코드&gt;<br>
                                     }
                                 </code>
 
                                 <h3 class="mb-3">화살표 함수</h3>
 
                                 <code>
-                                    let &lt;function_name&gt; = (...&lt;variable&gt;) => {<br>
-                                    &nbsp;&nbsp;&lt;content&gt;<br>
+                                    const &lt;function_name&gt; = () => {<br>
+                                    &nbsp;&nbsp;&lt;실행할 코드&gt;<br>
                                     }
                                 </code>
 
-                                <h2 class="mb-3">6. 호이스팅</h2>
+                                <h2 class="mb-3">3. 함수의 호출</h2>
 
-                                <p>자바스크립트 함수 안에 있는 모든 변수의 선언은 함수의 맨 처음으로 이동된 것처럼 작동된다.<br>
-                                    이것을 호이스팅이라고 한다.(여기서 주의점은 선언만 호이스팅 된다)
+                                <p>함수의 호출이란 선언된 함수를 실행시키는 것을 말한다.</p>
+
+                                <p>함수의 호출 방법은 선언된 함수명 뒤에 소괄호(())를 붙여서 호출한다.<br>
+                                    이때 인수(argument)가 존재하면 소괄호(())안에 넣어주면 된다.
                                 </p>
 
                                 <code>
-                                    function testHoisting(){<br>
-                                    &nbsp;&nbsp;console.log(num); // expected output : undefined<br>
-                                    &nbsp;&nbsp;var num=10;<br>
-                                    &nbsp;&nbsp;console.log(num); // expected output : 10<br>
-                                    }
+                                    &lt;function_name&gt;()
                                 </code>
+
+                                <h3 class="mb-3">인수(argument)</h3>
+
+                                <p>함수의 인수(argument)는 함수가 호출될 때 함수로 값을 전달해주는 변수를 말한다.</p>
+
+                                <h2 class="mb-3">4. 호이스팅</h2>
+
+                                <p>JS에서 모든 변수의 선언은 해당 유효 범위의 최상단으로 끌어올린 것처럼 작동되는데 이것을 호이스팅이라고 부른다.<br>
+                                    이때 주의할점은 선언만 호이스팅이 된다는 것이다.
+                                </p>
 
 							</div>
 						</div>
@@ -193,19 +165,19 @@
 
 								<ol>
                                     <li>함수</li>
-									<li>함수의 선언(정의)
+									<li>함수의 선언
                                         <ul>
-											<li>반환문</li>
-										</ul>
-                                    </li>
-                                    <li>함수의 호출</li>
-                                    <li>함수의 범위(유효 범위)</li>
-                                    <li>함수 선언 방법
-                                        <ul>
-											<li>함수 선언식</li>
+                                            <li>매개변수(parameter)</li>
+                                            <li>반환(return)문</li>
+                                            <li>함수 선언식</li>
                                             <li>함수 표현식</li>
                                             <li>화살표 함수</li>
 										</ul>
+                                    </li>
+                                    <li>함수의 호출
+                                        <ul>
+                                            <li>인수(argument)</li>
+                                        </ul>
                                     </li>
                                     <li>호이스팅</li>
 								</ol>
