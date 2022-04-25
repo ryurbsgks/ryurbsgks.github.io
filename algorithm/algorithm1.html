@@ -38,16 +38,16 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="../index.html">Home</a></li>
-                    <li><a href="../javascriptindex.html">JavaScript</a></li>
-                    <li><a href="../linuxindex.html">Linux</a></li>
-                    <li><a href="../gitindex.html">Git</a></li>
+					<li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git</a></li>
 					<li><a href="../nodeindex.html">Node.js</a></li>
-                    <li class="colorlib-active"><a href="../algorithmindex.html">알고리즘</a></li>
-                    <li><a href="../databaseindex.html">Database</a></li>
-                    <li><a href="../mvcindex.html">MVC</a></li>
-                    <li><a href="../sequelizeindex.html">Sequelize</a></li>
-                    <li><a href="../cookiesession.html">인증/보안</a></li>
-                    <li><a href="../about.html">About</a></li>
+					<li class="colorlib-active"><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../about.html">About</a></li>
 				</ul>
 			</nav>
 
@@ -80,33 +80,33 @@
 
 								<h2 class="mb-3">2. 시간 복잡도</h2>
 
-                                <p>시간 복잡도란 입력값의 변화에 따라 연산을 실행할 때 문제를 해결하는데 걸리는 시간관계를 뜻한다.</p>
+								<p>시간 복잡도란 입력값의 변화에 따라 연산을 실행할 때 문제를 해결하는데 걸리는 시간관계를 뜻한다.</p>
 
-                                <p>시간 복잡도를 표기하는 방법으로는 Big-O(빅-오), Big-Ω(빅-오메가), Big-θ(빅-세타) 가 있다.<br>
-                                    각각 최악, 최선, 중간(평균)의 경우에 대하여 나타내는 방법이다.
-                                </p>
+								<p>시간 복잡도를 표기하는 방법으로는 Big-O(빅-오), Big-Ω(빅-오메가), Big-θ(빅-세타) 가 있다.<br>
+									각각 최악, 최선, 중간(평균)의 경우에 대하여 나타내는 방법이다.
+								</p>
 
-                                <h3 class="mb-3">Big-O 표기법</h3>
+								<h3 class="mb-3">Big-O 표기법</h3>
 
-                                <p>Big-O 표기법은 최악의 경우를 고려하므로 프로그램이 실행되는 과정에서 소요되는 최악의 시간까지 고려할 수 있기 때문에 
-                                    시간 복잡도를 표기하는 방법 중 하나로 가장 자주 사용 된다.
-                                </p>
+								<p>Big-O 표기법은 최악의 경우를 고려하므로 프로그램이 실행되는 과정에서 소요되는 최악의 시간까지 고려할 수 있기 때문에
+									시간 복잡도를 표기하는 방법 중 하나로 가장 자주 사용 된다.
+								</p>
 
-                                <p>
-                                    <img src="../images/big_o.PNG" alt="" class="img-fluid">
-                                </p>
+								<p>
+									<img src="../images/big_o.PNG" alt="" class="img-fluid">
+								</p>
 
-                                <h4 class="mb-3">O(1)</h4>
+								<h4 class="mb-3">O(1)</h4>
 
-                                <p>O(1)는 constant complexity라고 하며 입력값이 증가하더라도 시간이 늘어나지 않는다.<br>
-                                    즉, 입력값의 크기와 관계없이 즉시 출력값을 얻어낼 수 있다.
-                                </p>
+								<p>O(1)는 constant complexity라고 하며 입력값이 증가하더라도 시간이 늘어나지 않는다.<br>
+									즉, 입력값의 크기와 관계없이 즉시 출력값을 얻어낼 수 있다.
+								</p>
 
-                                <p>
-                                    <img src="../images/o1.PNG" alt="" class="img-fluid">
-                                </p>
+								<p>
+									<img src="../images/o1.PNG" alt="" class="img-fluid">
+								</p>
 
-                                <code>
+								<code>
                                     function O_1_algorithm(arr, index){<br>
                                     &nbsp;&nbsp;return arr[index];<br>
                                     }<br>
@@ -116,15 +116,15 @@
                                     let result = O_1_algorithm(arr, index);  // expected output : 2
                                 </code>
 
-                                <h4 class="mb-3">O(n)</h4>
+								<h4 class="mb-3">O(n)</h4>
 
-                                <p>O(n)은 linear complexity라고 하며 입력값이 증가함에 따라 시간 또한 같은 비율로 증가한다.</p>
+								<p>O(n)은 linear complexity라고 하며 입력값이 증가함에 따라 시간 또한 같은 비율로 증가한다.</p>
 
-                                <p>
-                                    <img src="../images/on.PNG" alt="" class="img-fluid">
-                                </p>
+								<p>
+									<img src="../images/on.PNG" alt="" class="img-fluid">
+								</p>
 
-                                <code>
+								<code>
                                     function O_n_algorithm(n){<br>
                                     &nbsp;&nbsp;for(let i = 0; i < n; i++){<br>
                                     &nbsp;&nbsp;// do something for 1 second<br>
@@ -139,8 +139,8 @@
 								</p>
 
 								<p>
-                                    <img src="../images/ologn.PNG" alt="" class="img-fluid">
-                                </p>
+									<img src="../images/ologn.PNG" alt="" class="img-fluid">
+								</p>
 
 								<p>O(log n)의 예시로 up & down 게임을 예로 들수있다.<br>
 									1. 1~100 중 하나의 숫자를 플레이어1이 고른다. (30을 골랐다고 가정)<br>
@@ -155,8 +155,8 @@
 								<p>O(n^2)은 quadratic complexity라고 하며 입력값이 증가함에 따라 시간이 n의 제곱수의 비율로 증가한다.</p>
 
 								<p>
-                                    <img src="../images/onn.PNG" alt="" class="img-fluid">
-                                </p>
+									<img src="../images/onn.PNG" alt="" class="img-fluid">
+								</p>
 
 								<code>
 									function O_quadratic_algorithm(n) {<br>
@@ -173,8 +173,8 @@
 								<p>O(2^n)은 exponential complexity라고 하며 Big-O 표기법 중 가장 느린 시간 복잡도이다.</p>
 
 								<p>
-                                    <img src="../images/o2n.PNG" alt="" class="img-fluid">
-                                </p>
+									<img src="../images/o2n.PNG" alt="" class="img-fluid">
+								</p>
 
 								<code>
 									function fibonacci(n) {<br>
@@ -235,7 +235,7 @@
 									<li>알고리즘</li>
 									<li>시간 복잡도
 										<ul>
-											<li>Big-O 표기법</li>		
+											<li>Big-O 표기법</li>
 										</ul>
 									</li>
 									<li>탐욕 알고리즘(Greedy Algorithm)
