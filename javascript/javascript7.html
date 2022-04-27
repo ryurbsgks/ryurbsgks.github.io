@@ -38,8 +38,19 @@
       <nav id="colorlib-main-menu" role="navigation">
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-
+					<li class="colorlib-active"><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../about.html">About</a></li>
         </ul>
       </nav>
 
@@ -67,122 +78,152 @@
               <div class="row pt-md-4">
 
                 <h2 class="mb-3">1. 문자열</h2>
+                
+                <p>문자열은 String 타입으로 문자열 선언 방법은 따옴표 안에 원하는 문자열을 입력하거나 템플릿 리터럴을 사용하는 방법이 있다.</p>
 
-                <p>문자열은 String 타입으로 사용방법은 따옴표안에 원하는 문자열을 입력하면 된다.</p>
+                <h3 class="mb-3">따옴표 사용</h3>
 
-                <h2 class="mb-3">2. 문자열을 숫자로 반환하는 방법</h2>
+                <p>가장 기본적인 문자열 선언 방식으로 큰따옴표("")와 작은따옴표('')를 이용하여 문자열을 선언할 수 있다.</p>
 
-                <p>기존 변수의 타입을 완전히 변경하는 것이 아닌 결과값만 문자열을 숫자로 반환하는 방법이다.</p>
+                <h3 class="mb-3">템플릿 리터럴(Template literals)</h3>
+               
+                <p>템플릿 리터럴은 내장된 표현식을 허용하는 문자열 리터럴로 여러 줄로 이루어진 문자열과 문자 보간 기능을 사용할 수 있다.</p>
 
-                <h3 class="mb-3">Number()</h3>
+                <p>사용 방법은 따옴표 대신 백틱(``)을 사용하여 백틱안에 문자열을 입력하여 사용 한다.<br>
+                  또한 플레이스 홀더(${})를 사용하여 표현식도 나타낼 수 있다.
+                </p>
 
-                <code>
-                                    let a = "123";<br>
-                                    typeof Number(a); // expected output : "number"<br>
-                                </code>
+                <p>템플릿 리터럴에서 줄 바꿈은 \n 또는 엔터를 사용하여 표현할 수 있다. </p>
 
-                <h3 class="mb-3">Math 객체</h3>
+                <h2 class="mb-3">2. length</h2>
 
-                <p>Math 객체중 abs, floor, ceil 등과 같은 메서드를 사용하면 문자열을 숫자로 반환 한다.</p>
-
-                <h4 class="mb-3">Math.abs()</h4>
-
-                <p>Math.abs() 함수는 값의 절대값을 반환하는 함수이다.</p>
-
-                <code>
-                                    let a = "123";<br>
-                                    typeof Math.abs(a); // expected output : "number"<br>
-                                </code>
-
-                <h4 class="mb-3">Math.floor()</h4>
-
-                <p>Math.floor() 함수는 인수보다 작거나 같은 수 중에서 가장 큰 정수를 반환하는 함수이다.(내림)</p>
+                <p>length 프로퍼티(property)는 해당 문자열의 길이를 반환한다.</p>
 
                 <code>
-                                    let a = "123";<br>
-                                    typeof Math.floor(a); // expected output : "number"<br>
-                                </code>
+                  &lt;string&gt;.length
+                </code>
 
-                <h4 class="mb-3">Math.ceil()</h4>
+                <h2 class="mb-3">3. index</h2>
 
-                <p>Math.ceil() 함수는 인수보다 크거나 같은 수 중에서 가장 작은 정수를 반환하는 함수이다.(올림)</p>
+                <p>문자열에서 특정 위치를 가리키는 숫자를 index라고 한다.</p>
 
-                <code>
-                                    let a = "123";<br>
-                                    typeof Math.ceil(a); // expected output : "number"<br>
-                                </code>
-
-                <h3 class="mb-3">parseInt()</h3>
-
-                <p>parseInt() 함수는 문자열 인자를 파싱하여 특정 진수의 정수를 반환한다.</p>
+                <p>문자열에서 index는 읽기 전용(read-only)으로 접근은 가능하지만 값을 재할당 할 수는 없다.</p>
 
                 <code>
-                                    let a = "123";<br>
-                                    typeof parseInt(a); // expected output : "number"<br>
-                                </code>
+                  &lt;string&gt;[&lt;index&gt;]
+                </code>
 
-                <h3 class="mb-3">parseFloat()</h3>
+                <h2 class="mb-3">4. 문자열 합치기</h2>
+
+                <p>문자열을 합치는 방법에는 + 연산자를 사용하거나 concat() 메서드를 사용하는 방법이 있다.</p>
+
+                <h3 class="mb-3">+ 연산자</h3>
+
+                <p>합치려고 하는 문자열들을 + 연산자를 사용하여 합칠 수 있다.</p>
+
+                <h3 class="mb-3">concat()</h3>
+
+                <p>concat() 메서드는 매개변수로 전달된 모든 문자열을 호출 문자열에 붙인 새로운 문자열을 반환한다.</p>
+
+                <code>
+                  &lt;string&gt;.concat(&lt;string&gt;)
+                </code>
+
+                <h2 class="mb-3">5. 문자열 타입 변경</h2>
+
+                <p>문자열의 타입을 변경하는 방법으로 상황에 따라 문자열을 숫자로 사용하거나 숫자를 문자열로 사용해야하는 경우가 있다.<br>
+                  주의할 점은 원본 변수의 타입이 완전히 변경되는 것이 아닌 결과값만 타입이 변경된다는 것이다.
+                </p>
+
+                <h3 class="mb-3">문자열을 숫자로 변경</h3>
+
+                <p>문자열을 숫자로 변경하는 방법에는 Number() 생성자, Math 메서드, parseInt() 또는 parseFloat() 함수, 문자열에 숫자를 곱하는 방법이 있다.</p>
+
+                <h4 class="mb-3">Number()</h4>
+
+                <p>Number() 생성자는 해당 변수를 Number 타입으로 변환하여 반환한다.</p>
+
+                <code>
+                  Number(&lt;variable&gt;)
+                </code>
+
+                <h4 class="mb-3">Math 메서드</h4>
+
+                <p>Math 메서드 중 abs(), floor(), ceil() 함수를 사용하여 문자열을 숫자로 반환할 수 있다.</p>
+
+                <h5 class="mb-3">abs()</h5>
+
+                <p>abs() 함수는 주어진 값의 절대값을 반환하는 함수이다.</p>
+
+                <code>
+                  Math.abs(&lt;variable&gt;)
+                </code>
+
+                <h5 class="mb-3">floor()</h5>
+
+                <p>floor() 함수는 주어진 값보다 작거나 같은 수 중에서 가장 큰 정수를 반환하는 함수이다.<br>
+                  즉 내림과 같다.
+                </p>
+
+                <code>
+                  Math.floor(&lt;variable&gt;)
+                </code>
+
+                <h5 class="mb-3">ceil()</h5>
+
+                <p>ceil() 함수는 주어진 값보다 크거나 같은 수 중에서 가장 작은 정수를 반환하는 함수이다.<br>
+                  즉 올림과 같다.
+                </p>
+
+                <code>
+                  Math.ceil(&lt;variable&gt;)
+                </code>
+                
+                <h4 class="mb-3">parseInt()</h4>
+
+                <p>parseInt() 함수는 주어진 값을 파싱하여 특정 진수의 정수를 반환한다.</p>
+
+                <code>
+                  parseInt(&lt;string&gt;, &lt;radix&gt;)
+                </code>
+
+                <p>radix는 string을 숫자로 바꿀때 사용하는 진수로 2 ~ 36 까지의 정수로 생략 가능하다.</p>
+                
+                <h4 class="mb-3">parseFloat()</h4>
 
                 <p>parseFloat() 함수는 주어진 값을 문자열로 변환한 후 부동소수점 실수로 파싱해 반환한다.</p>
 
                 <code>
-                                    let a = "123";<br>
-                                    typeof parseFloat(a); // expected output : "number"<br>
-                                </code>
+                  parseFloat(&lt;string&gt;)
+                </code>
 
-                <h3 class="mb-3">곱을 하는 경우</h3>
+                <h4 class="mb-3">숫자를 곱하는 방법</h4>
 
-                <p>이 경우는 문자열이 숫자로만 이루어진 경우 숫자를 곱하여 문자열을 숫자로 반환한다.</p>
+                <p>문자열에 숫자를 곱하면 결과값이 Number 타입으로 변환하여 반환한다.</p>
+                
+                <h3 class="mb-3">숫자를 문자열로 변경</h3>
 
-                <code>
-                                    let a = "123";<br>
-                                    let b = a * 1; // expected output : 123<br>
-                                    typeof b; // expected output : "number"<br>
-                                </code>
+                <p>숫자를 문자열로 변경하는 방법에는 String() 생성자, toString() 메서드, 빈 문자열을 더하는 방법이 있다.</p>
 
-                <h2 class="mb-3">3. 숫자를 문자열로 반환하는 방법</h2>
-
-                <h3 class="mb-3">String()</h3>
+                <h4 class="mb-3">String()</h4>
+               
+                <p>String() 생성자는 해당 변수를 String 타입으로 변환하여 반환한다.</p>
 
                 <code>
-                                    let a = 123;<br>
-                                    typeof String(a); // expected output : "stirng"<br>
-                                </code>
+                  String(&lt;variable&gt;)
+                </code>
 
-                <h3 class="mb-3">toString()</h3>
+                <h4 class="mb-3">toString()</h4>
 
+                <p>toString() 메서드는 주어진 값을 문자열로 변환하여 반환한다.</p>
+                
                 <code>
-                                    let a = 123;<br>
-                                    typeof a.toString(); // expected output : "stirng"<br>
-                                </code>
+                  &lt;variable&gt;.toString()
+                </code>
 
-                <h3 class="mb-3">문자열을 더하는 경우</h3>
+                <h4 class="mb-3">빈 문자열을 더하는 방법</h4>
 
-                <p>숫자에 문자열을 더하여 숫자를 문자열로 반환한다.</p>
-
-                <code>
-                                    let a = 123;<br>
-                                    let b = a + ""; // expected output : "123"<br>
-                                    typeof b; // expected output : "stirng"<br>
-                                </code>
-
-                <h2 class="mb-3">4. 템플릿 리터럴(Template literals)</h2>
-
-                <p>템플릿 리터럴은 내장된 표현식을 허용하는 문자열 리터럴이다.<br>
-                  여러 줄로 이루어진 문자열과 문자 보간 기능을 사용할 수 있다.
-                </p>
-
-                <p>사용 방법은 백틱(``)을 사용하여 백틱안에 문자열을 입력한다.<br>
-                  또한 플레이스 홀더(${})를 사용하여 표현식도 나타낼 수 있다.<br>
-                  줄 바꿈은 \n 또는 엔터를 사용하여 표현할 수 있다.
-                </p>
-
-                <code>
-                                    let a = 1;<br>
-                                    let test = `템플릿 리터럴 테스트 문구입니다.<br>
-                                    1 더하기 ${a}을 진행합니다.\n결과값은 ${1+a}입니다.`<br>
-                                    // expected output : "템플릿 리터럴 테스트 문구입니다.\n1 더하기 1을 진행합니다.\n결과값은 2입니다."
-                                </code>
+                <p>숫자에 빈 문자열을 더하면 결과값이 String 타입으로 변환하여 반환한다.</p>
 
               </div>
             </div>
@@ -193,25 +234,26 @@
                 <h3 class="sidebar-heading">List</h3>
 
                 <ol>
-                  <li>문자열</li>
-                  <li>문자열을 숫자로 반환하는 방법
+                  <li>문자열
                     <ul>
-                      <li>Number()</li>
-                      <li>Math 객체</li>
-                      <li>parseInt()</li>
-                      <li>parseFloat()</li>
-                      <li>곱을 하는 경우</li>
+                      <li>따옴표 사용</li>
+                      <li>템플릿 리터럴(Template literals)</li>
                     </ul>
                   </li>
-                  <li>숫자를 문자열로 반환하는 방법
+                  <li>length</li>
+                  <li>index</li>
+                  <li>문자열 합치기
                     <ul>
-                      <li>String()</li>
-                      <li>toString()</li>
-                      <li>문자열을 더하는 경우</li>
+                      <li>+ 연산자</li>
+                      <li>concat()</li>
                     </ul>
                   </li>
-                  <li>템플릿 리터럴(Template literals)</li>
-
+                  <li>문자열 타입 변경
+                    <ul>
+                      <li>문자열을 숫자로 변경</li>
+                      <li>숫자를 문자열로 변경</li>
+                    </ul>
+                  </li>
                 </ol>
 
               </div>
