@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li class="colorlib-active"><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>비동기 콜백 함수</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. 비동기 처리</h2>
+
+                <p>JS의 비동기 처리란 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 JS의 특성을 의미한다.</p>
+                
+                <p>하지만 개발하다 보면 비동기 처리가 마치 동기적으로 작동하게끔 비동기의 순서를 제어하고 싶을 때가 있다.<br>
+                  이때 사용되는 방법이 콜백 함수, Promise, async/await 3가지이다.
+                </p>
+
+                <h2 class="mb-3">2. 콜백 함수</h2>
+
+                <p>아래와 같이 매개변수로 받은 변수를 1~100 밀리초 사이에 랜덤하게 콘솔을 찍는 함수가 있고 이 함수를 이용해서 문자열 A, B, C를 출력하는 함수를 실행한다고 가정한다.</p>
+
+                <code>
+                  const printString = (stirng) => {<br>
+                  &nbsp;&nbsp;setTimeout( () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(string)<br>
+                  &nbsp;&nbsp;}, Math.floor(Math.random() * 100) + 1 )<br>
+                  }<br>
+                  <br>
+                  const printAll = () => {<br>
+                  &nbsp;&nbsp;printString("A")<br>
+                  &nbsp;&nbsp;printString("B")<br>
+                  &nbsp;&nbsp;printString("C")<br>
+                  }<br>
+                  <br>
+                  printAll()
+                </code>
+
+                <p>결과는 A, B, C 순서대로 출력되는게 아니라 비동기 처리로 인해 A, B, C가 랜덤하게 출력된다.</p>
+
+                <p>이러한 비동기 처리가 마치 동기적으로 작동하게끔 하기 위해 아래와 같이 콜백 함수를 사용한다.</p>
+
+                <code>
+                  const printString = (stirng, callback) => {<br>
+                  &nbsp;&nbsp;setTimeout( () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(string)<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;callback()<br>
+                  &nbsp;&nbsp;}, Math.floor(Math.random() * 100) + 1 )<br>
+                  }<br>
+                  <br>
+                  const printAll = () => {<br>
+                  &nbsp;&nbsp;printString("A", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;printString("B", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printString("C", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;})<br>
+                  }<br>
+                  <br>
+                  printAll()
+                </code>
+
+                <p>결과는 A, B, C 순서대로 출력된다.</p>
+
+                <h2 class="mb-3">3. 콜백 지옥</h2>
+
+                <p>콜백 지옥(Callback Hell)은 콜백 함수가 반복되어 코드의 들여쓰기 수준이 감당하기 힘들 정도로 깊어지는 현상을 말한다.</p>
+
+                <code>
+                  const printAll = () => {<br>
+                  &nbsp;&nbsp;printString("A", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;printString("B", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printString("C", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printString("D", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printStirng("E", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printString("F", () => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>    
+                  &nbsp;&nbsp;&nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;})<br>
+                  }
+                </code>
+
+                <p>위와 같이 콜백 지옥은 코드의 가독성이 떨어지며 코드를 수정하기 어렵다는 단점이 있다.</p>
+
+                <p>이러한 콜백 지옥을 해결하기 위해 Promise 또는 async/await를 사용할 수 있다.</p>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>비동기 처리</li>
+                  <li>콜백 함수</li>
+                  <li>콜백 지옥</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
