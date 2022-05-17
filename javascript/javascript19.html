@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li class="colorlib-active"><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1>
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>Promise</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. Promise</h2>
+
+                <p>Promise는 JS의 비동기 처리에 사용되는 객체로 비동기 작업이 종료된 이후에 결과값 또는 실패 이유에 대한 처리를 할 수 있다.</p>
+               
+                <h2 class="mb-3">2. Promise의 3가지 상태</h2>
+
+                <p>Promise는 pending(대기), fulfilled(이행), rejected(실패) 3가지의 상태가 존재하며 이 중 하나의 상태를 가진다.</p>
+
+                <p>
+                  <img src="../images/promiseState.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">pending(대기)</h3>
+
+                <p>pending(대기)은 비동기 처리를 이행하지도 거부하지도 않은 초기 상태를 의미한다.<br>
+                  즉, resolve() 또는 reject() 메서드가 아직 호출되지 않은 상태를 의미한다.
+                </p>
+
+                <h3 class="mb-3">fulfilled(이행)</h3>
+
+                <p>fulfilled(이행)는 비동기 처리가 성공적으로 완료된 상태를 의미한다.<br>
+                  즉, resolve() 메서드가 호출된 상태를 의미한다.
+                </p>
+
+                <h3 class="mb-3">rejected(실패)</h3>
+
+                <p>rejected(실패)는 비동기 처리가 실패한 상태를 의미한다.<br>
+                  즉, reject() 메서드가 호출된 상태를 의미한다.
+                </p>
+
+                <h2 class="mb-3">3. Promise 사용 방법</h2>
+
+                <p>기본적으로  Promise는 함수에 콜백 함수를 전달하는 대신에 콜백 함수를 첨부하여 반환하는 객체이다.<br>
+                  이때 첨부되는 콜백 함수의 매개변수는 resolve, reject 이다.
+                </p>
+
+                <code>
+                  new Promise( (resolve, reject) => {<br>
+                  &nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;if (&lt;비동기 작업 성공&gt;) {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;resolve()<br>
+                  &nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;if (&lt;비동기 작업 실패&gt;) {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;reject()<br>
+                  &nbsp;&nbsp;}<br>
+                  })
+                </code>
+
+                <h3 class="mb-3">resolve()</h3>
+
+                <p>resolve() 메서드가 호출되면 Promise는 fulfilled(이행) 상태가 된다.</p>
+
+                <p>resolve() 메서드는 인자를 가질 수 있으며 해당 인자는 Promise 객체의 후속 처리 메서드(then())로 전달된다.<br>
+                  보통 비동기 작업을 통해 얻어진 결과값을 넘길때 인자를 통해 넘긴다.
+                </p>
+
+                <h3 class="mb-3">reject()</h3>
+
+                <p>reject() 메서드가 호출되면 Promise는 rejected(실패) 상태가 된다.</p>
+
+                <p>reject() 메서드는 인자를 가질 수 있으며 해당 인자는 Promise 객체의 후속 처리 메서드(catch())로 전달된다.<br>
+                  보통 비동기 작업이 실패한 이유에 대한 에러 메세지를 넘길때 인자를 통해 넘긴다.
+                </p>
+
+                <h2 class="mb-3">4. Promise 후속 처리 메서드</h2>
+
+                <p>Promise로 구현된 비동기 함수를 호출하는 측에서는 Promise 객체의 후속 처리 메소드(then(), catch())를 통해 비동기 처리 결과값 또는 에러 메시지를 전달받아 처리한다.</p>
+
+                <code>
+                  &lt;PromiseName&gt;()<br>
+                  &nbsp;&nbsp;.then( (res) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;.catch( (err) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})
+                </code>
+
+                <h3 class="mb-3">then()</h3>
+
+                <p>then() 메서드는 두 개의 콜백 함수를 매개변수로 받을 수 있으며 첫 번째 매개변수는 비동기 작업이 성공시 호출되는 콜백 함수이며 두 번째 매개변수는 비동기 작업이 실패시 호출되는 콜백 함수이다.</p>
+
+                <code>
+                  &lt;PromiseName&gt;()<br>
+                  &nbsp;&nbsp;.then( (res) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;첫 번째 매개변수 코드&gt;<br>
+                  &nbsp;&nbsp;}, (err) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;두 번째 매개변수 코드&gt;<br>
+                  &nbsp;&nbsp;})
+                </code>
+
+                <p>첫 번째 콜백 함수 매개변수에서 resolve() 메서드를 통해 넘긴 인자를 매개변수로 받을 수 있다.</p>
+
+                <p>두 번째 콜백 함수 매개변수에서 reject() 메서드를 통해 넘긴 인자를 매개변수로 받을 수 있다.</p>
+
+                <p>비동기 작업이 성공적일 경우만 다루고 싶다면 두 번째 매개변수를 생략하면 된다.<br>
+                  보통 비동기 작업이 실패한 경우는 catch()에서 다루기 때문에 두 번째 매개변수는 많이 생략된다.
+                </p>
+
+                <h3 class="mb-3">catch()</h3>
+
+                <p>catch() 메서드는 비동기 처리에서 에러 또는 then() 메서드에서 에러가 발생하면 호출된다.</p>
+
+                <code>
+                  &lt;PromiseName&gt;()<br>
+                  &nbsp;&nbsp;.catch( (err) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})
+                </code>
+
+                <h2 class="mb-3">5. Promise Chaining</h2>
+
+                <p>Promise는 후속 처리 메서드(then(), catch())를 chaining(체이닝)하여 여러 개의 Promise를 연결하여 사용할 수 있다.</p>
+
+                <code>
+                  &lt;PromiseName&gt;()<br>
+                  &nbsp;&nbsp;.then( (res) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;.then( (res) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;.then( (res) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})<br>
+                  &nbsp;&nbsp;.catch( (err) => {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;동작할 코드&gt;<br>
+                  &nbsp;&nbsp;})
+                </code>
+
+                <h2 class="mb-3">6. Promise.all()</h2>
+
+                <p>Promise.all() 메서드는 순회 가능한 객체가 들어있는 배열을 매개변수로 받아 주어진 모든 Promise를 이행한 후 Promise를 반환한다.</p>
+
+                <code>
+                  Promise.all([&lt;순회 가능한 객체&gt;])
+                </code>
+
+                <p>모든 Promise가 성공하면 처리 결과를 배열에 담은 새로운 Promise를 반환한다.<br>
+                  이때 배열에 담기는 결과는 처리 순서가 보장된다.<br>
+                  즉, Promise.all() 메서드의 배열 매개변수에 담긴 순서대로 처리 결과가 배열에 담긴다.
+                </p>
+
+                <p>주어진 Promise 중 하나라도 실패하면 가장 먼저 실패한 Promise를 즉시 반환한다.</p>
+
+                <p>Promise.all() 메서드 또한 Promise 후속 처리 메서드를 사용할 수 있다.</p>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>Promise</li>
+                  <li>Promise의 3가지 상태
+                    <ul>
+                      <li>pending(대기)</li>
+                      <li>fulfilled(이행)</li>
+                      <li>rejected(실패)</li>
+                    </ul>
+                  </li>
+                  <li>Promise 사용 방법
+                    <ul>
+                      <li>resolve()</li>
+                      <li>reject()</li>
+                    </ul>
+                  </li>
+                  <li>Promise 후속 처리 메서드
+                    <ul>
+                      <li>then()</li>
+                      <li>catch()</li>
+                    </ul>
+                  </li>
+                  <li>Promise Chaining</li>
+                  <li>Promise.all()</li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
