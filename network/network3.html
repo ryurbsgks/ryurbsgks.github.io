@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li class="colorlib-active"><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>HTTP</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. HTTP</h2>
+
+                <p>HTTP(HyperText Transfer Protocol)는 HTML과 같은 문서를 전송하기 위한 Application Layer 프로토콜이다.</p>
+
+                <p>HTTP는 웹 브라우저와 웹 서버의 소통을 위해 디자인 되었다.</p>
+
+                <p>HTTP는 특정 상태를 유지하지 않는 특징이 있으며 이를 무상태성(Stateless)이라고 한다.</p>
+
+                <h3 class="mb-3">무상태성</h3>
+
+                <p>무상태성(Stateless)는 말 그대로 상태를 가지지 않는다는 뜻으로 HTTP로 클라이언트와 서버가 통신을 주고받는 과정에서 HTTP가 클라이언트나 서버의 상태를 확인하지 않는다는 뜻이다.</p>
+               
+                <h2 class="mb-3">2. HTTP Messages</h2>
+
+                <p>HTTP Messages는 클라이언트와 서버 사이에서 데이터가 교환되는 방식으로 요청(Requests)과 응답(Responses) 두 가지 유형이 있다.</p>
+
+                <p>클라이언트가 HTTP Messages 양식에 맞춰 요청을 보내면 서버도 HTTP Messages 양식에 맞춰 응답한다.</p>
+
+                <p>요청(Requests)과 응답(Responses)은 start(status) line, HTTP headers, empty line, body의 구조를 가진다.</p>
+
+                <p>
+                  <img src="../images/HTTPMessages.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">start(status) line</h3>
+
+                <p>start line은 항상 첫 번째 줄에 위치하며 응답에서는 status line이라고 부른다.</p>
+
+                <p>start(status) line에는 요청이나 응답의 상태를 나타낸다.</p>
+
+                <h3 class="mb-3">HTTP headers</h3>
+
+                <p>요청을 지정하거나 메시지에 포함된 본문을 설명하는 헤더의 집합이다.</p>
+
+                <h3 class="mb-3">empty line</h3>
+
+                <p>헤더와 본문을 구분하는 빈 줄이다.</p>
+
+                <h3 class="mb-3">body</h3>
+
+                <p>요청과 관련된 데이터나 응답과 관련된 데이터 또는 문서를 포함한다.</p>
+
+                <p>요청과 응답의 유형에 따라 선택적으로 사용한다.</p>
+
+                <h2 class="mb-3">3. HTTP 요청 메서드</h2>
+
+                <p>HTTP 요청에는 GET, POST, PUT(또는 PATCH), DELETE 메서드라는 것이 존재하며 각각 조회, 추가, 갱신, 삭제와 관련이 있다.</p>
+
+                <h2 class="mb-3">4. HTTP 상태 코드</h2>
+
+                <p>상태 코드는 사용자가 웹 서버에 요청을 보냈을 때 응답으로 보내주는 숫자 코드이다.</p>
+
+                <p>각 숫자는 미리 약속된 특정한 의미를 포함하고 있어 클라이언트는 응답으로 온 숫자를 통해 보낸 요청의 성공 여부와 의미를 알 수 있다.</p>
+
+                <p>200번대 상태 코드는 요청 성공을 의미하고 400번대, 500번대 상태 코드는 요청 실패를 의미한다.</p>
+
+                <h3 class="mb-3">200 OK</h3>
+
+                <p>에러 없이 요청이 성공적으로 진행되었을 때 상태 코드로 대표적인 성공 상태 코드이다.</p>
+
+                <h3 class="mb-3">201 Created</h3>
+
+                <p>요청이 성공적으로 처리되어 서버가 새로운 리소스를 생성하였을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">204 No Content</h3>
+
+                <p>요청이 성공적으로 처리되었지만 제공 해줄 데이터가 없을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">400 Bad Request</h3>
+
+                <p>API에 정의되지 않은 방식으로 요청을 하는 등 클라이언트가 잘못된 요청을 했을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">401 Unauthorized</h3>
+
+                <p>클라이언트가 인증 권한이 없어서 요청을 받아들일 수 없을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">403 Forbidden</h3>
+
+                <p>클라이언트가 권한이 없어서 요청을 받아들일 수 없을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">404 Not Found</h3>
+
+                <p>클라이언트가 요청한 리소스를 서버에서 찾을 수 없을 때 상태 코드이다.</p>
+
+                <h3 class="mb-3">500 Internal Server Error</h3>
+
+                <p>클라이언트의 요청이 잘못된 것이 아니라 서버측에서 문제가 생겼을 때 상태 코드이다.</p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>HTTP
+                    <ul>
+                      <li>무상태성</li>
+                    </ul>
+                  </li>
+                  <li>HTTP Messages
+                    <ul>
+                      <li>start(status) line</li>
+                      <li>HTTP headers</li>
+                      <li>empty line</li>
+                      <li>body</li>
+                    </ul>
+                  </li>
+                  <li>HTTP 요청 메서드</li>
+                  <li>HTTP 상태 코드
+                    <ul>
+                      <li>200 OK</li>
+                      <li>201 Created</li>
+                      <li>204 No Content</li>
+                      <li>400 Bad Request</li>
+                      <li>401 Unauthorized</li>
+                      <li>403 Forbidden</li>
+                      <li>404 Not Found</li>
+                      <li>500 Internal Server Error</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
