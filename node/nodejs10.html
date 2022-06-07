@@ -101,8 +101,9 @@
 
                 <p>공식문서에 나와있는 예시로 brids.js라는 router 기능의 파일을 만들고 모듈화하여 앱에서 router 모듈을 로드하는 예시이다.</p>
                
+                <p style="color: red;">birds.js</p>
+
                 <code>
-                  // birds.js<br>
                   const express = require('express')<br>
                   const router = express.Router()<br>
                   <br>
@@ -122,8 +123,9 @@
                   module.exports = router
                 </code>
 
+                <p style="color: red;">app.js</p>
+
                 <code>
-                  //  app.js<br>
                   const birds = require('./birds')<br>
                   <br>
                   &lt;app.js에서 동작할 코드&gt;<br>
