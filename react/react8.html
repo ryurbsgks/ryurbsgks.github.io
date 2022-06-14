@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ryu의 코딩 블로그</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
+
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<link rel="stylesheet" href="../css/ionicons.min.css">
+
+	<link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+	<link rel="stylesheet" href="../css/flaticon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li class="colorlib-active"><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+						style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+				<p class="pfooter">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+					This template is copyrighted by Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+				<div class="container">
+					<div class="row d-flex">
+						<div class="col-lg-8 px-md-5 py-5">
+
+							<h1>Redux</h1>
+
+							<div class="row pt-md-4">
+
+								<h2 class="mb-3">1. Redux</h2>
+
+                <p>Redux는 JS 앱을 위한 예측 가능한 상태 컨테이너 즉, JS 상태 관리 라이브러리이다.</p>
+                
+                <p>Redux는 일관되게 작동하고 다양한 환경(클라이언트, 서버 등)에서 실행되며 테스트하기 쉬운 애플리케이션을 작성하는 데 도움이 된다.<br>
+                  또한 시간 여행 디버깅(time travel debugging)과 같은 훌륭한 개발자 경험을 제공한다.
+                </p>
+
+                <p>Redux는 React 또는 다른 view 라이브러리와 함께 사용할 수 있다.</p>
+
+                <h3 class="mb-3">Redux의 장점</h3>
+
+                <p>Redux는 상태를 예측 가능하게 만들어 주며 유지보수와 디버깅에 유리하다는 장점이 있다.</p>
+
+                <h2 class="mb-3">2. Redux 3가지 원칙</h2>
+
+                <p>Redux의 기초를 이루는 3가지 원칙은 Single source of truth, State is read-only, Changes are made with pure functions 3가지 이다.</p>
+
+                <h3 class="mb-3">Single source of truth</h3>
+
+                <p>애플리케이션의 전역 상태(global state)는 단일 저장소(single store) 내의 하나의 객체에 트리 구조로 저장된다.</p>
+
+                <h3 class="mb-3">State is read-only</h3>
+
+                <p>상태를 변경하는 유일한 방법은 Action 객체를 전달하는 방법 뿐이다.</p>
+
+                <h3 class="mb-3">Changes are made with pure functions</h3>
+
+                <p>Action에 의해 상태 트리가 어떻게 변화하는지를 지정하기 위해서는 순수 Reducer를 작성해야한다.</p>
+
+                <p>Reducer는 이전 상태와 Action을 받아 다음 상태를 반환하는 순수 함수이다.</p>
+
+                <h2 class="mb-3">3. Redux 설치</h2>
+
+                <p>Node 애플리케이션에서 Redux를 설치하기 위해 npm install을 이용한다.</p>
+
+                <code>
+                  npm install redux
+                </code>
+
+                <h3 class="mb-3">Redux toolkit 설치</h3>
+
+                <p>Redux toolkit 설치 방법은 아래와 같다.</p>
+
+                <code>
+                  npm install @reduxjs/toolkit
+                </code>
+
+                <p>Redux toolkit은 Redux를 사용하기 위한 공식 권장 방식이다.<br>
+                  Redux toolkit은 Redux 앱을 빌드하는데 필수적이라고 생각하는 패키지와 기능이 포함되어 있다.
+                </p>
+
+                <p>Redux toolkit에 대한 내용은 따로 다루지 않고 <a href="https://redux-toolkit.js.org" target="_blank">Redux toolkit 공식문서</a>에 대한 링크만 남긴다.</p>
+
+                <h2 class="mb-3">4. Redux 용어</h2>
+
+                <p>Redux의 대표적인 Store, Action, Dispatch, Reducer 용어에 대해서 설명한다.</p>
+
+                <h3 class="mb-3">Store</h3>
+
+                <p>Store는 응용 프로그램의 상태 트리를 보유하는 객체로 Redux 앱에는 단일 Store만 있어야 한다.</p>
+
+                <h3 class="mb-3">Action</h3>
+
+                <p>Action은 상태를 변경 하려는 의도를 나타내는 일반 객체로 데이터를 Store로 가져오는 유일한 방법이다.</p>
+
+                <p>Action에는 수행 중인 작업의 유형을 나타내는 type 필드가 있어야 한다.</p>
+
+                <h3 class="mb-3">Dispatch</h3>
+
+                <p>Dispatch 함수는 Action이나 비동기 Action을 받는 함수로 받은 다음 하나나 여러개의 Action을 Store에 보낼수도 보내지 않을 수도 있다.</p>
+
+                <p>기본 Dispatch 함수는 반드시 동기적으로 Store의 Reducer에 Action을 보내야 한다.<br>
+                  그러면 Reducer는 Store가 반환한 이전 상태와 함께 새 상태를 계산한다.
+                </p>
+
+                <h3 class="mb-3">Reducer</h3>
+
+                <p>Reducer는 누적값과 값을 받아서 새로운 누적값을 반환하는 함수이다.</p>
+
+                <p>Redux에서 누적값은 상태 객체이고 누적될 값은 Action이다.<br>
+                  Reducer는 주어진 이전 상태와 Action에서 새로운 상태를 계산하는 순수 함수이다.
+                </p>
+
+                <h4 class="mb-3">Reducer의 Immutability</h4>
+
+                <p>Reducer의 Immutability(불변성)는 Redux의 상태 업데이트는 immutable한 방식으로 변경해야 한다는 것이다.<br>
+                  즉, Reducer는 Side Effect를 가져서는 안된다.<br>
+                  이를 통해 Redux의 장점 중 하나인 핫 리로딩(hot reloading)과 시간 여행 디버깅(time travel debugging)과 같은 기능들이 가능해진다.
+                </p>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+							<div class="sidebar-box ftco-animate">
+
+								<h3 class="sidebar-heading">List</h3>
+
+								<ol>
+									<li>Redux
+                    <ul>
+                      <li>Redux의 장점</li>
+                    </ul>
+                  </li>
+                  <li>Redux 3가지 원칙
+                    <ul>
+                      <li>Single source of truth</li>
+                      <li>State is read-only</li>
+                      <li>Changes are made with pure functions</li>
+                    </ul>
+                  </li>
+                  <li>Redux 설치
+										<ul>
+											<li>Redux toolkit 설치</li>
+										</ul>
+									</li>
+                  <li>Redux 용어
+                    <ul>
+                      <li>Store</li>
+                      <li>Action</li>
+                      <li>Dispatch</li>
+                      <li>Reducer</li>
+                    </ul>
+                  </li>
+								</ol>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/aos.js"></script>
+	<script src="../js/jquery.animateNumber.min.js"></script>
+	<script src="../js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="../js/google-map.js"></script>
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
