@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>SSR & CSR</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. SSR</h2>
+
+                <p>SSR(Server Side Rendering)은 웹 페이지를 브라우저에서 렌더링하는 대신에 서버에서 렌더링하는 것을 말한다.</p>
+
+                <p>
+                  <img src="../images/ssr.png" alt="" class="img-fluid">
+                </p>
+
+                <p>브라우저가 서버의 URI로 요청을 보내면 서버는 정해진 웹 페이지 파일을 브라우저로 전송하고 서버의 웹 페이지가 브라우저에 도착하면 완전히 렌더링 된다.<br>
+                  서버에서 웹 페이지를 브라우저로 보내기 전에 서버에서 완전히 렌더링했기 때문에 SSR이라고 한다.
+                </p>
+
+                <h3 class="mb-3">Use SSR</h3>
+
+                <p>SEO(Search Engine Optimiztion)가 우선순위인 경우 일반적으로 SSR을 사용한다.</p>
+
+                <p>웹 페이지의 첫 화면 렌더링이 빠르게 필요한 경우 단일 파일의 용량이 작은 SSR이 적합하다.</p>
+
+                <p>웹 페이지가 사용자와 상호작용이 적은 경우 CSR보다 SSR이 적합하다.</p>
+
+                <h2 class="mb-3">2. CSR</h2>
+
+                <p>CSR(Client Side Rendering)은 SSR과 반대로 웹 페이지를 서버에서 렌더링하는 대신에 클라이언트에서 페이지를 렌더링하는 것을 말한다.<br>
+                  웹 개발에서 사용하는 대표적인 클라이언트는 웹 브라우저이다.
+                </p>
+
+                <p>
+                  <img src="../images/csr.png" alt="" class="img-fluid">
+                </p>
+
+                <p>브라우저의 요청을 서버로 보내면 서버는 웹 페이지를 렌더링하는 대신 웹 페이지의 골격이 될 단일 페이지를 클라이언트에 보낸다.<br>
+                  이때 서버는 웹 페이지와 함께 JS파일을 보낸다.<br>
+                  클라이언트가 웹 페이지를 받으면 웹 페이지와 함께 전달된 JS파일은 브라우저에서 웹 페이지를 완전히 렌더링 된 페이지로 바꾼다.
+                </p>
+
+                <h3 class="mb-3">Use CSR</h3>
+
+                <p>SEO(Search Engine Optimiztion)가 우선순위가 아닌 경우 일반적으로 CSR을 사용한다.</p>
+
+                <p>사이트에 풍부한 상호 작용이 있는 경우 CSR은 빠른 라우팅으로 강력한 사용자 경험(빠른 동적 렌더링 등)을 제공한다.</p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>SSR
+                    <ul>
+                      <li>Use SSR</li>
+                    </ul>
+                  </li>
+                  <li>CSR
+                    <ul>
+                      <li>Use CSR</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
