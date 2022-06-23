@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../distributionindex.html">배포</a></li>
+          <li class="colorlib-active"><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>가비지 컬렉션(GC)</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. 가비지 컬렉션(GC)</h2>
+
+                <p>가비지 컬렉션(Garbage Collection, GC)은 메모리 관리 기법 중의 하나로 프로그램에서 더 이상 사용하지 않는 메모리를 자동으로 정리하는 기능이다.</p>
+                
+                <p>가비지 컬렉션 기능을 가진 언어(or 엔진)는 JAVA, C#, JS 등이 있다.</p>
+
+                <h2 class="mb-3">2. 가비지 컬렉션의 방법</h2>
+
+                <p>가비지 컬렉션의 대표적인 방법으로 트레이싱과 레퍼런스 카운팅에 대한 설명</p>
+
+                <h3 class="mb-3">트레이싱</h3>
+
+                <p>트레이싱(Tracing)은 한 객체에 flag를 두고 가비지 컬렉션 사이클마다 flag에 표시 후 삭제하는 Mark and Sweep 방법이다.</p>
+
+                <p>객체에 in-use flag를 두고 사이클마다 메모리 관리자가 모든 객체를 추적해서 사용 중인지 아닌지를 표시한다.<br>
+                  그 후 표시되지 않은 객체를 삭제하는 단계를 통해 메모리를 해제한다.
+                </p>
+
+                <h3 class="mb-3">레퍼런스 카운팅</h3>
+
+                <p>레퍼런스 카운팅(Reference coun)은 한 객체를 참조하는 변수의 수를 추적하는 방법이다.</p>
+
+                <p>객체를 참조하는 변수는 처음에는 특정 메모리에 대해 레퍼런스가 하나뿐이지만 변수의 레퍼런스가 복사될 때마다 레퍼런스 카운트가 늘어난다.<br>
+                  객체를 참조하고 있던 변수의 값이 바뀌거나 변수 스코프를 벗어나면 레퍼런스 카운트는 줄어든다.<br>
+                  레퍼런스 카운트가 0이 되면 그 객체와 관련한 메모리는 비울 수 있다.<br>
+                  레퍼런스 카운트가 0이 된다는 말은 아무도 그 객체에 대한 레퍼런스를 가지고 있지 않다는 말과 같다.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>가비지 컬렉션(GC)</li>
+                  <li>가비지 컬렉션의 방법
+                    <ul>
+                      <li>트레이싱</li>
+                      <li>레퍼런스 카운팅</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
