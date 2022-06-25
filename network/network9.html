@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li class="colorlib-active"><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>IP와 IP Packet</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. IP와 IP Packet</h2>
+
+                <p>
+                  <img src="../images/IPandIPPacket.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>복잡한 인터넷 망 속 수많은 노드들을 지나 클라이언트와 서버가 통신하는 방법은 IP(인터넷 프로토콜) 주소를 컴퓨터에 부여하여 이를 이용해 통신하는 방법이다.</p>
+
+                <p>IP는 지정한 IP 주소(IP Address)에 패킷(Packet)이라는 통신 단위로 데이터 전달을 한다.</p>
+                
+                <h2 class="mb-3">2. IP Packet</h2>
+
+                <p>IP Packet에서 Packet(패킷)은 pack과 bucket이 합쳐진 단어로 소포로 비유할 수 있으며 IP Packet은 이를 데이터 통신에 적용한 것이라고 보면 된다.</p>
+
+                <p>IP Packet은 우체국 송장처럼 전송 데이터를 무사히 전송하기 위해 출발지 IP, 목적지 IP와 같은 정보가 포함되어 있다.</p>
+
+                <p>
+                  <img src="../images/IPPacket.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">클라이언트 패킷 전달</h3>
+
+                <p>패킷 단위로 전송을 하면 노드들은 목적지 IP에 도달하기 위해 서로 데이터를 전달한다.<br>
+                  이를 통해 복잡한 인터넷 망 사이에서도 정확한 목적지로 패킷을 전송할 수 있다.
+                </p>
+
+                <p>
+                  <img src="../images/clientPacket.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">서버 패킷 전달</h3>
+
+                <p>서버에서 무사히 데이터를 전송받는다면 서버도 이에 대한 응답을 돌려줘야 한다.<br>
+                  서버 역시 IP 패킷을 이용해 클라이언트에 응답을 전달한다.
+                </p>
+
+                <p>
+                  <img src="../images/serverPacket.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h2 class="mb-3">3. IP 프로토콜 한계</h2>
+
+                <p>정확한 출발지와 목적지를 파악할 수 있다는 점에서 IP 프로토콜은 적절한 통신 방법으로 보이지만 한계가 존재한다.</p>
+                
+                <h3 class="mb-3">비연결성</h3>
+
+                <p>만약 패킷을 받을 대상이 없거나 서비스 불능 상태여도 클라이언트는 서버의 상태를 파악할 방법이 없기 때문에 패킷을 그대로 전송하게 된다.</p>
+
+                <p>
+                  <img src="../images/unconnect.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">비신뢰성</h3>
+
+                <p>중간에 있는 서버가 데이터를 전달하던 중 장애가 생겨 패킷이 중간에 소실되더라도 클라이언트는 이를 파악할 방법이 없다.</p>
+
+                <p>
+                  <img src="../images/untrust1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>전달 데이터의 용량이 클 경우 이를 패킷 단위로 나눠 데이터를 전달하게 되는데 이때 패킷들은 중간에 서로 다른 노드를 통해 전달될 수 있다.<br>
+                  이렇게 되면 클라이언트가 의도하지 않은 순서로 서버에 패킷이 도착할 수 있다.
+                </p>
+
+                <p>
+                  <img src="../images/untrust2.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>IP와 IP Packet</li>
+                  <li>IP Packet
+                    <ul>
+                      <li>클라이언트 패킷 전달</li>
+                      <li>서버 패킷 전달</li>
+                    </ul>
+                  </li>
+                  <li>IP 프로토콜 한계
+                    <ul>
+                      <li>비연결성</li>
+                      <li>비신뢰성</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
