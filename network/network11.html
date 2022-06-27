@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li class="colorlib-active"><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>HTTP</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. HTTP 역사</h2>
+
+                <p>
+                  <img src="../images/HTTPHistory.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>HTTP/1.1, HTTP/2는 TCP 기반이며 HTTP/3는 UDP 기반 프로토콜이다.</p>
+
+                <h2 class="mb-3">2. HTTP 특징</h2>
+
+                <p>HTTP의 특징은 다음과 같은 특징이 있다.</p>
+
+                <h3 class="mb-3">클라이언트 서버 구조</h3>
+
+                <p>클라이언트가 서버에 요청을 보내면 서버는 그에 대한 응답을 보내는 클라이언트 서버 구조로 이루어져 있다.</p>
+
+                <p>
+                  <img src="../images/ClientServer.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">무상태 프로토콜</h3>
+
+                <p>HTTP는 서버가 클라이언트의 상태를 보존하지 않는 무상태 프로토콜이다.</p>
+
+                <p>무상태는 응답 서버를 쉽게 바꿀 수 있기 때문에 무한한 서버 증설이 가능하다.</p>
+
+                <p>로그인이 필요 없는 단순한 서비스 소개 화면 같은 경우엔 무상태로 설계할 수 있지만 로그인이 필요한 서비스라면 유저의 상태를 유지해야 되기 때문에 브라우저 쿠키, 서버 세션, 토큰 등을 이용해 상태를 유지한다.</p>
+              
+                <h3 class="mb-3">비연결성</h3>
+
+                <p>
+                  <img src="../images/connectionOriented.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>TCP/IP의 경우 기본적으로 연결을 유지하여 요청을 보내지 않더라도 계속 연결을 유지해야 한다.<br>
+                  이러한 경우 연결을 유지하는 서버의 자원이 계속 소모가 된다.
+                </p>
+
+                <p>HTTP 1.0 기준으로 HTTP는 연결을 유지하지 않는 모델이다.</p>
+
+                <p>
+                  <img src="../images/connectionless.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>비연결성을 가지는 HTTP에서는 실제로 요청을 주고받을 때만 연결을 유지하고 응답을 주고 나면 TCP/IP 연결을 끊는다.<br>
+                  이를 통해 최소한의 자원으로 서버 유지를 가능하게 한다.
+                </p>
+
+                <p>트래픽이 많지 않고 빠른 응답을 제공할 수 있는 경우 비연결성의 특징은 효율적으로 작동한다.<br>
+                  하지만 트래픽이 많고 큰 규모의 서비스를 운영할 때에는 비연결성은 한계를 보인다.
+                </p>
+
+                <h4 class="mb-3">HTTP 지속 연결</h4>
+
+                <p>자원들을 보낼 때마다 연결을 끊고 다시 연결하고를 반복하는 것은 비효율적이기 때문에 지금은 HTTP 지속 연결(Persistent Connections)로 문제를 해결한다.</p>
+
+                <p>HTTP 초기에는 각각의 자원을 다운로드하기 위해 연결과 종료를 반복해야 했다.</p>
+
+                <p>
+                  <img src="../images/HTTPConnectEnd.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>HTTP 지속 연결에서는 연결이 이루어지고 난 뒤 각각의 자원들을 요청하고 모든 자원에 대한 응답이 돌아온 후에 연결을 종료한다.</p>
+
+                <p>
+                  <img src="../images/HTTPPersistentConnect.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>HTTP 역사</li>
+                  <li>HTTP 특징
+                    <ul>
+                      <li>클라이언트 서버 구조</li>
+                      <li>무상태 프로토콜</li>
+                      <li>비연결성</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
