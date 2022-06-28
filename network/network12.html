@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li class="colorlib-active"><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>HTTP 헤더</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. HTTP 메세지</h2>
+
+                <p>HTTP 메시지는 헤더와 바디로 구분할 수 있다.</p>
+
+                <p>HTTP 바디에서는 데이터 메시지 본문(Message body)을 통해서 표현(Representation) 데이터를 전달한다.<br>
+                  여기서 데이터를 실어 나르는 부분을 페이로드(Payload)라 한다.
+                </p>
+
+                <p>HTTP 헤더는 HTTP 전송에 필요한 모든 부가정보를 담기 위해 사용한다.</p>
+
+                <h2 class="mb-3">2. 표현 헤더</h2>
+
+                <p>표현은 요청이나 응답에서 전달할 실제 데이터를 뜻하며 표현 헤더는 표현 데이터를 해석할 수 있는 정보를 제공한다.</p>
+
+                <p>표현 헤더는 요청, 응답 둘 다 사용하며 표현 데이터의 형식, 압축 방식, 자연 언어, 길이 등을 설명하는 헤더이며 아래와 같이 대소문자 구분이 없는 key-value 형식을 따른다.</p>
+
+                <p>
+                  <img src="../images/HTTPHeader.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">Content-Type</h3>
+
+                <p>Content-Type은 표현 데이터의 media type을 나타내기 위해 사용된다.</p>
+
+                <h3 class="mb-3">Content-Encoding</h3>
+
+                <p>Content-Encoding은 표현 데이터의 media type을 압축하기 위해 사용된다.</p>
+
+                <h3 class="mb-3">Content-Language</h3>
+
+                <p>Content-Language는 청중을 위한 언어를 설명하기 위해 사용되는데 사용자가 선호하는 언어에 따라 사용자를 구분하도록 해준다.</p>
+
+                <h3 class="mb-3">Content-Length</h3>
+
+                <p>Content-Length는 수신자에게 보내지는 바이트 단위를 가지는 표현 데이터의 크기를 나타낸다.</p>
+
+                <h2 class="mb-3">3. HTTP 주요 헤더</h2>
+
+                <p>요청(Request)과 응답(Response)에서 사용되는 주요 헤더에 대한 설명</p>
+
+                <h3 class="mb-3">요청에서 사용되는 헤더</h3>
+
+                <p>요청에서 사용되는 헤더로 From, Referer, User-Agent, Host, Origin, Authorization에 대한 설명</p>
+
+                <h4 class="mb-3">From</h4>
+
+                <p>From 요청 헤더는 유저 에이전트의 이메일 정보를 나타낸다.</p>
+
+                <p>검색 엔진에서 주료 사용하며 일반적으로 잘 사용하지는 않는다.</p>
+
+                <h4 class="mb-3">Referer</h4>
+
+                <p>Referer 요청 헤더는 이전 웹 페이지 주소를 나타낸다.</p>
+
+                <p>현재 요청된 페이지의 이전 웹 페이지 주소로 Referer를 사용하면 유입경로를 수집 가능하다.</p>
+
+                <h4 class="mb-3">User-Agent</h4>
+
+                <p>User-Agent 요청 헤더는 유저 에이전트 애플리케이션 정보를 식별할 수 있도록 하는 문자열이다.</p>
+
+                <p>User-Agent를 통해 어떤 종류의 브라우저에서 장애가 발생하는지 파악할 수 있다.</p>
+
+                <h4 class="mb-3">Host</h4>
+
+                <p>Host 요청 헤더는 요청한 호스트의 도메인 정보를 나타낸다.</p>
+
+                <p>Host 요청 헤더는 필수 헤더이며 하나의 서버가 여러 도메인을 처리해야 할 때 호스트 정보를 명시하기 위해 사용한다.</p>
+
+                <h4 class="mb-3">Origin</h4>
+
+                <p>Origin 요청 헤더는 서버로 POST 요청을 보낼 때 요청을 시작한 주소를 나타낸다.</p>
+
+                <p>요청을 보낸 주소와 받는 주소가 다르면 CORS 에러가 발생한다.</p>
+
+                <h4 class="mb-3">Authorization</h4>
+
+                <p>Authorization 요청 헤더는 인증 토큰을 서버로 보낼 때 사용하는 헤더이다.</p>
+
+                <h3 class="mb-3">응답에서 사용되는 헤더</h3>
+
+                <p>응답에서 사용되는 헤더로 Server, Date, Location, Allow, Retry-After에 대한 설명</p>
+
+                <h4 class="mb-3">Server</h4>
+
+                <p>Server 헤더는 요청을 처리하는 Origin 서버의 소프트웨어 정보를 포함하고 있다.</p>
+
+                <h4 class="mb-3">Date</h4>
+
+                <p>Date 헤더는 메시지가 발생한 날짜와 시간을 포함한다.</p>
+
+                <h4 class="mb-3">Location</h4>
+
+                <p>Location 헤더는 페이지를 리디렉션할 URL을 나타낸다.</p>
+
+                <p>3xx 또는 201 상태 응답과 함께 제공될 때만 Location 헤더가 의미가 있다.</p>
+
+                <h4 class="mb-3">Allow</h4>
+
+                <p>Allow 헤더는 허용 가능한 HTTP 메서드를 나열한다.</p>
+
+                <h4 class="mb-3">Retry-After</h4>
+
+                <p>Retry-After 헤더는 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간을 나타낸다.</p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>HTTP 메세지</li>
+                  <li>표현 헤더
+                    <ul>
+                      <li>Content-Type</li>
+                      <li>Content-Encoding</li>
+                      <li>Content-Language</li>
+                      <li>Content-Length</li>
+                    </ul>
+                  </li>
+                  <li>HTTP 주요 헤더
+                    <ul>
+                      <li>요청에서 사용되는 헤더</li>
+                      <li>응답에서 사용되는 헤더</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
