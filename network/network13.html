@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li class="colorlib-active"><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>웹 캐시</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. 캐시</h2>
+
+                <p>캐시(cache)는 컴퓨터 과학에서 데이터나 값을 미리 복사해 놓는 임시 장소를 가리킨다.</p>
+
+                <p>캐시는 캐시의 접근 시간에 비해 원래 데이터를 접근하는 시간이 오래 걸리는 경우나 값을 다시 계산하는 시간을 절약하고 싶은 경우에 사용한다.</p>
+                
+                <p>캐시에 데이터를 미리 복사해 놓으면 계산이나 접근 시간 없이 더 빠른 속도로 데이터에 접근할 수 있다.</p>
+
+                <h2 class="mb-3">2. 웹 캐시</h2>
+
+                <p>브라우저에 캐시를 저장할 땐 헤더에 Cache-Control 속성을 통해 캐시가 유효한 시간을 지정할 수 있다.</p>
+
+                <p>
+                  <img src="../images/webCache1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>이 경우 60초로 설정한다면 60초 동안은 해당 캐시가 유효하다는 의미가 된다.<br>
+                  이렇게 되면 응답을 받았을 때 브라우저 캐시에 해당 응답 결과를 저장하며 이는 60초간 유효하다.
+                </p>
+
+                <p>
+                  <img src="../images/webCache2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>이제 두 번째 요청에선 캐시를 우선 조회하게 된다.</p>
+
+                <p>캐시가 존재하고 아직 유효한 캐시라면 해당 캐시에서 데이터를 가져온다.</p>
+               
+                <p>
+                  <img src="../images/webCache3.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>캐시의 유효시간이 초과한다면 다시 서버에 요청을 하고 유효한 응답 결과를 받는다.<br>
+                  이때 다시 네트워크 다운로드가 발생하게 된다.
+                </p>
+
+                <p>
+                  <img src="../images/webCache4.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>응답 결과를 브라우저가 렌더링 하면 브라우저 캐시는 기존 캐시를 지우고 새 캐시로 데이터를 업데이트한다.<br>
+                  이 과정에서 캐시 유효 시간이 다시 초기화 된다.
+                </p>
+
+                <h2 class="mb-3">3. 검증 헤더와 조건부 요청</h2>
+
+                <p>유효시간이 초과하면 다시 요청을 보내 새로운 데이터로 캐시를 업데이트하였다.<br>
+                  만약 캐시 유효시간이 지났지만 변경이 없기 때문에 해당 데이터를 써도 되는 상황이라면 이를 검증하고 사용하는 방법이 있다면 더 편리할 것이다.
+                </p>
+
+                <p>
+                  <img src="../images/validationHeader.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">Last Modified & If-Modified-Since</h3>
+
+                <p>
+                  <img src="../images/LastModified1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Last Modified는 데이터가 마지막으로 수정된 시간 정보를 헤더에 포함한다.<br>
+                  이로 인해 응답 결과를 캐시에 저장할 때 데이터 최종 수정일도 저장된다.
+                </p>
+
+                <p>
+                  <img src="../images/LastModified2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>캐시 유효시간이 초과되더라도 If-Modified-Since 헤더를 이용해 조건부 요청을 할 수 있다.</p>
+
+                <p>
+                  <img src="../images/LastModified3.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>서버의 해당 자료의 최종 수정일과 비교해서 데이터가 수정이 안되었을 경우 응답 메시지에 이를 담아서 알려준다.<br>
+                  이때 HTTP Body는 응답 데이터에 없으며 상태 코드는 304 Not Modified로 변경된 것이 없다는 뜻이다.
+                </p>
+
+                <p>클라이언트에서는 해당 응답을 받은 뒤 캐시를 갱신해 주고 다시 일정 시간 동안 유효하게 된다.</p>
+
+                <h3 class="mb-3">ETag & If-None-Match</h3>
+
+                <p>Last-Modified와 If-Modified-Since보다 좀 더 간단한 방식으로 ETag와 If-None-Match 검증 헤더가 있다.</p>
+
+                <p>서버에서 완전히 캐시를 컨트롤하고 싶은 경우 ETag를 사용할 수 있다.</p>
+
+                <p>
+                  <img src="../images/ETag1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>서버에서 헤더에 ETag를 작성해 응답하면 클라이언트의 캐시에서 해당 ETag 값을 저장한다.</p>
+
+                <p>
+                  <img src="../images/ETag2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>만약 캐시 시간이 초과돼서 다시 요청을 해야 하는 경우라면 이때 ETag 값을 검증하는 If-None-Match를 요청 헤더에 작성해서 보낸다.</p>
+
+                <p>서버에서 데이터가 변경되지 않았을 경우 ETag는 동일하기에 If-None-Match는 거짓이 된다.<br>
+                  이 경우 서버에서는 304 Not Modified를 응답하며 이때 역시 HTTP Body는 없다.
+                </p>
+
+                <p>브라우저 캐시에서는 응답 결과를 재사용하고 헤더 데이터를 갱신한다.</p>
+
+                <h2 class="mb-3">4. 프록시 캐시</h2>
+
+                <p>프록시란 클라이언트와 서버 사이에 대리로 통신을 수행하는 것을 가리키며 그 중계 기능을 하는 서버를 프록시 서버라고 한다.</p>
+
+                <p>클라이언트 혹은 서버가 다른 네트워크에 간접적으로 접속할 수 있기 때문에 보안, 캐싱을 통한 성능, 트래픽 분산 등의 장점을 가진다.</p>
+
+                <p>
+                  <img src="../images/Proxy.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>한국에 있는 클라이언트에서 특정 데이터가 필요한 상황인데 해당 데이터의 원 서버가 미국에 있다고 가정해 본다.<br>
+                  한국에서 미국까지 직접 접근하여 이미지를 가져오는데 0.5초가량 걸린다고 하면 한국에 있는 클라이언트는 모두 0.5초가량을 기다려야 해당 이미지를 받을 수 있다.
+                </p>
+
+                <p>
+                  <img src="../images/ProxyCache1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>위 예시는 매우 긍정적인 상황이고 실제로는 더 많은 시간이 걸릴 수 있다.<br>
+                  하지만 우리는 유튜브와 같은 해외 사이트에서 위와 같은 불편함 없이 빠르게 영상을 시청할 수 있다.
+                </p>
+
+                <p>이는 클라이언트와 원 서버 사이에 위치한 프록시 캐시 서버를 도입하였기 때문이다.</p>
+
+                <p>
+                  <img src="../images/ProxyCache2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>한국에 프록시 캐시서버를 두고 한국의 클라이언트는 프록시 캐시서버를 통해 자료를 가져오도록 하면 여러 사람이 찾은 자료일수록 이미 캐시에 등록되어 있기에 빠른 속도로 자료를 가져올 수 있다.<br>
+                  이는 같은 국내에 있기에 원서버에 접근하는 것보다 훨씬 빠른 속도에 자료를 가져올 수 있기 때문이다.<br>
+                  이때 클라이언트에서 사용하고 저장하는 캐시를 private 캐시라 하며 프록시 캐시 서버의 캐시를 public 캐시라 한다.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>캐시</li>
+                  <li>웹 캐시</li>
+                  <li>검증 헤더와 조건부 요청
+                    <ul>
+                      <li>Last Modified & If-Modified-Since</li>
+                      <li>ETag & If-None-Match</li>
+                    </ul>
+                  </li>
+                  <li>프록시 캐시</li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
