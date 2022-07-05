@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>S3</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. 클라우드 스토리지</h2>
+
+                <p>클라우드 스토리지란 쉽게 말해서 인터넷 공간에 데이터를 저장하는 저장소이다.</p>
+
+                <p>클라우드 스토리지 서비스는 뛰어난 접근성을 가지고 있다.<br>
+                  컴퓨터의 하드디스크에 저장된 파일에 접근하기 위해서는 해당 컴퓨터를 이용해야만 하지만 클라우드 스토리지를 이용하면 웹 환경이라면 언제 어디서나 저장된 파일에 접근할 수 있다.<br>
+                  또한 컴퓨터뿐만 아니라 웹에 접속이 가능한 다른 전자기기를 활용하여 클라우드 스토리지에 저장된 데이터에 접속할 수 있다.
+                </p>
+
+                <h2 class="mb-3">2. S3</h2>
+
+                <p>S3(Simple Storage Service)는 AWS에서 제공하는 클라우드 스토리지 서비스이다.</p>
+
+                <h3 class="mb-3">S3의 장점</h3>
+
+                <p>S3의 장점으로는 높은 확장성과 높은 가용성, 강력한 내구성을 들 수 있으며 다양한 스토리지 클래스를 제공한다.</p>
+
+                <h4 class="mb-3">높은 확장성</h4>
+
+                <p>확장성이 높으면 많은 시간과 수고를 들이지 않고 스토리지 규모를 확장 또는 축소할 수 있다.<br>
+                  또한 S3에서는 스토리지의 용량을 무한히 확장할 수 있다.<br>
+                  그리고 사용한 만큼만 비용을 지불하면 되기 때문에 비용적인 측면에서 매우 효율적이다.
+                </p>
+
+                <h4 class="mb-3">높은 가용성</h4>
+
+                <p>가용성이 높으면 스토리지에 저장된 파일들을 정상적으로 사용할 수 있는 시간이 길어진다.<br>
+                  S3는 연간 99.99%의 스토리지 가용성을 보장하도록 설계가 되어 있다.
+                </p>
+
+                <h4 class="mb-3">강력한 내구성</h4>
+
+                <p>스토리지의 내구성이 높으면 저장된 파일을 유실할 가능성이 적어진다.<br>
+                  S3는 99.999999999%의 내구성을 보장한다.
+                </p>
+
+                <h4 class="mb-3">다양한 스토리지 클래스를 제공</h4>
+
+                <p>S3에는 Standard, Glacier, Standard-IA, One Zone-IA, S3 Glacier Deep Archive 등 여러 가지 스토리지 클래스가 존재하여 사용자의 이용 목적에 따라 다양한 스토리지 클래스를 사용할 수 있다.<br>
+                  이 중에서 S3 사용자들이 대표적으로 많이 선택하는 스토리지 클래스는 Standard 클래스와 Glacier 클래스 두 가지가 있다.
+                </p>
+
+                <h5 class="mb-3">Standard</h5>
+
+                <p>Standard 클래스는 범용적인 목적으로 사용하기 좋다.</p>
+
+                <p>데이터에 빠른 속도로 접근할 수 있고 데이터 액세스 요청에 대한 처리 속도가 빠르다.<br>
+                  대신 보관 비용이 높게 발생하기 때문에 데이터를 오래 보관하는 목적으로는 효율적인 선택지가 아니다.
+                </p>
+
+                <h5 class="mb-3">Glacier</h5>
+
+                <p>장기적인 보관 목적으로 스토리지를 사용할 때는 Glacier를 사용하는 것이 효율적이다.<br>
+                  비록 저장된 데이터에 액세스하는 속도는 느리지만 데이터를 보관하는 비용이 매우 저렴하다는 장점이 있다.
+                </p>
+
+                <h2 class="mb-3">3. 리전 & 가용 영역</h2>
+
+                <p>
+                  <img src="../images/Region.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">리전</h3>
+
+                <p>지도를 보면 주황색 동그라미가 쳐진 지역이 있는데 이 지역을 리전(Region)이라고 부른다.</p>
+
+                <p>리전(Region)이란 AWS에서 클라우드 서비스를 제공하기 위해서 운영하는 물리적인 서버의 위치를 뜻한다.</p>
+
+                <h3 class="mb-3">가용 영역</h3>
+
+                <p>주황색 동그라미 안에 숫자가 새겨져 있는데 이 숫자는 리전에 위치한 가용 영역(Availability Zone)의 수를 뜻한다.</p>
+
+                <p>가용 영역(Availability Zone)이란 각 리전 안에 존재하는 데이터 센터(IDC)를 뜻한다.<br>
+                  가용 영역은 각각 개별적인 위치에 떨어져서 존재한다.<br>
+                  그래서 한 곳의 가용 영역이 재난이나 사고로 인해 가동이 불가능해지더라도 다른 가용 영역에 백업을 해놓은 데이터를 활용하여 문제없이 서버가 가동되게 한다.<br>
+                  이런 가동 방식 덕분에 AWS에서 제공하는 서비스들은 높은 가용성과 내구성을 보장한다.
+                </p>
+
+                <h2 class="mb-3">4. 버킷</h2>
+
+                <p>버킷이란 S3에 저장되는 파일들이 담기는 바구니로 파일을 저장하는 최상위 디렉터리라고도 설명할 수 있다.</p>
+
+                <p>S3에서 저장되는 모든 파일은 버킷 안에 저장되어야 하고 버킷에는 무한한 양의 파일을 저장할 수 있다.<br>
+                  각각의 버킷은 이름을 가지고 있는데 버킷의 이름은 버킷이 속해 있는 리전(버킷이 생성된 지역)에서 유일해야 한다.<br>
+                  또한 버킷 정책을 생성하여 해당 버킷에 대한 다른 유저의 접근 권한을 수정할 수 있다.
+                </p>
+
+                <h3 class="mb-3">객체</h3>
+
+                <p>S3에서 버킷에 담기는 파일을 객체라고 부른다.<br>
+                  S3에서 저장소에 데이터를 저장할 때 키-값 페어 형식으로 데이터를 저장하기 때문이다.
+                </p>
+
+                <p>모든 객체는 고유한 URL 주소를 가지고 있다.<br>
+                  URL 주소는 http://&lt;버킷의 이름&gt;.S3.amazonaws.com/&lt;객체의 키&gt;의 형태를 띠고 URL 주소를 통해서도 원하는 데이터에 접근할 수 있다.
+                </p>
+
+                <h4 class="mb-3">파일 & 메타데이터</h4>
+
+                <p>S3에 저장되는 객체는 파일과 메타데이터로 구성된다.</p>
+
+                <h5 class="mb-3">파일</h5>
+
+                <p>파일은 위에 설명한 대로 키-값 페어 형식으로 데이터를 저장한다.</p>
+
+                <p>파일의 값에는 실제 데이터를 저장하며 S3 객체의 값으로써 저장될 수 있는 데이터의 최대 크기는 5TB이다.</p>
+
+                <p>파일의 키는 각각의 객체를 고유하게 만들어주는 식별자 역할을 한다.<br>
+                  파일의 키를 이용하여 원하는 객체를 검색할 수 있다.
+                </p>
+
+                <h5 class="mb-3">메타데이터</h5>
+
+                <p>메타데이터는 객체의 생성일, 크기, 유형과 같은 객체에 대한 정보가 담긴 데이터이다.<br>
+                  객체를 설명하는 데이터라고 이해하면 된다.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>클라우드 스토리지</li>
+                  <li>S3
+                    <ul>
+                      <li>S3의 장점</li>
+                    </ul>
+                  </li>
+                  <li>리전 & 가용 영역
+                    <ul>
+                      <li>리전</li>
+                      <li>가용 영역</li>
+                    </ul>
+                  </li>
+                  <li>버킷
+                    <ul>
+                      <li>객체</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
