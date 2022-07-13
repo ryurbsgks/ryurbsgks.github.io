@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>RDS Instance 생성</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. RDS Instance 생성</h2>
+
+                <p>AWS 메인 콘솔 창에서 RDS를 검색하여 RDS 메인 화면으로 이동한다.</p>
+
+                <p>
+                  <img src="../images/AWSRDS.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>사이드 바에 위치한 데이터베이스 메뉴를 클릭하여 이동한다.</p>
+
+                <p>
+                  <img src="../images/RDSMain.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>데이터베이스 메뉴로 이동한 뒤 화면에 보이는 데이터베이스 생성 버튼을 클릭한다.</p>
+              
+                <p>
+                  <img src="../images/RDSCreate.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>데이터베이스 생성 버튼을 클릭하면 DB 인스턴스의 생성과 관련해서 여러 가지 옵션을 지정할 수 있는 페이지가 보인다.<br>
+                  이 중 데이터베이스 엔진 옵션을 선택해야한다.<br>
+                  여기에서는 MySQL을 사용하여 진행한다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSMySQL.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>데이터베이스 엔진을 MySQL로 선택하고 페이지의 스크롤을 살짝 아래로 내리면 템플릿 옵션 화면을 볼 수 있는데 여기에서는 프리 티어 옵션을 선택한다.</p>
+
+                <p>
+                  <img src="../images/RDSFreeTier.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>설정 옵션 창으로 이동하여 DB 클러스터 식별자 이름, 마스터 사용자 이름과 마스터 암호를 기재한다.<br>
+                  마스터 사용자 이름과 암호는 나중에 데이터베이스를 연결할 때 쓰이는 정보로 반드시 기억해야 한다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSOption.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>연결 옵션으로 이동하셔서 퍼블릭 액세스 가능 부분을 예로 설정한다.</p>
+
+                <p>
+                  <img src="../images/RDSPublicAccess.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>보안 그룹 같은 경우는 기본값인 default 보안 그룹을 선택한다.<br>
+                  다른 보안 그룹을 선택 시 로컬 환경 터미널에서 테스트가 불가능하다.
+                </p>
+
+                <p>추가 연결 구성 토글을 열면 데이터베이스 포트 번호를 지정할 수 있는 창이 보인다.<br>
+                  여기서는 흔히 사용되는 3306번 포트 대신 포트 번호 노출을 방지하려는 목적으로 13306번으 지정하였다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSPort.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>포트 번호 변경이 완료된 뒤 페이지의 스크롤을 아래로 내려 추가 구성 토글 창을 찾아 클릭한다.<br>
+                  추가 구성 토글을 열면 여러 옵션을 추가로 확인 가능하다.<br>
+                  여기에서는 초기 데이터베이스 test 라는 이름으로 설정하였다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSFirstDatabase.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>초기 데이터베이스 이름을 기입하고 나면 모든 설정이 끝난다.<br>
+                  데이터베이스 생성 버튼을 클릭하여 DB 인스턴스를 생성한다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSCreateInstance.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>DB 인스턴스가 생성되기까지 시간이 오래 걸린다.<br>
+                  아래 사진과 같이 상태 부분이 생성 중으로 보인다면 정상적으로 생성 중이며 해당 부분이 사용 가능으로 변화하면 DB 인스턴스 생성이 완료되었다는 소리이다.
+                </p>
+
+                <p>
+                  <img src="../images/RDSStatus.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>RDS Instance 생성</li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
