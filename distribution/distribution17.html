@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>ELB 생성 & ACM을 통한 인증서 발급</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. ELB 생성 & ACM을 통한 인증서 발급</h2>
+
+                <p>AWS 메인 콘솔 창에서 EC2를 검색하여 EC2 메인 콘솔로 이동한다.</p>
+
+                <p>
+                  <img src="../images/ELBMain.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>로드밸런서를 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBMain.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Load Balancer 생성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBCreateButton.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Load Balancer 유형 선택에서 Application Load Balancer의 생성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ALBCreateButton.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Load Balancer 구성에서 기본 구성 옵션에 ELB 이름을 설정하고 리스너 옵션에 프로토콜을 추가한다.</p>
+                
+                <p>
+                  <img src="../images/LBSetting1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Load Balancer 구성에서 가용 영역 옵션에서 아래 사진과 같이 선택 후 다음: 보안 설정 구성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBSetting2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>ACM으로부터 새 인증서 요청을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMReq.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>도메인 이름 입력 후 다음 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMDomain.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>아래 사진과 같이 다음 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMVerify.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>아래 사진과 같이 검토 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMReview.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>아래 사진과 같이 확인 및 요청 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMConfirm.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Route 53에서 레코드 생성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMRoute53.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>아래 사진과 같이 화면이 뜨면 생성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMRoute53Create.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>레코드가 생성 되어서 성공 문구가 뜨면 계속 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/ACMRoute53Sucess.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>인증서 발급까지 시간이 걸릴 수 있어 그 전까지는 아래의 사진과 같이 인증서 요청의 상태가 검증 보류 상태이다.</p>
+
+                <p>
+                  <img src="../images/ACMVerifyStay.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>인증서 발급이 완료되면 아래 사진과 같은 화면이 보인다.</p>
+
+                <p>
+                  <img src="../images/ACMSucess.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Load Balancer 생성 창으로 돌아가 아래 사진에 표시된 recurring 아이콘을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBRecurring.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>인증서 선택 후 다음: 보안 그룹 구성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBSecurityGroup.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>보안 그룹  선택 후 다음: 라우팅 구성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBSelectSecurityGroup.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>대상 그룹 이름을 설정한다.</p>
+
+                <p>
+                  <img src="../images/LBGroupName.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>고급 상태 검사 설정 토글을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBStatusTest.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>성공 코드를 201번으로 수정 후 다음: 대상 등록 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBStatusCode.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>EC2 인스턴스 체크 표시 후 등록된 항목에 추가 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBEC2Instance.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>선택한 EC2 인스턴스의 등록 여부 확인 후 다음: 검토 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBEC2InstanceCheck.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>요약된 내용을 검토 후 생성 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBCheckandCreate.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>생성 완료 화면이 정상적으로 나오면 닫기 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/LBCreateSucess.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>로드밸런서 메뉴로 돌아가 DNS 이름 주소를 이용하여 접속 테스트를 진행한다.</p>
+
+                <p>
+                  <img src="../images/LBDNSTest.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>ELB 생성 & ACM을 통한 인증서 발급</li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
