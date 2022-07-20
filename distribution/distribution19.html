@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>CloudFront 배포 생성</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. CloudFront 배포 생성</h2>
+
+                <p>AWS 메인 콘솔 창에서 CloudFront를 검색하여 CloudFront 메인 콘솔로 이동한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontMain.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Create Distribution 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontCreateDistribution.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Get Started 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontGetStarted.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Origin Domain Name에서 S3 버킷을 선택한다.</p>
+
+                <p>
+                  <img src="../images/OriginDomainName.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Viewer Protocol Policy에서 Redirect HTTP to HTTPS를 선택한다.</p>
+
+                <p>
+                  <img src="../images/RedirectHTTPtoHTTPS.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>ACM에서 인증서 발급 시 입력했던 도메인 주소를 입력한다.</p>
+
+                <p>
+                  <img src="../images/ACMDomainAddress.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Custom SSL Certificate 선택 후 발급 받은 인증서를 선택한다.</p>
+
+                <p>
+                  <img src="../images/CustomSSLCertificate.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Default Root Object에서 index.html을 입력 후 Create Distribution 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/DefaultRootObject.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>배포 생성 후 Status와 State를 확인한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontStatusState.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>배포 ID를 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontID.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Error Pages 탭을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontErrorPages.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Create Custom Error Response 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CreateCustomErrorResponse.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>HTTP Error Code에 403: Forbidden을 선택한다.</p>
+
+                <p>
+                  <img src="../images/CCERHTTPErrorCode.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Response Page Path에 /index.html을 입력 하고 HTTP Response Code에 200: OK를 선택 후 Create 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CCERResponsePagePath.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>404에러 코드에도 똑같은 설정을 적용 후 Create 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CCER404ErrorCode.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Error Response 생성 여부를 확인한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontErrorResponseCheck.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Status가 Deployed 상태인 것을 확인한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontStatusCheck.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>Domain Name 주소를 통해 접속 테스트를 진행한다.</p>
+
+                <p>
+                  <img src="../images/CloudFrontTest.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>CloudFront 배포 생성</li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
