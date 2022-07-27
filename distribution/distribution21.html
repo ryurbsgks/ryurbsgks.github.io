@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>배포 자동화</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. 배포 자동화</h2>
+
+                <p>배포 자동화란 한 번의 클릭 혹은 명령어 입력을 통해 전체 배포 과정을 자동으로 진행하는 것을 의미한다.</p>
+
+                <p>배포 자동화가 필요한 이유는 수동적이고 반복적인 배포 과정을 자동화함으로써 시간이 절약되며 휴면 에러(Human Error)를 방지할 수 있기 때문이다.</p>
+
+                <h3 class="mb-3">휴먼 에러</h3>
+
+                <p>휴먼 에러란 사람이 수동적으로 배포 과정을 진행하는 중에 생기는 실수를 뜻한다.</p>
+
+                <p>그전에 했던 배포 과정과 비교하여 특정 과정을 생략하거나 다르게 진행하여 오류가 발생하는 것이 휴먼 에러의 예로 볼 수 있다.</p>
+
+                <h2 class="mb-3">2. 파이프라인</h2>
+
+                <p>배포에서 파이프라인(Pipeline)이란 용어는 소스 코드의 관리부터 실제 서비스로의 배포 과정을 연결하는 구조를 뜻한다.</p>
+
+                <p>파이프라인은 전체 배포 과정을 여러 단계(Stages)로 분리한다.<br>
+                  각 단계는 파이프라인 안에서 순차적으로 실행되며 단계마다 주어진 작업(Actions)을 수행한다.
+                </p>
+
+                <p>파이프라인의 단계는 상황과 필요에 따라 더 세분화되거나 간소화될 수 있지만 여러 단계로 분리할 때 대표적으로 쓰이는 Source, Build, Deploy 세 가지 단계가 존재한다.</p>
+
+                <h3 class="mb-3">Source 단계</h3>
+
+                <p>Source 단계에서는 원격 저장소에 관리되고 있는 소스 코드에 변경 사항이 일어날 경우 이를 감지하고 다음 단계로 전달하는 작업을 수행한다.</p>
+
+                <h3 class="mb-3">Build 단계</h3>
+
+                <p>Build 단계에서는 Source 단계에서 전달받은 코드를 컴파일, 빌드, 테스트하여 가공한다.<br>
+                  또한 Build 단계를 거쳐 생성된 결과물을 다음 단계로 전달하는 작업을 수행한다.
+                </p>
+
+                <h3 class="mb-3">Deploy 단계</h3>
+
+                <p>Deploy 단계에서는 Build 단계로부터 전달받은 결과물을 실제 서비스에 반영하는 작업을 수행한다.</p>
+
+                <h2 class="mb-3">3. AWS 개발자 도구</h2>
+
+                <p>AWS에는 개발자 도구 섹션이 존재하며 개발자 도구 섹션에서 제공하는 서비스를 활용하여 배포 자동화 파이프라인을 구축할 수 있다.</p>
+
+                <p>
+                  <img src="../images/AWSDevTools.png" alt="" class="img-fluid">
+                </p>
+
+                <h3 class="mb-3">CodeCommit</h3>
+
+                <p>Source 단계를 구성할 때 CodeCommit 서비스를 이용한다.</p>
+
+                <p>CodeCommit은 GitHub와 유사한 서비스를 제공하는 버전 관리 도구이다.</p>
+
+                <h3 class="mb-3">CodeBuild</h3>
+
+                <p>Build 단계에서는 CodeBuild 서비스를 이용한다.</p>
+
+                <p>CodeBuild 서비스를 통해 유닛 테스트, 컴파일, 빌드와 같은 빌드 단계에서 필수적으로 실행되어야 할 작업을 명령어를 통해 실행할 수 있다.</p>
+
+                <h3 class="mb-3">CodeDeploy</h3>
+
+                <p>Deploy 단계를 구성할 때는 기본적으로 다양한 서비스를 이용할 수 있다.</p>
+
+                <p>CodeDeploy 서비스를 이용하면 실행되고 있는 서버 애플리케이션에 실시간으로 변경 사항을 전달할 수 있다.</p>
+
+                <h3 class="mb-3">CodePipeline</h3>
+
+                <p>각 단계를 연결하는 파이프라인을 구축할 때 CodePipeline 서비스를 이용한다.</p>
+
+                <p>주의할 점은 AWS 프리티어 계정 사용 시 한 계정에 두 개 이상의 파이프라인을 생성하면 추가 요금이 부여될 수 있다.</p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>배포 자동화
+                    <ul>
+                      <li>휴먼 에러</li>
+                    </ul>
+                  </li>
+                  <li>파이프라인
+                    <ul>
+                      <li>Source 단계</li>
+                      <li>Build 단계</li>
+                      <li>Deploy 단계</li>
+                    </ul>
+                  </li>
+                  <li>AWS 개발자 도구
+                    <ul>
+                      <li>CodeCommit</li>
+                      <li>CodeBuild</li>
+                      <li>CodeDeploy</li>
+                      <li>CodePipeline</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
