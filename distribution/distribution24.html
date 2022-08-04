@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../javascriptindex.html">JavaScript</a></li>
+          <li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+          <li><a href="../linuxindex.html">Linux</a></li>
+          <li><a href="../gitindex.html">Git & Github</a></li>
+          <li><a href="../nodeindex.html">Node.js</a></li>
+          <li><a href="../reactindex.html">React</a></li>
+          <li><a href="../algorithmindex.html">알고리즘</a></li>
+          <li><a href="../networkindex.html">네트워크</a></li>
+          <li><a href="../databaseindex.html">Database</a></li>
+          <li><a href="../mvcindex.html">MVC</a></li>
+          <li><a href="../sequelizeindex.html">Sequelize</a></li>
+          <li><a href="../cookiesession.html">인증/보안</a></li>
+          <li class="colorlib-active"><a href="../distributionindex.html">배포</a></li>
+          <li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>EC2 인스턴스에 태그와 역할 부여</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. EC2 인스턴스에 태그 부여</h2>
+
+                <p>태그를 추가하는 이유는 인스턴스를 잘 식별하기 위함이다.</p>
+
+                <p>먼저 EC2 대시보드로 이동 후 인스턴스로 이동한다.</p>
+               
+                <p>
+                  <img src="../images/AWSEC2Dashboard.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>EC2 인스턴스에 태그를 추가하기 위해 인스턴스를 선택한 후 작업, 인스턴스 설정, 태그 관리 순서로 클릭해 이동한다.</p>
+
+                <p>
+                  <img src="../images/EC2InstanceTagging.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>태그 추가 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/AddTag.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>태그 이름을 자유롭게 설정하고 저장 버튼을 눌러 태그를 생성한다.</p>
+
+                <p>
+                  <img src="../images/NewTagName.PNG" alt="" class="img-fluid">
+                </p>
+
+                <h2 class="mb-3">2. EC2 인스턴스에 역할 부여</h2>
+
+                <p>역할은 AWS의 개체(서비스, 사용자 등)가 다른 서비스에 접근하게 할 수 있도록 해주는 방법이다.</p>
+
+                <p>EC2 인스턴스에 역할을 부여함으로써 다른 AWS 서비스를 호출할 수 있는 권한을 가진다.</p>
+
+                <p>먼저 EC2 대시보드로 이동 후 인스턴스로 이동한다.</p>
+
+                <p>
+                  <img src="../images/AWSEC2Dashboard.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>IAM 서비스를 이용해서 EC2 인스턴스에 역할을 부여하기 위해 인스턴스를 선택 후 작업, 보안, IAM 역할 수정 순서로 클릭해 이동한다.</p>
+
+                <p>
+                  <img src="../images/EC2InstanceIAM.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>새 IAM 역할 생성 버튼을 클릭해 AWS IAM 서비스로 이동한다.</p>
+
+                <p>
+                  <img src="../images/CreateNewIAMRole.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>역할 만들기 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CreateRole.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>AWS 서비스, EC2를 선택한 후 다음: 권한 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CreateRoleOption1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>검색창에 S3를 입력하여 AmazonS3FullAccess를 선택한다.</p>
+
+                <p>
+                  <img src="../images/CreateRoleSearchOption1.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>검색창에 SSM을 입력하여 AmazonSSMFullAccess를 선택한다.</p>
+
+                <p>
+                  <img src="../images/CreateRoleSearchOption2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>검색창에 CodeDeploy를 입력하여 AWSCodeDeployRole을 선택한 후 다음: 태그 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CreateRoleSearchOption3.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>아래 사진과 같은 화면에서는 아무런 작업 없이 바로 다음: 검토 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/CreateRoleOption2.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>역할 이름을 자유롭게 입력한 후 역할 만들기 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/RoleName.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>메인 화면으로 돌아온 후 방금 전 생성한 역할 이름을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/SelectRoleName.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>신뢰 관계 탭에서 신뢰 관계 편집 버튼을 클릭한다.</p>
+
+                <p>신뢰 관계란 해당 역할을 취할 수 있는 서비스나 사용자를 명시하는 부분으로 앞서 access 정책 부여를 통해 역할을 생성해 주었지만 access 할 수 있는 서비스를 신뢰 관계에서 명시함으로써 역할이 확실히 완성된다.</p>
+
+                <p>
+                  <img src="../images/EditTrustRelationship.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>처음 신뢰 관계 편집 화면으로 들어가면 Service의 값으로 ec2.amazonaws.com만 할당되어 있다.<br>
+                  이를 아래 사진과 같이 배열로 바꾼 후 codedeploy.ap-northeast-2.amazonaws.com값을 추가한다.
+                </p>
+
+                <p>
+                  <img src="../images/EditServiceTrustRelationship.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>EC2 인스턴스에 생성한 역할을 적용해 주기위해 EC2 수정 페이지로 돌아와서 생성한 IAM 역할을 선택한 후 저장 버튼을 클릭한다.</p>
+
+                <p>
+                  <img src="../images/SaveIAMRole.PNG" alt="" class="img-fluid">
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>EC2 인스턴스에 태그 부여</li>
+                  <li>EC2 인스턴스에 역할 부여</li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
