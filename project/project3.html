@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+					<li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../networkindex.html">네트워크</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../distributionindex.html">배포</a></li>
+					<li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li class="colorlib-active"><a href="../projectindex.html">Project</a></li>
+					<li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>TopBar 컴포넌트</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. TopBar 컴포넌트</h2>
+
+                <p>Main 페이지 최상단에 로그인과 회원가입 페이지로 이동하기 위한 TopBar 컴포넌트가 존재해야한다.</p>
+
+                <p>구조는 App.js 파일에서 React Router를 사용하여 Main 페이지로 라우팅을 하며 Main 페이지의 TopBar 컴포넌트에는 로그인과 회원가입 메뉴가 있어 해당 페이지로 라우팅을 하는 구조로 pages 폴더에 Main.js 파일이 있으며 component 폴더에 TopBar.js 파일이 있다.</p>
+
+                <h3 class="mb-3">code</h3>
+
+                <code>
+                  src/component/TopBar.js
+                </code>
+
+                <p>
+                  <pre>
+import "../App.css";
+import { Link } from "react-router-dom"
+                    
+function TopBar() {
+  return (
+    &lt;div className="header__topbar"&gt;
+      &lt;div className="container"&gt;
+        &lt;ul className="header__topbar__menu"&gt;
+          &lt;li&gt;&lt;Link to="/login"&gt;로그인&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to="/signup"&gt;회원가입&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+                    
+export default TopBar;
+                  </pre>
+                </p>
+               
+                <code>
+                  src/pages/Main.js
+                </code>
+
+                <p>
+                  <pre>
+import TopBar from "../component/TopBar";
+
+function Main() {
+  return (
+    &lt;header&gt;
+      &lt;TopBar /&gt;
+    &lt;/header&gt;
+  );
+}
+
+export default Main;
+                  </pre>
+                </p>
+
+                <code>
+                  src/App.js
+                </code>
+
+                <p>
+                  <pre>
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./pages/Main";
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+          &lt;Route path="/" element={&lt;Main /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+
+export default App;
+                  </pre>
+                </p>
+
+                <code>
+                  src/App.css
+                </code>
+
+                <p>
+                  <pre>
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 1200px;
+}
+
+.header__topbar {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.header__topbar ul {
+  margin: 0px;
+}
+
+.header__topbar__menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding-left: 0;
+  font-size: 12px;
+}
+
+.header__topbar__menu li {
+  padding: 10px 12px;
+}
+                  </pre>
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>TopBar 컴포넌트
+                    <ul>
+                      <li>code</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
