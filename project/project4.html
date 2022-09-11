@@ -113,68 +113,68 @@ function Signup() {
   return (
     &lt;div className="container__sub"&gt;
       &lt;div className="signup__title"&gt;회원가입&lt;/div&gt;
-      &lt;div className="signup__subtitle"&gt;
-        &lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;
+      &lt;div className="signup__comment"&gt;
+        &lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;
         &lt;div&gt;필수입력사항&lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;아이디&lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
+        &lt;div className="signup__container__info"&gt;아이디&lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
           &lt;input placeholder="아이디를 입력해주세요" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;
+        &lt;div className="signup__container__btn"&gt;
           &lt;button type="button"&gt;중복확인&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;비밀번호&lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
+        &lt;div className="signup__container__info"&gt;비밀번호&lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
           &lt;input type="password" placeholder="비밀번호를 입력해주세요" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;&lt;/div&gt;
+        &lt;div className="signup__container__btn"&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;비밀번호확인&lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
-          &lt;input type="password" placeholder="비밀번호를 한 번 더 입력해주세요"  /&gt;
+        &lt;div className="signup__container__info"&gt;비밀번호확인&lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
+          &lt;input type="password" placeholder="비밀번호를 한 번 더 입력해주세요" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;&lt;/div&gt;
+        &lt;div className="signup__container__btn"&gt;&lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;닉네임&lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
-          &lt;input placeholder="닉네임을 입력해주세요"  /&gt;
+        &lt;div className="signup__container__info"&gt;닉네임&lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
+          &lt;input placeholder="닉네임을 입력해주세요" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;
+        &lt;div className="signup__container__btn"&gt;
           &lt;button type="button"&gt;중복확인&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;핸드폰&lt;span className="signup__required__itemsymbol"&gt;*&lt;/span&gt;&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
-          &lt;input placeholder="숫자만 입력해주세요"  /&gt;
+        &lt;div className="signup__container__info"&gt;핸드폰&lt;span className="signup__comment__mark"&gt;*&lt;/span&gt;&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
+          &lt;input placeholder="숫자만 입력해주세요" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;
+        &lt;div className="signup__container__btn"&gt;
           &lt;button type="button"&gt;인증번호 받기&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;이메일&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
-          &lt;input placeholder="ex)sourcing@sourcing.com"  /&gt;
+        &lt;div className="signup__container__info"&gt;이메일&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
+          &lt;input placeholder="ex)sourcing@sourcing.com" /&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;
+        &lt;div className="signup__container__btn"&gt;
           &lt;button type="button"&gt;인증번호 받기&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="signup__container"&gt;
-        &lt;div className="signup__info"&gt;주소&lt;/div&gt;
-        &lt;div className="signup__inputbox__space"&gt;
+        &lt;div className="signup__container__info"&gt;주소&lt;/div&gt;
+        &lt;div className="signup__container__inp"&gt;
           &lt;button type="button"&gt;&lt;FontAwesomeIcon icon={faMagnifyingGlass} /&gt;주소 검색&lt;/button&gt;
         &lt;/div&gt;
-        &lt;div className="signup__button__space"&gt;&lt;/div&gt;
+        &lt;div className="signup__container__btn"&gt;&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div className="signup__button"&gt;
+      &lt;div className="signup__btn"&gt;
         &lt;button&gt;회원가입&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -262,7 +262,7 @@ export default App;
   text-align: center;
 }
 
-.signup__subtitle {
+.signup__comment {
   display: flex;
   justify-content: flex-end;
   font-size: 12px;
@@ -270,7 +270,7 @@ export default App;
   border-bottom: black 2px solid;
 }
 
-.signup__required__itemsymbol {
+.signup__comment__mark {
   color: red;
 }
 
@@ -279,25 +279,25 @@ export default App;
   padding: 5% 5% 0;
 }
 
-.signup__info {
+.signup__container__info {
   flex: 2.5;
   margin: auto 0;
   font-size: 16px;
 }
 
-.signup__inputbox__space {
+.signup__container__inp {
   flex: 5.5;
   height: 45px;
 }
 
-.signup__inputbox__space > input {
+.signup__container__inp input {
   width: 100%;
   height: 100%;
   font-size: 18px;
   padding: 0 3%;
 }
 
-.signup__inputbox__space > button {
+.signup__container__inp button {
   width: 100%;
   height: 100%;
   color: green;
@@ -307,16 +307,16 @@ export default App;
   cursor: pointer;
 }
 
-.signup__inputbox__space svg {
+.signup__container__inp svg {
   margin-right: 2%;
 }
 
-.signup__button__space {
+.signup__container__btn {
   margin-left: 10px;
   flex: 2;
 }
 
-.signup__button__space > button{
+.signup__container__btn button{
   width: 100%;
   height: 100%;
   color: green;
@@ -326,12 +326,12 @@ export default App;
   cursor: pointer;
 }
 
-.signup__button {
+.signup__btn {
   text-align: center;
   margin: 5% 0 0;
 }
 
-.signup__button > button {
+.signup__btn button {
   width: 30%;
   height: 50px;
   color: green;
