@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ryu의 코딩 블로그</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+
+  <link rel="stylesheet" href="../css/aos.css">
+
+  <link rel="stylesheet" href="../css/ionicons.min.css">
+
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="../css/flaticon.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+					<li><a href="../javascriptindex.html">JavaScript</a></li>
+					<li><a href="../htmlindex.html">HTML</a></li>
+					<li><a href="../cssindex.html">CSS</a></li>
+					<li><a href="../linuxindex.html">Linux</a></li>
+					<li><a href="../gitindex.html">Git & Github</a></li>
+					<li><a href="../nodeindex.html">Node.js</a></li>
+					<li><a href="../reactindex.html">React</a></li>
+					<li><a href="../algorithmindex.html">알고리즘</a></li>
+					<li><a href="../networkindex.html">네트워크</a></li>
+					<li><a href="../databaseindex.html">Database</a></li>
+					<li><a href="../mvcindex.html">MVC</a></li>
+					<li><a href="../sequelizeindex.html">Sequelize</a></li>
+					<li><a href="../cookiesession.html">인증/보안</a></li>
+					<li><a href="../distributionindex.html">배포</a></li>
+					<li><a href="../computerScienceindex.html">컴퓨터 공학</a></li>
+          <li class="colorlib-active"><a href="../projectindex.html">Project</a></li>
+					<li><a href="../about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <!-- <h1 id="colorlib-logo" class="mb-4"><a href="../index.html"
+            style="background-image: url(../images/bg_1.jpg);">Ryu <span>coding</span></br></a></h1> -->
+
+        <p class="pfooter">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved by Ryu coding and
+          This template is copyrighted by Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+    </aside> <!-- END COLORLIB-ASIDE -->
+    <div id="colorlib-main">
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-lg-8 px-md-5 py-5">
+
+              <h1>SearchBar 컴포넌트</h1>
+
+              <div class="row pt-md-4">
+
+                <h2 class="mb-3">1. SearchBar 컴포넌트</h2>
+
+                <p>SearchBar 컴포넌트는 검색기능이 있으며 장바구니, 찜하기 아이콘을 통해 해당 페이지로 라우팅이 가능한 컴포넌트이다.</p>
+
+                <p>component 폴더에 SearchBar.js 파일이 있으며 해당 컴포넌트는 pages 폴더에 Main.js 파일에서 호출한다.</p>
+
+                <h3 class="mb-3">Font Awesome 패키지 설치</h3>
+
+                <p>Font Awesome의 Regular style을 사용하기 위해 npm을 사용하여 아래와 같은 패키지를 설치한다.</p>
+
+                <code>
+                  npm i --save @fortawesome/fontawesome-free-regular
+                </code>
+
+                <h3 class="mb-3">Logo 이미지 추가</h3>
+
+                <p>images 폴더에 사용할 Logo 이미지를 logo.PNG 파일로 넣는다.</p>
+              
+                <h3 class="mb-3">code</h3>
+
+                <code>
+                  src/pages/Main.js
+                </code>
+
+                <p>전체 코드는 아래와 같다.</p>
+
+                <p>
+                  <pre>
+import TopBar from "../component/TopBar";
+import SearchBar from "../component/SearchBar";
+
+function Main() {
+  return (
+    &lt;header&gt;
+      &lt;TopBar /&gt;
+      &lt;SearchBar /&gt;
+    &lt;/header&gt;
+  );
+}
+
+export default Main;
+                  </pre>
+                </p>
+
+                <p>추가 된 코드는 아래와 같다.</p>
+
+                <p>
+                  <pre>
+import SearchBar from "../component/SearchBar";
+
+&lt;SearchBar /&gt;
+                  </pre>
+                </p>
+
+                <code>
+                  src/component/SearchBar.js
+                </code>
+
+                <p>
+                  <pre>
+import "../App.css"
+import logo from "../images/logo.PNG"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown, faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { Link } from "react-router-dom"
+
+function SearchBar() {
+  return (
+    &lt;div className="header__searchbar"&gt;
+      &lt;div className="container row"&gt;
+        &lt;div className="header__searchbar__logo"&gt;
+          &lt;img src={logo} alt="오늘의 장 logo" /&gt;
+        &lt;/div&gt;
+        &lt;div className="header__searchbar__searchbox"&gt;
+          &lt;div className="header__searchbar__searchbox__dropmenu"&gt;
+            &lt;Link to="/"&gt;전체&lt;FontAwesomeIcon icon={faCaretDown} /&gt;&lt;/Link&gt;
+          &lt;/div&gt;
+          &lt;div className="header__searchbar__searchbox__droplist"&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;Link to="/"&gt;전체&lt;/Link&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;Link to="/"&gt;야채&lt;/Link&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;Link to="/"&gt;과일&lt;/Link&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;Link to="/"&gt;수산&lt;/Link&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;input placeholder="검색어를 입력해 주세요" /&gt;
+          &lt;button&gt;&lt;FontAwesomeIcon icon={faMagnifyingGlass} /&gt;SEARCH&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;ul className="header__searchbar__menu"&gt; 
+          &lt;li&gt;&lt;Link to="/"&gt;&lt;FontAwesomeIcon className="icon__size28" icon={faHeart} /&gt;&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to="/"&gt;&lt;FontAwesomeIcon className="icon__size28" icon={faCartShopping} /&gt;&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default SearchBar;
+                  </pre>
+                </p>
+
+                <code>
+                  src/App.css
+                </code>
+
+                <p>
+                  <pre>
+.row {
+  display: flex;
+}
+
+.icon__size28 {
+  font-size: 28px;
+}
+
+.header__searchbar {
+  height: 97px;
+}
+
+.header__searchbar__logo {
+  flex: 1;
+  line-height: 97px;
+}
+
+.header__searchbar__logo img {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.header__searchbar__searchbox {
+  flex: auto;
+  margin: auto 0;
+  display: flex;
+  font-size: 16px;
+  border: 2px solid #7fad39;
+  height: 50px;
+  position: relative;
+}
+
+.header__searchbar__searchbox input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  flex: auto;
+  padding: 0 20px;
+}
+
+.header__searchbar__searchbox button {
+  background-color: #7fad39;
+  color: white;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.header__searchbar__searchbox button svg {
+  padding-right: 10px;
+}
+
+.header__searchbar__searchbox__dropmenu {
+  border-right: 2px solid #ebebeb;
+  line-height: 46px;
+  flex: 1;
+  display: flex;
+}
+
+.header__searchbar__searchbox__dropmenu a {
+  flex-grow: 1;
+  padding-left: 20px;
+  position: relative;
+}
+
+.header__searchbar__searchbox__dropmenu a svg {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.header__searchbar__searchbox__droplist {
+  display: block;
+  position: absolute;
+  top: 46px;
+  left: -2px;
+  z-index: 1;
+  border: 2px solid #ebebeb;
+  width: 139.817px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header__searchbar__searchbox__droplist ul {
+  padding: 8px 0;
+}
+
+.header__searchbar__searchbox__droplist a {
+  display: flex;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.header__searchbar__searchbox__droplist a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.header__searchbar__menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto 0;
+}
+
+.header__searchbar__menu li {
+  padding: 10px 12px;
+}
+                  </pre>
+                </p>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
+              <div class="sidebar-box ftco-animate">
+
+                <h3 class="sidebar-heading">List</h3>
+
+                <ol>
+                  <li>SearchBar 컴포넌트
+                    <ul>
+                      <li>Font Awesome 패키지 설치</li>
+                      <li>Logo 이미지 추가</li>
+                      <li>code</li>
+                    </ul>
+                  </li>
+                </ol>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div><!-- END COLORLIB-MAIN -->
+  </div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/jquery.waypoints.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.magnific-popup.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.animateNumber.min.js"></script>
+  <script src="../js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../js/google-map.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
